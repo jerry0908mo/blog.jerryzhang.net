@@ -1,0 +1,781 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="平板电脑,操作系统,小组件,地图应用,android,性能提升,工具," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JerrySher's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文是我翻译自fromdev 的文章，原文链接：10 Performance Tips to Speed Up Your Android Tablet 。感谢伯乐在线的选文、校译。本文在伯乐在线首发 。
+
+
+不同的Android平板运行在不同厂商的不同设备、不同操作系统上。因此，Android平板的性能提升就需要考虑各自的差异化特性以及他们的工作原理。此外，早期3.0版本以前的android操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提升Android平板性能的十大技巧">
+<meta property="og:url" content="http://blog.jerryzhang.net/2014/06/18/提升Android平板性能的十大技巧/index.html">
+<meta property="og:site_name" content="JerrySher's Blog">
+<meta property="og:description" content="本文是我翻译自fromdev 的文章，原文链接：10 Performance Tips to Speed Up Your Android Tablet 。感谢伯乐在线的选文、校译。本文在伯乐在线首发 。
+
+
+不同的Android平板运行在不同厂商的不同设备、不同操作系统上。因此，Android平板的性能提升就需要考虑各自的差异化特性以及他们的工作原理。此外，早期3.0版本以前的android操作">
+<meta property="og:image" content="http://3.bp.blogspot.com/-Ow2fEza0zNs/U10dXPWw5eI/AAAAAAAACZ4/dPDh72TfndI/s640/android-tablet.png">
+<meta property="og:updated_time" content="2016-06-01T16:55:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="提升Android平板性能的十大技巧">
+<meta name="twitter:description" content="本文是我翻译自fromdev 的文章，原文链接：10 Performance Tips to Speed Up Your Android Tablet 。感谢伯乐在线的选文、校译。本文在伯乐在线首发 。
+
+
+不同的Android平板运行在不同厂商的不同设备、不同操作系统上。因此，Android平板的性能提升就需要考虑各自的差异化特性以及他们的工作原理。此外，早期3.0版本以前的android操作">
+<meta name="twitter:image" content="http://3.bp.blogspot.com/-Ow2fEza0zNs/U10dXPWw5eI/AAAAAAAACZ4/dPDh72TfndI/s640/android-tablet.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 提升Android平板性能的十大技巧 | JerrySher's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">JerrySher's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">不断学习，不断归零 生活在这个时代，牛人都在不断的学习进步，我有什么理由停下来休息</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                提升Android平板性能的十大技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-06-18T00:00:00+08:00" content="2014-06-18">
+              2014-06-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/翻译/" itemprop="url" rel="index">
+                    <span itemprop="name">翻译</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/06/18/提升Android平板性能的十大技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/06/18/提升Android平板性能的十大技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文是我翻译自<a href="http://www.fromdev.com/" title="fromdev" target="_blank" rel="external">fromdev</a> 的文章，原文链接：<a href="http://www.fromdev.com/2014/04/android-tablet-performance-tips.html" target="_blank" rel="external">10 Performance Tips to Speed Up Your Android Tablet</a> 。感谢<a href="http://blog.jobbole.com/" target="_blank" rel="external">伯乐在线</a>的选文、校译。本文在<a href="http://blog.jobbole.com/69974/" target="_blank" rel="external">伯乐在线首发</a> 。</p>
+</blockquote>
+<p><img src="http://3.bp.blogspot.com/-Ow2fEza0zNs/U10dXPWw5eI/AAAAAAAACZ4/dPDh72TfndI/s640/android-tablet.png" alt=""></p>
+<p>不同的Android平板运行在不同厂商的不同设备、不同操作系统上。因此，Android平板的性能提升就需要考虑各自的差异化特性以及他们的工作原理。此外，早期3.0版本以前的android操作系统，没有适配平板设备，更多采用的是智能手机的技术。因此也需要做特别的对待。</p>
+<h2 id="Android平板性能"><a href="#Android平板性能" class="headerlink" title="Android平板性能"></a>Android平板性能</h2><p>『一分价钱一分货』，Android应用程序也是如此。很多Android应用都需要额外付费。可惜，Android用户不像iOS用户那样有大量的应用程序可供购买使用。苹果应用商店目前拥有超过40万款应用程序，其中超过9万款是iPad程序。</p>
+<p>在Android设备上用户可以安装使用任何一款发布在android市场的应用。 Android的另外一个优点是允许其他来源的应用程序安装，不过这样也提高了恶意软件的风险。</p>
+<h3 id="1、卸载不常用的软件"><a href="#1、卸载不常用的软件" class="headerlink" title="1、卸载不常用的软件"></a>1、卸载不常用的软件</h3><p>下载的应用程序会占存储空间。因此卸载不用的应用程序减少占用的存储空间，会对提升Android设备的性能和速度有帮助。</p>
+<h3 id="2、用完程序记得及时关掉"><a href="#2、用完程序记得及时关掉" class="headerlink" title="2、用完程序记得及时关掉"></a>2、用完程序记得及时关掉</h3><p>如果在后台有很多程序在运行，设备运行效率会降低。因此，不用程序时一定记得关掉。这样可以释放内存，获得更多的工作空间。最好下载一个可以一键关掉所有应用程序的软件。</p>
+<a id="more"></a>
+<p>###3、不同的应用程序占用不同的内存和空间大小</p>
+<p>建议下载占用空间小的应用程序。如果要下载占用空间大的程序，必须有足够的理由说明它的好处。另外，应用程序不是被下载到SD卡上，而是会占用你的内部存储空间，这点大多人经常搞错。这样内存和存储空间大小可以得到优化。</p>
+<h3 id="4、尽量不要使用活动壁纸"><a href="#4、尽量不要使用活动壁纸" class="headerlink" title="4、尽量不要使用活动壁纸"></a>4、尽量不要使用活动壁纸</h3><p>没错，活动壁纸看起来漂亮。不过它会让你的设备越来越慢，尽量不要用。最好使用普通壁纸，这样还可以延长电池寿命。所以，最好不要使用外部壁纸或者屏幕保护程序，坚持使用系统自带应用。</p>
+<h3 id="5、最好关闭地图类应用"><a href="#5、最好关闭地图类应用" class="headerlink" title="5、最好关闭地图类应用"></a>5、最好关闭地图类应用</h3><p>设备启动的时候地图类应用就会启动，特别是在有网络的时候，GPS也会启动。这样会尤其消耗内存。这些都有双重伤害，既损耗电池寿命又降低设备性能。</p>
+<h3 id="6、没有wifi或者没有信号时关闭wifi或者移动网络"><a href="#6、没有wifi或者没有信号时关闭wifi或者移动网络" class="headerlink" title="6、没有wifi或者没有信号时关闭wifi或者移动网络"></a>6、没有wifi或者没有信号时关闭wifi或者移动网络</h3><p>这两种情况都会降低设备性能，损耗电池寿命。关闭后还可以减少手机内存占用。</p>
+<h3 id="7、程序更新有技巧"><a href="#7、程序更新有技巧" class="headerlink" title="7、程序更新有技巧"></a>7、程序更新有技巧</h3><p>最好手动更新应用程序，不要让程序自动更新。</p>
+<h3 id="8、关闭动画"><a href="#8、关闭动画" class="headerlink" title="8、关闭动画"></a>8、关闭动画</h3><p>动画看起来很炫，如果长时间使用的话它们会特别消耗设备性能。在平板的设置中关掉动画，这样可以得到更好的性能。</p>
+<h3 id="9、移除冗余的桌面小组件"><a href="#9、移除冗余的桌面小组件" class="headerlink" title="9、移除冗余的桌面小组件"></a>9、移除冗余的桌面小组件</h3><p>桌面小组件会消耗内存，所以尽量少用桌面小组件。长期看来，这么做可以提高设备性能。</p>
+<h3 id="10、使用应用管理工具"><a href="#10、使用应用管理工具" class="headerlink" title="10、使用应用管理工具"></a>10、使用应用管理工具</h3><p>应用管理工具可以删除文件缓存、浏览器记录以及其他垃圾文件，还可以清理后台运行的应用。定期清理和管理你的平板设备可以显著提升设备性能。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总之，必须清楚地知道平板到底是用来干什么。实际上，Android 3.0的平板依赖几个硬件和软件要素。需要什么样的应用程序、用来干什么，也是一个需要考虑的主要因素。Android平板的性能提升需要等待应用程序和操作系统的升级。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt="JerrySher wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎关注『程序员在读书』</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/about/images/qrcode_wechat_pay.jpg" alt="JerrySher WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/about/images/qrcode_alipay.jpg" alt="JerrySher Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/平板电脑/" rel="tag">#平板电脑</a>
+          
+            <a href="/tags/操作系统/" rel="tag">#操作系统</a>
+          
+            <a href="/tags/小组件/" rel="tag">#小组件</a>
+          
+            <a href="/tags/地图应用/" rel="tag">#地图应用</a>
+          
+            <a href="/tags/android/" rel="tag">#android</a>
+          
+            <a href="/tags/性能提升/" rel="tag">#性能提升</a>
+          
+            <a href="/tags/工具/" rel="tag">#工具</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/07/01/Android开发技巧汇总（5）/" rel="prev" title="Android开发技巧汇总（5）">
+                Android开发技巧汇总（5） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2014/06/18/提升Android平板性能的十大技巧/"
+     data-title="提升Android平板性能的十大技巧"
+     data-content=""
+     data-url="http://blog.jerryzhang.net/2014/06/18/提升Android平板性能的十大技巧/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2014/06/18/提升Android平板性能的十大技巧/"
+           data-title="提升Android平板性能的十大技巧" data-url="http://blog.jerryzhang.net/2014/06/18/提升Android平板性能的十大技巧/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/1029393?v=3&s=460"
+               alt="JerrySher" />
+          <p class="site-author-name" itemprop="name">JerrySher</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jerry0908mo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/qxjerry" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/ZhangruiJerry" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情连接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.lofei.info/" title="Lofei's Blog" target="_blank">Lofei's Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://morisunshine.com/" title="Morisunshine's Blog" target="_blank">Morisunshine's Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+          <div id="wechat_subscriber_qcode" class="feed-link motion-element">
+            <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt="JerrySher wechat" style="width: 150px; max-width: 80%;"/>
+            <div style="text-align: center">欢迎关注『程序员在读书』</div>
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android平板性能"><span class="nav-number">1.</span> <span class="nav-text">Android平板性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、卸载不常用的软件"><span class="nav-number">1.1.</span> <span class="nav-text">1、卸载不常用的软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、用完程序记得及时关掉"><span class="nav-number">1.2.</span> <span class="nav-text">2、用完程序记得及时关掉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、尽量不要使用活动壁纸"><span class="nav-number">1.3.</span> <span class="nav-text">4、尽量不要使用活动壁纸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、最好关闭地图类应用"><span class="nav-number">1.4.</span> <span class="nav-text">5、最好关闭地图类应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、没有wifi或者没有信号时关闭wifi或者移动网络"><span class="nav-number">1.5.</span> <span class="nav-text">6、没有wifi或者没有信号时关闭wifi或者移动网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、程序更新有技巧"><span class="nav-number">1.6.</span> <span class="nav-text">7、程序更新有技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、关闭动画"><span class="nav-number">1.7.</span> <span class="nav-text">8、关闭动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、移除冗余的桌面小组件"><span class="nav-number">1.8.</span> <span class="nav-text">9、移除冗余的桌面小组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、使用应用管理工具"><span class="nav-number">1.9.</span> <span class="nav-text">10、使用应用管理工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JerrySher</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jerrysher"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

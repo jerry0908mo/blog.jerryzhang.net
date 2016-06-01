@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JerrySher&#39;s Blog</title>
+  <subtitle>不断学习，不断归零 生活在这个时代，牛人都在不断的学习进步，我有什么理由停下来休息</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.jerryzhang.net/"/>
+  <updated>2016-06-01T16:12:19.000Z</updated>
+  <id>http://blog.jerryzhang.net/</id>
+  
+  <author>
+    <name>JerrySher</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android开发技巧汇总（5）</title>
+    <link href="http://blog.jerryzhang.net/2014/07/01/Android%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB%EF%BC%885%EF%BC%89/"/>
+    <id>http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/</id>
+    <published>2014-06-30T16:00:00.000Z</published>
+    <updated>2016-06-01T16:12:19.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;本文是我翻译自&lt;a href=&quot;1&quot;&gt;国外开发者Danlew博客&lt;/a&gt;上的系列文章，原文链接：&lt;a href=&quot;2&quot;&gt;Android Tips Round-Up, Part 5&lt;/a&gt;。感谢&lt;a href=&quot;3&quot;&gt;伯乐在线&lt;/a&gt;的选文、校译。本文在&lt;a href=&quot;4&quot;&gt;伯乐在线首发&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;这是我发表的Android开发技巧的最后一篇。&lt;/p&gt;
+&lt;p&gt;这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。&lt;/p&gt;
+&lt;h2 id=&quot;ViewDragHelper&quot;&gt;&lt;a href=&quot;#ViewDragHelper&quot; class=&quot;headerlink&quot; title=&quot;ViewDragHelper&quot;&gt;&lt;/a&gt;ViewDragHelper&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;5&quot;&gt;ViewDragHelper&lt;/a&gt;  视图拖动是一个比较复杂的问题，这个类可以帮助解决不少问题。如果你需要一个例子，&lt;a href=&quot;6&quot;&gt;DrawerLayout&lt;/a&gt;就是利用它实现的扫滑。 Flavient Laurent 还写了一些关于这方面的&lt;a href=&quot;http://flavienlaurent.com/blog/2013/08/28/each-navigation-drawer-hides-a-viewdraghelper/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;优秀文章&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;PopupWindow&quot;&gt;&lt;a href=&quot;#PopupWindow&quot; class=&quot;headerlink&quot; title=&quot;PopupWindow&quot;&gt;&lt;/a&gt;PopupWindow&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/widget/PopupWindow.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PopupWindow&lt;/a&gt;: Android到处都在使用PopupWindow ，甚至你都没有意识到（标题导航条ActionBar，自动补全AutoComplete，编辑框错误提醒Edittext Errors），这个类是创建浮层内容的主要方法。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;ActionBar-getThemedContext&quot;&gt;&lt;a href=&quot;#ActionBar-getThemedContext&quot; class=&quot;headerlink&quot; title=&quot;ActionBar.getThemedContext()&quot;&gt;&lt;/a&gt;ActionBar.getThemedContext()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/app/ActionBar.html#getThemedContext(&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Actionbar.getThemrContext()&lt;/a&gt;) 标题导航栏的主题化是很复杂的（不同于Activity其他部分的主题化）。你可以得到一个上下文(Context)，用这个上下文(Context)创建的自定义组件可以有正确的主题。&lt;/p&gt;
+&lt;h2 id=&quot;ThumbnailUtils&quot;&gt;&lt;a href=&quot;#ThumbnailUtils&quot; class=&quot;headerlink&quot; title=&quot;ThumbnailUtils&quot;&gt;&lt;/a&gt;ThumbnailUtils&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/media/ThumbnailUtils.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ThumbnailUtils&lt;/a&gt;【译者注：该API从V8才开始支持】帮助创建缩略图；通常我都是用现有的图片加载库（比如，Picasso 或者 Volley），不过这个ThumbnaiUtils可以创建视频缩略图。&lt;/p&gt;
+&lt;h2 id=&quot;Context-getExternalFilesDir&quot;&gt;&lt;a href=&quot;#Context-getExternalFilesDir&quot; class=&quot;headerlink&quot; title=&quot;Context.getExternalFilesDir()&quot;&gt;&lt;/a&gt;Context.getExternalFilesDir()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Context.html#getExternalFilesDir(java.lang.String&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Context.getExternalFilesDir()&lt;/a&gt;)【译者注：该API从V8才开始支持】 申请了SD卡写权限后，你可以在SD的任何地方写数据，把你的数据写在设计好的合适位置会更加有礼貌。这样数据可以及时被清理，也会有更好的用户体验。此外在，Android 4.0 Kitkat 上在这个文件夹下写数据是不需要权限的，每个用户有自己的独立的数据存储路径。&lt;/p&gt;
+&lt;h2 id=&quot;SparseArray&quot;&gt;&lt;a href=&quot;#SparseArray&quot; class=&quot;headerlink&quot; title=&quot;SparseArray&quot;&gt;&lt;/a&gt;SparseArray&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/util/SparseArray.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SparseArray&lt;/a&gt;：Map&lt;integer,object&gt;的高效优化版本。推荐了解姐妹类SparseBooleanArray，SparseIntArray和SparseLongArray。&lt;/integer,object&gt;&lt;/p&gt;
+&lt;h2 id=&quot;PackageManager-setComponentEnabledSetting&quot;&gt;&lt;a href=&quot;#PackageManager-setComponentEnabledSetting&quot; class=&quot;headerlink&quot; title=&quot;PackageManager.setComponentEnabledSetting()&quot;&gt;&lt;/a&gt;PackageManager.setComponentEnabledSetting()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/pm/PackageManager.html#setComponentEnabledSetting(android.content.ComponentName,%20int,%20int&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PackageManager.setComponentEnabledSetting()&lt;/a&gt;)可以用来启动或者禁用程序清单中的组件。 这个对于关闭不需要的功能组件是非常赞的。比如,关掉一个当前不用的广播接收器。&lt;/p&gt;
+&lt;h2 id=&quot;SQLiteDatabase-yieldIfContendedSafely&quot;&gt;&lt;a href=&quot;#SQLiteDatabase-yieldIfContendedSafely&quot; class=&quot;headerlink&quot; title=&quot;SQLiteDatabase.yieldIfContendedSafely()&quot;&gt;&lt;/a&gt;SQLiteDatabase.yieldIfContendedSafely()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html#yieldIfContendedSafely(&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SQLiteDatabase.yieldIfContendedSafely()&lt;/a&gt;)让你暂时停止一个数据库事务， 这样你可以就不会占用太多的系统资源。&lt;/p&gt;
+&lt;h2 id=&quot;Environment-getExternalStoragePublicDirectory&quot;&gt;&lt;a href=&quot;#Environment-getExternalStoragePublicDirectory&quot; class=&quot;headerlink&quot; title=&quot;Environment.getExternalStoragePublicDirectory()&quot;&gt;&lt;/a&gt;Environment.getExternalStoragePublicDirectory()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/os/Environment.html#getExternalStoragePublicDirectory(java.lang.String&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Environment.getExternalStoragePublicDirectory()&lt;/a&gt;：还是那句话，用户期望在SD卡上得到统一的用户体验，用这个方法可以获得在用户设备上放置指定类型文件（音乐，图片等）的正确目录。&lt;/p&gt;
+&lt;h2 id=&quot;View-generateViewId&quot;&gt;&lt;a href=&quot;#View-generateViewId&quot; class=&quot;headerlink&quot; title=&quot;View.generateViewId()&quot;&gt;&lt;/a&gt;View.generateViewId()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/view/View.html#generateViewId(&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;View.generateViewId()&lt;/a&gt;)每次我都想要推荐动态生成控件的ID.需要注意的是，不要和已经存在的控件ID或者其他已经生成的控件ID重复。&lt;/p&gt;
+&lt;h2 id=&quot;ActivityManager-clearApplicationUserData&quot;&gt;&lt;a href=&quot;#ActivityManager-clearApplicationUserData&quot; class=&quot;headerlink&quot; title=&quot;ActivityManager.clearApplicationUserData()&quot;&gt;&lt;/a&gt;ActivityManager.clearApplicationUserData()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/app/ActivityManager.html#clearApplicationUserData(&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ActivityManager.clearApplicationUserData()&lt;/a&gt;) 一键清理你的app产生的用户数据，可能是做用户退出登录功能，有史以来最简单的方式了。&lt;/p&gt;
+&lt;h2 id=&quot;Context-createConfigurationContext&quot;&gt;&lt;a href=&quot;#Context-createConfigurationContext&quot; class=&quot;headerlink&quot; title=&quot;Context.createConfigurationContext()&quot;&gt;&lt;/a&gt;Context.createConfigurationContext()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://developer.android.com/reference/android/content/Context.html#createConfigurationContext(android.content.res.Configuration&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Context.createConfigurationContext()&lt;/a&gt;) - 自定义你的配置环境信息，我通常会遇到这样的问题：强制让一部分显示在某个特定的环境下（倒不是我一直这样瞎整，说来话长，你很难理解）。用这个可以实现起来稍微简单一点。&lt;/p&gt;
+&lt;h2 id=&quot;ActivityOptions&quot;&gt;&lt;a href=&quot;#ActivityOptions&quot; class=&quot;headerlink&quot; title=&quot;ActivityOptions&quot;&gt;&lt;/a&gt;ActivityOptions&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://developer.android.com/reference/android/app/ActivityOptions.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ActivityOptions&lt;/a&gt; - 方便的定义两个Activity切换的动画。 使用&lt;a href=&quot;http://developer.android.com/reference/android/support/v4/app/ActivityOptionsCompat.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ActivityOptionsCompat&lt;/a&gt; 可以很好解决旧版本的兼容问题。&lt;/p&gt;
+&lt;h2 id=&quot;AdapterViewFlipper-fyiWillBeAdvancedByHostKThx&quot;&gt;&lt;a href=&quot;#AdapterViewFlipper-fyiWillBeAdvancedByHostKThx&quot; class=&quot;headerlink&quot; title=&quot;AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()&quot;&gt;&lt;/a&gt;AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://developer.android.com/reference/android/widget/AdapterViewFlipper.html#fyiWillBeAdvancedByHostKThx%28%29&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()&lt;/a&gt;【译者注：该API从V11才开始支持】- 仅仅因为很好玩，没有其他原因。在整个安卓开源项目中(AOSP the Android Open Source Project Android开放源代码项目)中还有其他很有意思的东西（比如 &lt;a href=&quot;http://developer.android.com/reference/android/hardware/SensorManager.html#GRAVITY_DEATH_STAR_I&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GRAVITY_DEATH_STAR_I&lt;/a&gt;），不过，都不像这个这样，这个确实有用。&lt;/p&gt;
+&lt;h2 id=&quot;ViewParent-requestDisallowInterceptTouchEvent&quot;&gt;&lt;a href=&quot;#ViewParent-requestDisallowInterceptTouchEvent&quot; class=&quot;headerlink&quot; title=&quot;ViewParent.requestDisallowInterceptTouchEvent()&quot;&gt;&lt;/a&gt;ViewParent.requestDisallowInterceptTouchEvent()&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://developer.android.com/reference/android/view/ViewParent.html#requestDisallowInterceptTouchEvent%28boolean%29&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ViewParent.requestDisallowInterceptTouchEvent()&lt;/a&gt; - Android系统触摸事件机制大多时候能够默认处理，不过有时候你需要使用这个方法来剥夺父一级控件的控制权（顺便，如果你想对Android触摸机制了解更多，&lt;a href=&quot;https://www.youtube.com/watch?v=EZAoJU-nUyI&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这个演讲&lt;/a&gt;会令你惊叹不已。) &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文是我翻译自&lt;a href=&quot;1&quot;&gt;国外开发者Danlew博客&lt;/a&gt;上的系列文章，原文链接：&lt;a href=&quot;2&quot;&gt;Android Tips Round-Up, Part 5&lt;/a&gt;。感谢&lt;a href=&quot;3&quot;&gt;伯乐在线&lt;/a&gt;的选文、校译。本文在&lt;a href=&quot;4&quot;&gt;伯乐在线首发&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;这是我发表的Android开发技巧的最后一篇。&lt;/p&gt;
+&lt;p&gt;这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。&lt;/p&gt;
+&lt;h2 id=&quot;ViewDragHelper&quot;&gt;&lt;a href=&quot;#ViewDragHelper&quot; class=&quot;headerlink&quot; title=&quot;ViewDragHelper&quot;&gt;&lt;/a&gt;ViewDragHelper&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;5&quot;&gt;ViewDragHelper&lt;/a&gt;  视图拖动是一个比较复杂的问题，这个类可以帮助解决不少问题。如果你需要一个例子，&lt;a href=&quot;6&quot;&gt;DrawerLayout&lt;/a&gt;就是利用它实现的扫滑。 Flavient Laurent 还写了一些关于这方面的&lt;a href=&quot;http://flavienlaurent.com/blog/2013/08/28/each-navigation-drawer-hides-a-viewdraghelper/&quot;&gt;优秀文章&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;PopupWindow&quot;&gt;&lt;a href=&quot;#PopupWindow&quot; class=&quot;headerlink&quot; title=&quot;PopupWindow&quot;&gt;&lt;/a&gt;PopupWindow&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/widget/PopupWindow.html&quot;&gt;PopupWindow&lt;/a&gt;: Android到处都在使用PopupWindow ，甚至你都没有意识到（标题导航条ActionBar，自动补全AutoComplete，编辑框错误提醒Edittext Errors），这个类是创建浮层内容的主要方法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="翻译" scheme="http://blog.jerryzhang.net/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="视频" scheme="http://blog.jerryzhang.net/tags/%E8%A7%86%E9%A2%91/"/>
+    
+      <category term="SparseArray" scheme="http://blog.jerryzhang.net/tags/SparseArray/"/>
+    
+      <category term="缩略图" scheme="http://blog.jerryzhang.net/tags/%E7%BC%A9%E7%95%A5%E5%9B%BE/"/>
+    
+      <category term="android开发" scheme="http://blog.jerryzhang.net/tags/android%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="控件拖动" scheme="http://blog.jerryzhang.net/tags/%E6%8E%A7%E4%BB%B6%E6%8B%96%E5%8A%A8/"/>
+    
+      <category term="数据库事务" scheme="http://blog.jerryzhang.net/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/"/>
+    
+      <category term="Activity" scheme="http://blog.jerryzhang.net/tags/Activity/"/>
+    
+      <category term="TouchEvent" scheme="http://blog.jerryzhang.net/tags/TouchEvent/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提升Android平板性能的十大技巧</title>
+    <link href="http://blog.jerryzhang.net/2014/06/18/%E6%8F%90%E5%8D%87Android%E5%B9%B3%E6%9D%BF%E6%80%A7%E8%83%BD%E7%9A%84%E5%8D%81%E5%A4%A7%E6%8A%80%E5%B7%A7/"/>
+    <id>http://blog.jerryzhang.net/2014/06/18/提升Android平板性能的十大技巧/</id>
+    <published>2014-06-17T16:00:00.000Z</published>
+    <updated>2016-06-01T16:55:30.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;本文是我翻译自&lt;a href=&quot;http://www.fromdev.com/&quot; title=&quot;fromdev&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fromdev&lt;/a&gt; 的文章，原文链接：&lt;a href=&quot;http://www.fromdev.com/2014/04/android-tablet-performance-tips.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;10 Performance Tips to Speed Up Your Android Tablet&lt;/a&gt; 。感谢&lt;a href=&quot;http://blog.jobbole.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线&lt;/a&gt;的选文、校译。本文在&lt;a href=&quot;http://blog.jobbole.com/69974/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线首发&lt;/a&gt; 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://3.bp.blogspot.com/-Ow2fEza0zNs/U10dXPWw5eI/AAAAAAAACZ4/dPDh72TfndI/s640/android-tablet.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;不同的Android平板运行在不同厂商的不同设备、不同操作系统上。因此，Android平板的性能提升就需要考虑各自的差异化特性以及他们的工作原理。此外，早期3.0版本以前的android操作系统，没有适配平板设备，更多采用的是智能手机的技术。因此也需要做特别的对待。&lt;/p&gt;
+&lt;h2 id=&quot;Android平板性能&quot;&gt;&lt;a href=&quot;#Android平板性能&quot; class=&quot;headerlink&quot; title=&quot;Android平板性能&quot;&gt;&lt;/a&gt;Android平板性能&lt;/h2&gt;&lt;p&gt;『一分价钱一分货』，Android应用程序也是如此。很多Android应用都需要额外付费。可惜，Android用户不像iOS用户那样有大量的应用程序可供购买使用。苹果应用商店目前拥有超过40万款应用程序，其中超过9万款是iPad程序。&lt;/p&gt;
+&lt;p&gt;在Android设备上用户可以安装使用任何一款发布在android市场的应用。 Android的另外一个优点是允许其他来源的应用程序安装，不过这样也提高了恶意软件的风险。&lt;/p&gt;
+&lt;h3 id=&quot;1、卸载不常用的软件&quot;&gt;&lt;a href=&quot;#1、卸载不常用的软件&quot; class=&quot;headerlink&quot; title=&quot;1、卸载不常用的软件&quot;&gt;&lt;/a&gt;1、卸载不常用的软件&lt;/h3&gt;&lt;p&gt;下载的应用程序会占存储空间。因此卸载不用的应用程序减少占用的存储空间，会对提升Android设备的性能和速度有帮助。&lt;/p&gt;
+&lt;h3 id=&quot;2、用完程序记得及时关掉&quot;&gt;&lt;a href=&quot;#2、用完程序记得及时关掉&quot; class=&quot;headerlink&quot; title=&quot;2、用完程序记得及时关掉&quot;&gt;&lt;/a&gt;2、用完程序记得及时关掉&lt;/h3&gt;&lt;p&gt;如果在后台有很多程序在运行，设备运行效率会降低。因此，不用程序时一定记得关掉。这样可以释放内存，获得更多的工作空间。最好下载一个可以一键关掉所有应用程序的软件。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;###3、不同的应用程序占用不同的内存和空间大小&lt;/p&gt;
+&lt;p&gt;建议下载占用空间小的应用程序。如果要下载占用空间大的程序，必须有足够的理由说明它的好处。另外，应用程序不是被下载到SD卡上，而是会占用你的内部存储空间，这点大多人经常搞错。这样内存和存储空间大小可以得到优化。&lt;/p&gt;
+&lt;h3 id=&quot;4、尽量不要使用活动壁纸&quot;&gt;&lt;a href=&quot;#4、尽量不要使用活动壁纸&quot; class=&quot;headerlink&quot; title=&quot;4、尽量不要使用活动壁纸&quot;&gt;&lt;/a&gt;4、尽量不要使用活动壁纸&lt;/h3&gt;&lt;p&gt;没错，活动壁纸看起来漂亮。不过它会让你的设备越来越慢，尽量不要用。最好使用普通壁纸，这样还可以延长电池寿命。所以，最好不要使用外部壁纸或者屏幕保护程序，坚持使用系统自带应用。&lt;/p&gt;
+&lt;h3 id=&quot;5、最好关闭地图类应用&quot;&gt;&lt;a href=&quot;#5、最好关闭地图类应用&quot; class=&quot;headerlink&quot; title=&quot;5、最好关闭地图类应用&quot;&gt;&lt;/a&gt;5、最好关闭地图类应用&lt;/h3&gt;&lt;p&gt;设备启动的时候地图类应用就会启动，特别是在有网络的时候，GPS也会启动。这样会尤其消耗内存。这些都有双重伤害，既损耗电池寿命又降低设备性能。&lt;/p&gt;
+&lt;h3 id=&quot;6、没有wifi或者没有信号时关闭wifi或者移动网络&quot;&gt;&lt;a href=&quot;#6、没有wifi或者没有信号时关闭wifi或者移动网络&quot; class=&quot;headerlink&quot; title=&quot;6、没有wifi或者没有信号时关闭wifi或者移动网络&quot;&gt;&lt;/a&gt;6、没有wifi或者没有信号时关闭wifi或者移动网络&lt;/h3&gt;&lt;p&gt;这两种情况都会降低设备性能，损耗电池寿命。关闭后还可以减少手机内存占用。&lt;/p&gt;
+&lt;h3 id=&quot;7、程序更新有技巧&quot;&gt;&lt;a href=&quot;#7、程序更新有技巧&quot; class=&quot;headerlink&quot; title=&quot;7、程序更新有技巧&quot;&gt;&lt;/a&gt;7、程序更新有技巧&lt;/h3&gt;&lt;p&gt;最好手动更新应用程序，不要让程序自动更新。&lt;/p&gt;
+&lt;h3 id=&quot;8、关闭动画&quot;&gt;&lt;a href=&quot;#8、关闭动画&quot; class=&quot;headerlink&quot; title=&quot;8、关闭动画&quot;&gt;&lt;/a&gt;8、关闭动画&lt;/h3&gt;&lt;p&gt;动画看起来很炫，如果长时间使用的话它们会特别消耗设备性能。在平板的设置中关掉动画，这样可以得到更好的性能。&lt;/p&gt;
+&lt;h3 id=&quot;9、移除冗余的桌面小组件&quot;&gt;&lt;a href=&quot;#9、移除冗余的桌面小组件&quot; class=&quot;headerlink&quot; title=&quot;9、移除冗余的桌面小组件&quot;&gt;&lt;/a&gt;9、移除冗余的桌面小组件&lt;/h3&gt;&lt;p&gt;桌面小组件会消耗内存，所以尽量少用桌面小组件。长期看来，这么做可以提高设备性能。&lt;/p&gt;
+&lt;h3 id=&quot;10、使用应用管理工具&quot;&gt;&lt;a href=&quot;#10、使用应用管理工具&quot; class=&quot;headerlink&quot; title=&quot;10、使用应用管理工具&quot;&gt;&lt;/a&gt;10、使用应用管理工具&lt;/h3&gt;&lt;p&gt;应用管理工具可以删除文件缓存、浏览器记录以及其他垃圾文件，还可以清理后台运行的应用。定期清理和管理你的平板设备可以显著提升设备性能。&lt;/p&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;总之，必须清楚地知道平板到底是用来干什么。实际上，Android 3.0的平板依赖几个硬件和软件要素。需要什么样的应用程序、用来干什么，也是一个需要考虑的主要因素。Android平板的性能提升需要等待应用程序和操作系统的升级。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文是我翻译自&lt;a href=&quot;http://www.fromdev.com/&quot; title=&quot;fromdev&quot;&gt;fromdev&lt;/a&gt; 的文章，原文链接：&lt;a href=&quot;http://www.fromdev.com/2014/04/android-tablet-performance-tips.html&quot;&gt;10 Performance Tips to Speed Up Your Android Tablet&lt;/a&gt; 。感谢&lt;a href=&quot;http://blog.jobbole.com/&quot;&gt;伯乐在线&lt;/a&gt;的选文、校译。本文在&lt;a href=&quot;http://blog.jobbole.com/69974/&quot;&gt;伯乐在线首发&lt;/a&gt; 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://3.bp.blogspot.com/-Ow2fEza0zNs/U10dXPWw5eI/AAAAAAAACZ4/dPDh72TfndI/s640/android-tablet.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;不同的Android平板运行在不同厂商的不同设备、不同操作系统上。因此，Android平板的性能提升就需要考虑各自的差异化特性以及他们的工作原理。此外，早期3.0版本以前的android操作系统，没有适配平板设备，更多采用的是智能手机的技术。因此也需要做特别的对待。&lt;/p&gt;
+&lt;h2 id=&quot;Android平板性能&quot;&gt;&lt;a href=&quot;#Android平板性能&quot; class=&quot;headerlink&quot; title=&quot;Android平板性能&quot;&gt;&lt;/a&gt;Android平板性能&lt;/h2&gt;&lt;p&gt;『一分价钱一分货』，Android应用程序也是如此。很多Android应用都需要额外付费。可惜，Android用户不像iOS用户那样有大量的应用程序可供购买使用。苹果应用商店目前拥有超过40万款应用程序，其中超过9万款是iPad程序。&lt;/p&gt;
+&lt;p&gt;在Android设备上用户可以安装使用任何一款发布在android市场的应用。 Android的另外一个优点是允许其他来源的应用程序安装，不过这样也提高了恶意软件的风险。&lt;/p&gt;
+&lt;h3 id=&quot;1、卸载不常用的软件&quot;&gt;&lt;a href=&quot;#1、卸载不常用的软件&quot; class=&quot;headerlink&quot; title=&quot;1、卸载不常用的软件&quot;&gt;&lt;/a&gt;1、卸载不常用的软件&lt;/h3&gt;&lt;p&gt;下载的应用程序会占存储空间。因此卸载不用的应用程序减少占用的存储空间，会对提升Android设备的性能和速度有帮助。&lt;/p&gt;
+&lt;h3 id=&quot;2、用完程序记得及时关掉&quot;&gt;&lt;a href=&quot;#2、用完程序记得及时关掉&quot; class=&quot;headerlink&quot; title=&quot;2、用完程序记得及时关掉&quot;&gt;&lt;/a&gt;2、用完程序记得及时关掉&lt;/h3&gt;&lt;p&gt;如果在后台有很多程序在运行，设备运行效率会降低。因此，不用程序时一定记得关掉。这样可以释放内存，获得更多的工作空间。最好下载一个可以一键关掉所有应用程序的软件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="翻译" scheme="http://blog.jerryzhang.net/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="平板电脑" scheme="http://blog.jerryzhang.net/tags/%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%84%91/"/>
+    
+      <category term="操作系统" scheme="http://blog.jerryzhang.net/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="小组件" scheme="http://blog.jerryzhang.net/tags/%E5%B0%8F%E7%BB%84%E4%BB%B6/"/>
+    
+      <category term="地图应用" scheme="http://blog.jerryzhang.net/tags/%E5%9C%B0%E5%9B%BE%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="android" scheme="http://blog.jerryzhang.net/tags/android/"/>
+    
+      <category term="性能提升" scheme="http://blog.jerryzhang.net/tags/%E6%80%A7%E8%83%BD%E6%8F%90%E5%8D%87/"/>
+    
+      <category term="工具" scheme="http://blog.jerryzhang.net/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+</feed>
