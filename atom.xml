@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jerryzhang.net/"/>
-  <updated>2016-06-01T16:12:19.000Z</updated>
+  <updated>2016-06-10T15:58:00.000Z</updated>
   <id>http://blog.jerryzhang.net/</id>
   
   <author>
@@ -14,6 +14,187 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个老鸟发的公司内部整理的 Android 学习路线图 Markdown 版本</title>
+    <link href="http://blog.jerryzhang.net/2016/06/10/%E4%B8%80%E4%B8%AA%E8%80%81%E9%B8%9F%E5%8F%91%E7%9A%84%E5%85%AC%E5%8F%B8%E5%86%85%E9%83%A8%E6%95%B4%E7%90%86%E7%9A%84-Android-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE-Markdown-%E7%89%88%E6%9C%AC/"/>
+    <id>http://blog.jerryzhang.net/2016/06/10/一个老鸟发的公司内部整理的-Android-学习路线图-Markdown-版本/</id>
+    <published>2016-06-10T15:34:54.000Z</published>
+    <updated>2016-06-10T15:58:00.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;这篇文章不是原创，是根据 &lt;a href=&quot;http://www.diycode.cc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DiyCode&lt;/a&gt; 社区看到&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一篇学习Android路线&lt;/a&gt;，整理成 Markdown 格式。我直接转帖到我的博客，方便自己学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;发了一篇&lt;code&gt;一个老鸟也发了一份他给公司内部小伙伴整理的路线图&lt;/code&gt;。&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt;。可惜不是MarkDown格式的，所以&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;直接上传的截图，在&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;的呼吁下，我花了些时间，把这篇大牛的推荐清单编辑成了Markdown格式，方便大家浏览，学习。&lt;/p&gt;
+&lt;p&gt;有一些链接可能还不是特别准确，因为我只能根据图片上的书或者资源的名字去Google可能的书籍，所以链接上有什么不对的，欢迎大家评论指出，我会及时更正。请参考原文：&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt; 帮助修改。谢谢。 &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基础工具部分： 中文手册，我猜测是Maven中文手册，可是我并没有找到这样的资源，欢迎知道的朋友告诉我；&lt;/li&gt;
+&lt;li&gt;Android部分有 『第三方库集合』，我没能找到资源地址；&lt;/li&gt;
+&lt;li&gt;书籍我大多是给的豆瓣链接，如果觉得不合适可以替换一下；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;关于Markdown表格&quot;&gt;&lt;a href=&quot;#关于Markdown表格&quot; class=&quot;headerlink&quot; title=&quot;关于Markdown表格&quot;&gt;&lt;/a&gt;关于Markdown表格&lt;/h4&gt;&lt;p&gt;本来我一开始整理了一份表格版本的, 用 Mou 写的，表格内的换行用&lt;br&gt;标签处理的，但是在DiyCode上来发的时候，发现Markdown表格内部不支持&lt;br&gt;标签换行，所以就只能整理成平铺的文档格式。&lt;del&gt;Markdown对于表格的支持不是很强大。&lt;/del&gt; &lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;程序设计&quot;&gt;&lt;a href=&quot;#程序设计&quot; class=&quot;headerlink&quot; title=&quot;程序设计&quot;&gt;&lt;/a&gt;程序设计&lt;/h1&gt;&lt;h3 id=&quot;一、java&quot;&gt;&lt;a href=&quot;#一、java&quot; class=&quot;headerlink&quot; title=&quot;一、java&quot;&gt;&lt;/a&gt;一、java&lt;/h3&gt;&lt;h4 id=&quot;（a）基本语法-如继承、异常、引用、泛型等&quot;&gt;&lt;a href=&quot;#（a）基本语法-如继承、异常、引用、泛型等&quot; class=&quot;headerlink&quot; title=&quot;（a）基本语法(如继承、异常、引用、泛型等)&quot;&gt;&lt;/a&gt;（a）基本语法(如继承、异常、引用、泛型等)&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/25762168/&quot; title=&quot;Java核心技术 卷I&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java核心技术 卷I&lt;/a&gt;（适合入门）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/3360807/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Effective Java中文版&lt;/a&gt;（如何写好的Java代码）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/5362860&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java解惑&lt;/a&gt; （介绍烂Java代码是什么样的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;（b）多线程、并发&quot;&gt;&lt;a href=&quot;#（b）多线程、并发&quot; class=&quot;headerlink&quot; title=&quot;（b）多线程、并发&quot;&gt;&lt;/a&gt;（b）多线程、并发&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/10484692/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java并发编程实战&lt;/a&gt; （系统全面的介绍了Java的并发，如何设计支持并发的数据结构）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;（c）Java-7&quot;&gt;&lt;a href=&quot;#（c）Java-7&quot; class=&quot;headerlink&quot; title=&quot;（c）Java 7&quot;&gt;&lt;/a&gt;（c）Java 7&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/24841235/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java程序员修炼之道&lt;/a&gt; （详细的介绍Java 7 的新特性） &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;（d）Java-8&quot;&gt;&lt;a href=&quot;#（d）Java-8&quot; class=&quot;headerlink&quot; title=&quot;（d）Java 8&quot;&gt;&lt;/a&gt;（d）Java 8&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/26274206/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;写给大忙人看的Java SE 8&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/26587213/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;函数式编程思维&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;（e）Java虚拟机&quot;&gt;&lt;a href=&quot;#（e）Java虚拟机&quot; class=&quot;headerlink&quot; title=&quot;（e）Java虚拟机&quot;&gt;&lt;/a&gt;（e）Java虚拟机&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/24722612/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深入理解Java虚拟机&lt;/a&gt; （并不是那么难，Java程序员都该看看）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;（f）性能优化&quot;&gt;&lt;a href=&quot;#（f）性能优化&quot; class=&quot;headerlink&quot; title=&quot;（f）性能优化&quot;&gt;&lt;/a&gt;（f）性能优化&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/25828043/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java性能优化权威指南&lt;/a&gt; （后面的章节好像用处不大，前面有些部分还是值得看）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;二、算法与数据结构&quot;&gt;&lt;a href=&quot;#二、算法与数据结构&quot; class=&quot;headerlink&quot; title=&quot;二、算法与数据结构&quot;&gt;&lt;/a&gt;二、算法与数据结构&lt;/h3&gt;&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;算法时间复杂度、空间复杂度的基本认知 &lt;/li&gt;
+&lt;li&gt;熟悉常用数据结构：链表、队列、散列表、树等；&lt;/li&gt;
+&lt;li&gt;递归、分支等基本思想；&lt;/li&gt;
+&lt;li&gt;常用算法应用：排序、查找、比较等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/1139426/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数据结构与算法分析&lt;/a&gt; （涵盖面比较全、示例是Java语言）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/26337727/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;算法设计与分析基础&lt;/a&gt; （实用主义的典型、偏算法设计）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/3227098/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;编程珠玑&lt;/a&gt; （实践型算法数据）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;三、操作系统&quot;&gt;&lt;a href=&quot;#三、操作系统&quot; class=&quot;headerlink&quot; title=&quot;三、操作系统&quot;&gt;&lt;/a&gt;三、操作系统&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;对Linux/OS的基本认知&lt;/li&gt;
+&lt;li&gt;Linux的常用命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/4889838/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;鸟哥的Linux私房菜&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/6097773/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux内核设计与实现(原书第3版)&lt;/a&gt; （很精炼的语言描述清楚了内核算法）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;四、网络&quot;&gt;&lt;a href=&quot;#四、网络&quot; class=&quot;headerlink&quot; title=&quot;四、网络&quot;&gt;&lt;/a&gt;四、网络&lt;/h3&gt;&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Http/Https&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP/IP&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/25863515/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;图解HTTP&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/24737674/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;图解TCP/IP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/1088054/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TCP/IP详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;五、Android&quot;&gt;&lt;a href=&quot;#五、Android&quot; class=&quot;headerlink&quot; title=&quot;五、Android&quot;&gt;&lt;/a&gt;五、Android&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;四大组件（服务、广播、ContentProvider、页面容器）&lt;/li&gt;
+&lt;li&gt;基础UI组件（ListView、ViewPager）&lt;/li&gt;
+&lt;li&gt;异步任务机制（AsyncTask、Handler、线程池）&lt;/li&gt;
+&lt;li&gt;布局优化（层级、绘制、碎片化处理）&lt;/li&gt;
+&lt;li&gt;图片加载（Bitmap、缓冲区）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/googlesamples/android-UniversalMusicPlayer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UniversalMusicePlayer&lt;/a&gt; (通过学习一个音乐播放器的代码能很快了解四大组件) &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hukai.me/android-training-course-in-chinese/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Training官方课程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/FX-Max/Point-of-Android&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android一些重要知识点解析整理&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wasabeef/awesome-android-ui&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android UI/UX库&lt;/a&gt;（各类常用组件及扩展组件的集合）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://square.github.io/picasso/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Picasso&lt;/a&gt; 、 &lt;a href=&quot;https://github.com/bumptech/glide&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Glide&lt;/a&gt; （两个图片加载库）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/google/iosched&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Google I/O 2015 Android App&lt;/a&gt; (Google大会官方的App，适合学习各类实现) &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.devtf.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android开发技术前线&lt;/a&gt; （定期翻译、发布国内外Android优质的技术、开源库、软件架构设计、测试等文章）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wasabeef/awesome-android-libraries&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三方库集合&lt;/a&gt; （列举了常见的各方向第三方库）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;软件工程&quot;&gt;&lt;a href=&quot;#软件工程&quot; class=&quot;headerlink&quot; title=&quot;软件工程&quot;&gt;&lt;/a&gt;软件工程&lt;/h1&gt;&lt;h3 id=&quot;一、基础工具&quot;&gt;&lt;a href=&quot;#一、基础工具&quot; class=&quot;headerlink&quot; title=&quot;一、基础工具&quot;&gt;&lt;/a&gt;一、基础工具&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;IDE、Git、Maven&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/studio/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndroidStudio&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://iissnan.com/progit/html/zh/ch1_0.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git权威指南中文手册&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;二、软件质量&quot;&gt;&lt;a href=&quot;#二、软件质量&quot; class=&quot;headerlink&quot; title=&quot;二、软件质量&quot;&gt;&lt;/a&gt;二、软件质量&lt;/h3&gt;&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码整洁 &lt;/li&gt;
+&lt;li&gt;码质量 &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;码重构 &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/10797189/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;编写可读代码的艺术&lt;/a&gt; （来自Google工程师，专注于代码可读性）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/4199741/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码整洁之道&lt;/a&gt;（使用面向对象+敏捷开发原则编写清晰可维护的代码）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/4262627/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;重构-改善既有代码的设计&lt;/a&gt; （学习改善已有代码）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/1173730/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;重构手册&lt;/a&gt; （改善代码的实际操作）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;三、设计模式&quot;&gt;&lt;a href=&quot;#三、设计模式&quot; class=&quot;headerlink&quot; title=&quot;三、设计模式&quot;&gt;&lt;/a&gt;三、设计模式&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;23种常见设计模式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/2334288/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;大话设计模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/2243615/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Head First设计模式&lt;/a&gt;(两本入门级的设计模式书籍)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/1052241/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;设计模式-可复用面向对象软件的基础&lt;/a&gt;（设计模式在实际中的应用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;四、敏捷开发&quot;&gt;&lt;a href=&quot;#四、敏捷开发&quot; class=&quot;headerlink&quot; title=&quot;四、敏捷开发&quot;&gt;&lt;/a&gt;四、敏捷开发&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/1790225/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;解析极限编程&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/4037534/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;敏捷开发的艺术&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;进阶&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/5348122/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;敏捷软件开发-原则、模式与实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;五、专业开发&quot;&gt;&lt;a href=&quot;#五、专业开发&quot; class=&quot;headerlink&quot; title=&quot;五、专业开发&quot;&gt;&lt;/a&gt;五、专业开发&lt;/h3&gt;&lt;p&gt;&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;序员职业素养&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更高效、更实效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/11614538/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员的是职业素养&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/5387402/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员修炼之道-从小工到专家&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;六、思考人生&quot;&gt;&lt;a href=&quot;#六、思考人生&quot; class=&quot;headerlink&quot; title=&quot;六、思考人生&quot;&gt;&lt;/a&gt;六、思考人生&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/6021440/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;黑客与画家&lt;/a&gt; (硅谷创业之父Paul Craham 的文集，主要介绍黑客及优秀程序员的爱好和动机)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这篇文章不是原创，是根据 &lt;a href=&quot;http://www.diycode.cc/&quot;&gt;DiyCode&lt;/a&gt; 社区看到&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;一篇学习Android路线&lt;/a&gt;，整理成 Markdown 格式。我直接转帖到我的博客，方便自己学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;发了一篇&lt;code&gt;一个老鸟也发了一份他给公司内部小伙伴整理的路线图&lt;/code&gt;。&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt;。可惜不是MarkDown格式的，所以&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;直接上传的截图，在&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;的呼吁下，我花了些时间，把这篇大牛的推荐清单编辑成了Markdown格式，方便大家浏览，学习。&lt;/p&gt;
+&lt;p&gt;有一些链接可能还不是特别准确，因为我只能根据图片上的书或者资源的名字去Google可能的书籍，所以链接上有什么不对的，欢迎大家评论指出，我会及时更正。请参考原文：&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt; 帮助修改。谢谢。 &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基础工具部分： 中文手册，我猜测是Maven中文手册，可是我并没有找到这样的资源，欢迎知道的朋友告诉我；&lt;/li&gt;
+&lt;li&gt;Android部分有 『第三方库集合』，我没能找到资源地址；&lt;/li&gt;
+&lt;li&gt;书籍我大多是给的豆瓣链接，如果觉得不合适可以替换一下；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;关于Markdown表格&quot;&gt;&lt;a href=&quot;#关于Markdown表格&quot; class=&quot;headerlink&quot; title=&quot;关于Markdown表格&quot;&gt;&lt;/a&gt;关于Markdown表格&lt;/h4&gt;&lt;p&gt;本来我一开始整理了一份表格版本的, 用 Mou 写的，表格内的换行用&lt;br/&gt;标签处理的，但是在DiyCode上来发的时候，发现Markdown表格内部不支持&lt;br/&gt;标签换行，所以就只能整理成平铺的文档格式。&lt;del&gt;Markdown对于表格的支持不是很强大。&lt;/del&gt; &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="整理" scheme="http://blog.jerryzhang.net/categories/%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="Android" scheme="http://blog.jerryzhang.net/tags/Android/"/>
+    
+      <category term="书单" scheme="http://blog.jerryzhang.net/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+      <category term="推荐" scheme="http://blog.jerryzhang.net/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+  </entry>
   
   <entry>
     <title>Android开发技巧汇总（5）</title>
