@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jerryzhang.net/"/>
-  <updated>2016-06-10T15:58:00.000Z</updated>
+  <updated>2016-06-10T16:03:53.000Z</updated>
   <id>http://blog.jerryzhang.net/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <link href="http://blog.jerryzhang.net/2016/06/10/%E4%B8%80%E4%B8%AA%E8%80%81%E9%B8%9F%E5%8F%91%E7%9A%84%E5%85%AC%E5%8F%B8%E5%86%85%E9%83%A8%E6%95%B4%E7%90%86%E7%9A%84-Android-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE-Markdown-%E7%89%88%E6%9C%AC/"/>
     <id>http://blog.jerryzhang.net/2016/06/10/一个老鸟发的公司内部整理的-Android-学习路线图-Markdown-版本/</id>
     <published>2016-06-10T15:34:54.000Z</published>
-    <updated>2016-06-10T15:58:00.000Z</updated>
+    <updated>2016-06-10T16:03:53.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;这篇文章不是原创，是根据 &lt;a href=&quot;http://www.diycode.cc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DiyCode&lt;/a&gt; 社区看到&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一篇学习Android路线&lt;/a&gt;，整理成 Markdown 格式。我直接转帖到我的博客，方便自己学习。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;发了一篇&lt;code&gt;一个老鸟也发了一份他给公司内部小伙伴整理的路线图&lt;/code&gt;。&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt;。可惜不是MarkDown格式的，所以&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;直接上传的截图，在&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;的呼吁下，我花了些时间，把这篇大牛的推荐清单编辑成了Markdown格式，方便大家浏览，学习。&lt;/p&gt;
-&lt;p&gt;有一些链接可能还不是特别准确，因为我只能根据图片上的书或者资源的名字去Google可能的书籍，所以链接上有什么不对的，欢迎大家评论指出，我会及时更正。请参考原文：&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt; 帮助修改。谢谢。 &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;发了一篇&lt;code&gt;一个老鸟也发了一份他给公司内部小伙伴整理的路线图&lt;/code&gt;。&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt;。可惜不是 MarkDown 格式的，所以&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;直接上传的截图，在&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jixiaohua&lt;/a&gt;的呼吁下，我花了些时间，把这篇大牛的推荐清单编辑成了 Markdown 格式，方便大家浏览，学习。&lt;/p&gt;
+&lt;p&gt;有一些链接可能还不是特别准确，因为我只能根据图片上的书或者资源的名字去 Google 可能的书籍，所以链接上有什么不对的，欢迎大家评论指出，我会及时更正。请参考原文：&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt; 帮助修改。谢谢。 &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;基础工具部分： 中文手册，我猜测是Maven中文手册，可是我并没有找到这样的资源，欢迎知道的朋友告诉我；&lt;/li&gt;
+&lt;li&gt;基础工具部分： 中文手册，我猜测是 Maven 中文手册，可是我并没有找到这样的资源，欢迎知道的朋友告诉我；&lt;/li&gt;
 &lt;li&gt;Android部分有 『第三方库集合』，我没能找到资源地址；&lt;/li&gt;
 &lt;li&gt;书籍我大多是给的豆瓣链接，如果觉得不合适可以替换一下；&lt;/li&gt;
 &lt;/ol&gt;
@@ -174,10 +174,10 @@
       &lt;blockquote&gt;
 &lt;p&gt;这篇文章不是原创，是根据 &lt;a href=&quot;http://www.diycode.cc/&quot;&gt;DiyCode&lt;/a&gt; 社区看到&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;一篇学习Android路线&lt;/a&gt;，整理成 Markdown 格式。我直接转帖到我的博客，方便自己学习。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;发了一篇&lt;code&gt;一个老鸟也发了一份他给公司内部小伙伴整理的路线图&lt;/code&gt;。&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt;。可惜不是MarkDown格式的，所以&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;直接上传的截图，在&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;的呼吁下，我花了些时间，把这篇大牛的推荐清单编辑成了Markdown格式，方便大家浏览，学习。&lt;/p&gt;
-&lt;p&gt;有一些链接可能还不是特别准确，因为我只能根据图片上的书或者资源的名字去Google可能的书籍，所以链接上有什么不对的，欢迎大家评论指出，我会及时更正。请参考原文：&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt; 帮助修改。谢谢。 &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;发了一篇&lt;code&gt;一个老鸟也发了一份他给公司内部小伙伴整理的路线图&lt;/code&gt;。&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt;。可惜不是 MarkDown 格式的，所以&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;直接上传的截图，在&lt;a href=&quot;http://www.diycode.cc/jixiaohua&quot;&gt;jixiaohua&lt;/a&gt;的呼吁下，我花了些时间，把这篇大牛的推荐清单编辑成了 Markdown 格式，方便大家浏览，学习。&lt;/p&gt;
+&lt;p&gt;有一些链接可能还不是特别准确，因为我只能根据图片上的书或者资源的名字去 Google 可能的书籍，所以链接上有什么不对的，欢迎大家评论指出，我会及时更正。请参考原文：&lt;a href=&quot;http://www.diycode.cc/topics/117&quot;&gt;另一份 Android 开发学习路线图&lt;/a&gt; 帮助修改。谢谢。 &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;基础工具部分： 中文手册，我猜测是Maven中文手册，可是我并没有找到这样的资源，欢迎知道的朋友告诉我；&lt;/li&gt;
+&lt;li&gt;基础工具部分： 中文手册，我猜测是 Maven 中文手册，可是我并没有找到这样的资源，欢迎知道的朋友告诉我；&lt;/li&gt;
 &lt;li&gt;Android部分有 『第三方库集合』，我没能找到资源地址；&lt;/li&gt;
 &lt;li&gt;书籍我大多是给的豆瓣链接，如果觉得不合适可以替换一下；&lt;/li&gt;
 &lt;/ol&gt;
@@ -193,6 +193,16 @@
       <category term="书单" scheme="http://blog.jerryzhang.net/tags/%E4%B9%A6%E5%8D%95/"/>
     
       <category term="推荐" scheme="http://blog.jerryzhang.net/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="学习路线" scheme="http://blog.jerryzhang.net/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    
+      <category term="DiyCode" scheme="http://blog.jerryzhang.net/tags/DiyCode/"/>
+    
+      <category term="Markdown" scheme="http://blog.jerryzhang.net/tags/Markdown/"/>
+    
+      <category term="Java" scheme="http://blog.jerryzhang.net/tags/Java/"/>
+    
+      <category term="设计模式" scheme="http://blog.jerryzhang.net/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
