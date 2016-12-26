@@ -92,11 +92,11 @@ else:
   </entry>
   
   <entry>
-    <title>既然是互联网公司为什么不搬到山里去，环境多好</title>
+    <title>让Sublime 支持GB2312格式</title>
     <link href="http://blog.jerryzhang.net/2016/06/14/%E8%AE%A9Sublime%20%E6%94%AF%E6%8C%81GB2312%E6%A0%BC%E5%BC%8F/"/>
     <id>http://blog.jerryzhang.net/2016/06/14/让Sublime 支持GB2312格式/</id>
     <published>2016-06-14T04:05:00.000Z</published>
-    <updated>2016-12-26T06:39:15.000Z</updated>
+    <updated>2016-12-26T06:42:00.000Z</updated>
     
     <content type="html">&lt;p&gt;让Sublime 支持GB2312格式，&lt;br&gt;Sublime默认只支持UTF-8编码格式&lt;/p&gt;
 &lt;p&gt;需要安装插件 CovertToUTF8&lt;/p&gt;
