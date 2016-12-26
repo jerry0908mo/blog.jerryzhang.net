@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jerryzhang.net/"/>
-  <updated>2016-06-10T16:03:53.000Z</updated>
+  <updated>2016-10-18T16:56:51.000Z</updated>
   <id>http://blog.jerryzhang.net/</id>
   
   <author>
@@ -14,6 +14,232 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我用 Python 写了一个颜色色值转换的小工具</title>
+    <link href="http://blog.jerryzhang.net/2016/10/19/%E6%88%91%E7%94%A8-Python-%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E9%A2%9C%E8%89%B2%E8%89%B2%E5%80%BC%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    <id>http://blog.jerryzhang.net/2016/10/19/我用-Python-写了一个颜色色值转换的小工具/</id>
+    <published>2016-10-18T16:56:51.000Z</published>
+    <updated>2016-10-18T16:56:51.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://blog.jerryzhang.net/2016/06/14/%E8%AE%A9Sublime%20%E6%94%AF%E6%8C%81GB2312%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://blog.jerryzhang.net/2016/06/14/让Sublime 支持GB2312格式/</id>
+    <published>2016-06-14T04:02:41.000Z</published>
+    <updated>2016-06-14T04:02:41.000Z</updated>
+    
+    <content type="html">&lt;p&gt;让Sublime 支持GB2312格式，&lt;br&gt;Sublime默认只支持UTF-8编码格式&lt;/p&gt;
+&lt;p&gt;需要安装插件 CovertToUTF8&lt;/p&gt;
+&lt;p&gt;File: /Users/jerrysher/Downloads/Fiy5SDEjl8xM9NHWXNnEAw3e-8wh.srt&lt;br&gt;Encoding: GB2312&lt;br&gt;Error: Codecs missing&lt;/p&gt;
+&lt;p&gt;Please install Codecs33 plugin (&lt;a href=&quot;https://github.com/seanliang/Codecs33/tree/osx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/seanliang/Codecs33/tree/osx&lt;/a&gt;).&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;让Sublime 支持GB2312格式，&lt;br&gt;Sublime默认只支持UTF-8编码格式&lt;/p&gt;
+&lt;p&gt;需要安装插件 CovertToUTF8&lt;/p&gt;
+&lt;p&gt;File: /Users/jerrysher/Downloads/Fiy5SDEjl8xM9NHWXNnEAw3e
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://blog.jerryzhang.net/2016/06/12/Pro-Git-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://blog.jerryzhang.net/2016/06/12/Pro-Git-学习笔记/</id>
+    <published>2016-06-12T09:21:54.000Z</published>
+    <updated>2016-08-03T13:44:36.000Z</updated>
+    
+    <content type="html">&lt;hr&gt;
+&lt;p&gt;title: Pro Git 学习笔记&lt;br&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;版本控制&lt;br&gt;categories: 工具学习&lt;br&gt;comments: true&lt;br&gt;—`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学习 Pro Git 一书的学习笔记。&lt;br&gt;采用教材：Pro Git 中文版&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;一、起步&quot;&gt;&lt;a href=&quot;#一、起步&quot; class=&quot;headerlink&quot; title=&quot;一、起步&quot;&gt;&lt;/a&gt;一、起步&lt;/h1&gt;&lt;h2 id=&quot;关于版本控制&quot;&gt;&lt;a href=&quot;#关于版本控制&quot; class=&quot;headerlink&quot; title=&quot;关于版本控制&quot;&gt;&lt;/a&gt;关于版本控制&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;本地版本的控制 rcs 保存并管理文件补丁（patch）&lt;/li&gt;
+&lt;li&gt;集中化的版本控制系统 CVS SubVersion Perfoce， 有集中的服务器管理版本，本地每次获得最新版本代码。 &lt;/li&gt;
+&lt;li&gt;分布式版本控制系统 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Git-历史&quot;&gt;&lt;a href=&quot;#Git-历史&quot; class=&quot;headerlink&quot; title=&quot;Git 历史&quot;&gt;&lt;/a&gt;Git 历史&lt;/h2&gt;&lt;p&gt; 2005年一直免费试用的 分布式版本控制系统 BitKeeper 的商业公司停止了对 Linux 的免费授权,  Linus 就带领社区撸了一个分布式版本管理系统。 &lt;/p&gt;
+&lt;h2 id=&quot;git-基础概念&quot;&gt;&lt;a href=&quot;#git-基础概念&quot; class=&quot;headerlink&quot; title=&quot;git 基础概念&quot;&gt;&lt;/a&gt;git 基础概念&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;文件快照，直接保存文件，而不是差异比较&lt;/li&gt;
+&lt;li&gt;本地操作 可以不用连接网络仓库  疯狂提交代码&lt;/li&gt;
+&lt;li&gt;时刻保证数据完整性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文件的三个状态&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已提交&lt;/li&gt;
+&lt;li&gt;已修改&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;已暂存&lt;br&gt;33&lt;/p&gt;
+&lt;h2 id=&quot;git-安装和配置&quot;&gt;&lt;a href=&quot;#git-安装和配置&quot; class=&quot;headerlink&quot; title=&quot;git 安装和配置&quot;&gt;&lt;/a&gt;git 安装和配置&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;源码安装，或者编译包安装。&lt;/p&gt;
+&lt;h3 id=&quot;配置：&quot;&gt;&lt;a href=&quot;#配置：&quot; class=&quot;headerlink&quot; title=&quot;配置：&quot;&gt;&lt;/a&gt;配置：&lt;/h3&gt;&lt;p&gt;配置和查看 git 环境：&lt;/p&gt;
+&lt;p&gt;git config   实际上调用的是 git-config 命令，但是至今输入git-config 找不到这个命令&lt;/p&gt;
+&lt;p&gt;git config —sytem 配置系统环境 系统所有用户通用的配置&lt;br&gt;git config —global 配置当前用户环境  在 ~/.gitconfig 目录下配置。&lt;br&gt;git config  设置当前项目的配置     在.git/config目录下记录&lt;/p&gt;
+&lt;p&gt;git config —list  查看所有配置信息&lt;/p&gt;
+&lt;h3 id=&quot;获得帮助信息。&quot;&gt;&lt;a href=&quot;#获得帮助信息。&quot; class=&quot;headerlink&quot; title=&quot;获得帮助信息。&quot;&gt;&lt;/a&gt;获得帮助信息。&lt;/h3&gt;&lt;p&gt;git help config&lt;br&gt;git config –help&lt;br&gt;man git-config&lt;/p&gt;
+&lt;h1 id=&quot;二、Git-基础&quot;&gt;&lt;a href=&quot;#二、Git-基础&quot; class=&quot;headerlink&quot; title=&quot;二、Git 基础&quot;&gt;&lt;/a&gt;二、Git 基础&lt;/h1&gt;&lt;p&gt;git init 初始化仓库&lt;/p&gt;
+&lt;p&gt;git add *.java&lt;br&gt;git add README&lt;br&gt;git commit -m  “first commit”&lt;/p&gt;
+&lt;p&gt;克隆现有的项目&lt;/p&gt;
+&lt;p&gt;git clone &lt;url&gt;  [本地名称]&lt;/url&gt;&lt;/p&gt;
+&lt;p&gt;检查当前文件状态。&lt;br&gt;git status&lt;/p&gt;
+&lt;p&gt;有没有跟踪的文件  或者有修改 的文件会在这里显示。 &lt;/p&gt;
+&lt;p&gt;$ vim README&lt;br&gt;$ git status&lt;br&gt;On branch master&lt;br&gt;Untracked files:&lt;br&gt;  (use “git add &lt;file&gt;…” to include in what will be committed)&lt;/file&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;README
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;nothing added to commit but untracked files present (use “git add” to track)&lt;/p&gt;
+&lt;p&gt;同样 如果仓库clean 也会显示出来。 &lt;/p&gt;
+&lt;p&gt;$ git status&lt;br&gt;On branch master&lt;br&gt;nothing to commit, working directory clean&lt;/p&gt;
+&lt;h3 id=&quot;跟踪新文件&quot;&gt;&lt;a href=&quot;#跟踪新文件&quot; class=&quot;headerlink&quot; title=&quot;跟踪新文件&quot;&gt;&lt;/a&gt;跟踪新文件&lt;/h3&gt;&lt;p&gt;git  add README &lt;/p&gt;
+&lt;p&gt;再次执行 git status &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git status&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;On branch master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Changes to be committed:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  (use &amp;quot;git reset HEAD &amp;lt;file&amp;gt;...&amp;quot; to unstage)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        new file:   README&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;git add 添加文件到暂存区&lt;/p&gt;
+&lt;h3 id=&quot;暂存已修改的文件-已经改被跟踪的文件-再次修改，&quot;&gt;&lt;a href=&quot;#暂存已修改的文件-已经改被跟踪的文件-再次修改，&quot; class=&quot;headerlink&quot; title=&quot;暂存已修改的文件 已经改被跟踪的文件  再次修改，&quot;&gt;&lt;/a&gt;暂存已修改的文件 已经改被跟踪的文件  再次修改，&lt;/h3&gt;&lt;h2 id=&quot;添加到缓存区后-，再次修改，-会看到两个该文件显示出来&quot;&gt;&lt;a href=&quot;#添加到缓存区后-，再次修改，-会看到两个该文件显示出来&quot; class=&quot;headerlink&quot; title=&quot;添加到缓存区后 ，再次修改， 会看到两个该文件显示出来&quot;&gt;&lt;/a&gt;添加到缓存区后 ，再次修改， 会看到两个该文件显示出来&lt;/h2&gt;&lt;p&gt;$ vim benchmarks.rb&lt;br&gt;$ git status&lt;br&gt;On branch master&lt;br&gt;Changes to be committed:&lt;br&gt;  (use “git reset HEAD &lt;file&gt;…” to unstage)&lt;/file&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;new file:   README
+modified:   benchmarks.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Changes not staged for commit:&lt;br&gt;  (use “git add &lt;file&gt;…” to update what will be committed)&lt;br&gt;  (use “git checkout – &lt;file&gt;…” to discard changes in working directory)&lt;/file&gt;&lt;/file&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;modified:   benchmarks.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;顺便学习到的-命令&quot;&gt;&lt;a href=&quot;#顺便学习到的-命令&quot; class=&quot;headerlink&quot; title=&quot;顺便学习到的 命令&quot;&gt;&lt;/a&gt;顺便学习到的 命令&lt;/h4&gt;&lt;p&gt;废弃本次修改&lt;br&gt;(use “git checkout – &lt;file&gt;…” to discard changes in working directory)&lt;/file&gt;&lt;/p&gt;
+&lt;p&gt;从缓冲区中撤回&lt;br&gt;(use “git reset HEAD &lt;file&gt;…” to unstage)&lt;/file&gt;&lt;/p&gt;
+&lt;h3 id=&quot;忽略部分文件。&quot;&gt;&lt;a href=&quot;#忽略部分文件。&quot; class=&quot;headerlink&quot; title=&quot;忽略部分文件。&quot;&gt;&lt;/a&gt;忽略部分文件。&lt;/h3&gt;&lt;p&gt;编译好的的文件，日志文件， 编辑器生成的临时备份文件 等等不需要上传到代码仓库&lt;br&gt;可以在 .gitignore 文件中配置忽略文件&lt;br&gt;最好一开始就变就好，免得不需要的文件被提交。 &lt;/p&gt;
+&lt;h4 id=&quot;gitignore文件规则：&quot;&gt;&lt;a href=&quot;#gitignore文件规则：&quot; class=&quot;headerlink&quot; title=&quot;gitignore文件规则：&quot;&gt;&lt;/a&gt;gitignore文件规则：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;空行或者# 开头的会被git忽略。 &lt;/li&gt;
+&lt;li&gt;可以使用标准的 glob 模式匹配。&lt;/li&gt;
+&lt;li&gt;匹配模式最后跟反斜杠（/）说明要忽略的是目录。&lt;/li&gt;
+&lt;li&gt;要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 所谓的 glob 模式是指 shell 所使用的简化了的正则表达式。星号（*）匹配零个或多个任意字符；[abc] 匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9 的数字）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们再看一个 .gitignore 文件的例子：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 此为注释 – 将被 Git 忽略&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 忽略所有 .a 结尾的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*.a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 但 lib.a 除外&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;!lib.a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/TODO&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 忽略 build/ 目录下的所有文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;build/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;doc/*.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ignore all .txt files in the doc/ directory&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;doc/**/*.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A **/ pattern is available in Git since version 1.8.2.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;采用&lt;br&gt;git commit 提交。 &lt;/p&gt;
+&lt;p&gt;加上-v可以显示更多的详细的改变信息。&lt;br&gt; git commit -v&lt;/p&gt;
+&lt;p&gt; 处理的文本编辑器 # 开头的会被好忽略，首行空着用来输入提交记录。 &lt;/p&gt;
+&lt;p&gt; 也可以用过 git  commit -m “提交说明” 的方式直接提交。 &lt;/p&gt;
+&lt;p&gt; 加上 -a 参数可以跳过 git add的步骤。 &lt;/p&gt;
+&lt;p&gt;如果文件都是一件被 add 过的话 &lt;/p&gt;
+&lt;p&gt;git commit -a -m “不用 git add 的提交。 “&lt;/p&gt;
+&lt;h3 id=&quot;移除文件&quot;&gt;&lt;a href=&quot;#移除文件&quot; class=&quot;headerlink&quot; title=&quot;移除文件&quot;&gt;&lt;/a&gt;移除文件&lt;/h3&gt;&lt;p&gt;本地磁盘删除文件&lt;br&gt;rm filename&lt;br&gt;查看  git status&lt;br&gt;得到 &lt;code&gt;Changes not staged for commit:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ git status&lt;br&gt;On branch master&lt;br&gt;Changes not staged for commit:&lt;br&gt;  (use “git add/rm &lt;file&gt;…” to update what will be committed)&lt;br&gt;  (use “git checkout – &lt;file&gt;…” to discard changes in working directory)&lt;/file&gt;&lt;/file&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deleted:    grit.gemspec
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;no changes added to commit (use “git add” and/or “git commit -a”)&lt;/p&gt;
+&lt;p&gt;所以需要在git 中移除文件&lt;br&gt;git rm  finame&lt;/p&gt;
+&lt;p&gt;加上 -f  f是 force的缩写，可以删除 修改过并且已经放到暂存区域的文件。  &lt;/p&gt;
+&lt;h4 id=&quot;从暂存区删除-，但是本地仓库保留。&quot;&gt;&lt;a href=&quot;#从暂存区删除-，但是本地仓库保留。&quot; class=&quot;headerlink&quot; title=&quot;从暂存区删除 ，但是本地仓库保留。&quot;&gt;&lt;/a&gt;从暂存区删除 ，但是本地仓库保留。&lt;/h4&gt;&lt;p&gt;这个适用于不小心把一个写大的文件加入到了仓库跟踪中，可以用这样的办法仅仅去掉跟踪。 &lt;/p&gt;
+&lt;p&gt;git rm –cached video.mp4 &lt;/p&gt;
+&lt;h4 id=&quot;移动文件&quot;&gt;&lt;a href=&quot;#移动文件&quot; class=&quot;headerlink&quot; title=&quot;移动文件&quot;&gt;&lt;/a&gt;移动文件&lt;/h4&gt;&lt;p&gt;git mv file_from file_to &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;TODO 实验，名字从小写改成大写。    之前的操作似乎是不敏感的， 尝试用  git mv 操作。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;查看提交历史&quot;&gt;&lt;a href=&quot;#查看提交历史&quot; class=&quot;headerlink&quot; title=&quot;查看提交历史&quot;&gt;&lt;/a&gt;查看提交历史&lt;/h3&gt;&lt;p&gt;git log&lt;br&gt;不加参数看全部的提交记录， &lt;/p&gt;
+&lt;p&gt;git log -p 附带每次提交的差异比较&lt;br&gt;-2 表示查看最近2条记录。 &lt;/p&gt;
+&lt;p&gt;–word-diff 单词层面的比较。 &lt;/p&gt;
+&lt;p&gt;得到结果：&lt;/p&gt;
+&lt;p&gt;会有如下：   git [-init-]{+in0t+}&lt;/p&gt;
+&lt;p&gt;[- -]中的是删除的单词， {+ +} 中是新插入的单词。 &lt;/p&gt;
+&lt;p&gt;加上  -U1  可以让上下文的行数从 默认3行变为1行。&lt;/p&gt;
+&lt;h4 id=&quot;其他的参数&quot;&gt;&lt;a href=&quot;#其他的参数&quot; class=&quot;headerlink&quot; title=&quot;其他的参数&quot;&gt;&lt;/a&gt;其他的参数&lt;/h4&gt;&lt;p&gt; –stat，仅显示简要的增改行数统计&lt;br&gt; –pretty 稍微简约一些的展示方式。&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;commit d2af3ae2b9e7b08f5f734ce81ac0cee21e4a7c38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Author: JerryZhang &amp;lt;jerry0908mo@163.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date:   Mon Jun 20 16:48:14 2016 +0800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    test 2nd word diff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;commit fec4ad1f0184ebca0cd01097bc3ec7785a91c99e&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Author: JerryZhang &amp;lt;jerry0908mo@163.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date:   Mon Jun 20 16:46:35 2016 +0800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    test word diff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;commit bf7b1fb2a5946a60f057303b0854f587a0ae527c&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Author: JerryZhang &amp;lt;jerry0908mo@163.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date:   Wed Jun 15 00:57:50 2016 +0800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    不用git add直接 commit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;commit a9b128c3820b4804aa330772bc81c4b84d24132c&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Author: JerryZhang &amp;lt;jerry0908mo@163.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date:   Wed Jun 15 00:51:26 2016 +0800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    添加gitigonre文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    readme书写了简单笔记。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;–oneline 每个提交展示在一行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;d2af3ae test 2nd word diff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fec4ad1 test word diff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bf7b1fb 不用git add直接 commit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a9b128c 添加gitigonre文件 readme书写了简单笔记。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;–graph 简单的图形化展示 展示演变&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git log --pretty=oneline&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;format 可以指定显示格式 方便写程序提取分析&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git log --pretty=format:&amp;quot;%h - %an, %ar : %s&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ca82a6d - Scott Chacon, 11 months ago : changed the version number&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;085bb3b - Scott Chacon, 11 months ago : removed unnecessary test code&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a11bef0 - Scott Chacon, 11 months ago : first commit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;搜索提交记录查看日志 &lt;/p&gt;
+&lt;p&gt;git log –grep=”题型”&lt;/p&gt;
+&lt;p&gt;git log –grep=”题型” –grep=”商务”  –all-match&lt;br&gt;同时满足两个条件 需要加上–all-match&lt;/p&gt;
+&lt;p&gt;查看指定目录或者文件的历史记录&lt;br&gt;git log – build.gradle&lt;/p&gt;
+&lt;p&gt;–author=JerryZhang 指定作者 查看提交记录&lt;/p&gt;
+&lt;p&gt;图形化工具 gitk 查看。 &lt;/p&gt;
+&lt;h2 id=&quot;撤销操作&quot;&gt;&lt;a href=&quot;#撤销操作&quot; class=&quot;headerlink&quot; title=&quot;撤销操作&quot;&gt;&lt;/a&gt;撤销操作&lt;/h2&gt;&lt;p&gt;提交后发现，少了几个文件，或者提交信息写错了，可以撤销重新提交&lt;/p&gt;
+&lt;p&gt;直接修改提交信息：git commit –amend&lt;br&gt;忘记文件：直接添加文件后，输入  git commit –amend&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &amp;apos;initial commit&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git add forgotten_file&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git commit --amend&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;取消已经暂存的文件，这个在git-status-查看的时候就有提醒。&quot;&gt;&lt;a href=&quot;#取消已经暂存的文件，这个在git-status-查看的时候就有提醒。&quot; class=&quot;headerlink&quot; title=&quot;取消已经暂存的文件，这个在git status 查看的时候就有提醒。&quot;&gt;&lt;/a&gt;取消已经暂存的文件，这个在git status 查看的时候就有提醒。&lt;/h4&gt;&lt;p&gt;git reest HEAD  filename&lt;/p&gt;
+&lt;h4 id=&quot;取消对文件的修改，-这个在-git-status查看时也有提醒。&quot;&gt;&lt;a href=&quot;#取消对文件的修改，-这个在-git-status查看时也有提醒。&quot; class=&quot;headerlink&quot; title=&quot;取消对文件的修改， 这个在 git status查看时也有提醒。&quot;&gt;&lt;/a&gt;取消对文件的修改， 这个在 git status查看时也有提醒。&lt;/h4&gt;&lt;p&gt;git checkout – filename  &lt;/p&gt;
+&lt;h3 id=&quot;远程仓库的使用&quot;&gt;&lt;a href=&quot;#远程仓库的使用&quot; class=&quot;headerlink&quot; title=&quot;远程仓库的使用&quot;&gt;&lt;/a&gt;远程仓库的使用&lt;/h3&gt;&lt;p&gt;clone 的仓库执行  git remote 后至少可以看到一名为 origin （默认远程库名）的远程仓库。&lt;/p&gt;
+&lt;p&gt;git remote -v&lt;br&gt;可以显示对于的克隆地址&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  ProGitBlog git:(master) git remote -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;origin  git@git.coding.net:jerrysher/Blog.git (fetch)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;origin  git@git.coding.net:jerrysher/Blog.git (push)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果有多个远程仓库，此时会全部列出&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git remote -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bakkdoor  git://github.com/bakkdoor/grit.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cho45     git://github.com/cho45/grit.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;defunkt   git://github.com/defunkt/grit.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;koke      git://github.com/koke/grit.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;origin    git@github.com:mojombo/grit.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;添加远程仓库&lt;/p&gt;
+&lt;p&gt;git remote add [shortname] [url]：&lt;/p&gt;
+&lt;p&gt;$ git remote add pb git://github.com/paulboone/ticgit.git&lt;br&gt;$ git remote -v&lt;br&gt;origin  git://github.com/schacon/ticgit.git&lt;br&gt;pb  git://github.com/paulboone/ticgit.git&lt;/p&gt;
+&lt;p&gt;可以用 pb 指代 paulboone 用户的 ticgit 仓库了。 &lt;/p&gt;
+&lt;h4 id=&quot;从远程仓库抓取信息。&quot;&gt;&lt;a href=&quot;#从远程仓库抓取信息。&quot; class=&quot;headerlink&quot; title=&quot;从远程仓库抓取信息。&quot;&gt;&lt;/a&gt;从远程仓库抓取信息。&lt;/h4&gt;&lt;p&gt;git fetch 可以抓取本地没有 远程有的信息。 &lt;/p&gt;
+&lt;p&gt;git fetch pb &lt;/p&gt;
+&lt;p&gt;抓取后可以看到所有 pb 远程的所有信息。 &lt;/p&gt;
+&lt;p&gt;git fetch 只抓取数据 没有合并。&lt;/p&gt;
+&lt;p&gt;git pull 抓取数据并且合并到当前的工作分支 &lt;/p&gt;
+&lt;p&gt;git push [remote-name] [branch-name]&lt;br&gt;推送数据到远程分支  ， 默认是 orgin仓库， master分支&lt;/p&gt;
+&lt;p&gt;查看远端仓库信息&lt;br&gt;git remote show origin&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  ProGitBlog git:(master) git remote show origin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* remote origin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Fetch URL: git@git.coding.net:jerrysher/Blog.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Push  URL: git@git.coding.net:jerrysher/Blog.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  HEAD branch: master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Remote branches:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    coding-pages tracked&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    master       tracked&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Local branch configured for &amp;apos;git pull&amp;apos;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    master merges with remote master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Local ref configured for &amp;apos;git push&amp;apos;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    master pushes to master (fast-forwardable)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;列出了所有跟踪中的远端分支，&lt;br&gt;Local ref configured for ‘git push’: 默认的push 分支，&lt;br&gt;Local branch configured for ‘git pull’: pull自动合并的分支&lt;br&gt;Stale tracking branches (use ‘git remote prune’) 本地被跟踪，但是远端已经删除的分支&lt;br&gt;New remote branches (next fetch will store in remotes/origin) 远程有，还没同步的本地的分支&lt;/p&gt;
+&lt;p&gt;远程仓库的删除和重命名&lt;/p&gt;
+&lt;p&gt;git remote rename 修改仓库的简称&lt;br&gt;git remote rename pb paul  pb 改为 paul&lt;/p&gt;
+&lt;p&gt;移除&lt;br&gt;$ git remote rm paul&lt;/p&gt;
+&lt;h4 id=&quot;打标签&quot;&gt;&lt;a href=&quot;#打标签&quot; class=&quot;headerlink&quot; title=&quot;打标签&quot;&gt;&lt;/a&gt;打标签&lt;/h4&gt;&lt;p&gt;发布某个版本，打一个标签。&lt;/p&gt;
+&lt;p&gt;列出所有标签&lt;br&gt;git tag&lt;/p&gt;
+&lt;p&gt;可以加上约束条件，列出符合条件的tag （只列出2.2相关的tag）&lt;br&gt;➜  platform git:(feature/3.1.0(Iron_Man)) ✗ git tag -l ‘2.2*’&lt;br&gt;2.2.0&lt;br&gt;2.2.1&lt;br&gt;2.2.2&lt;br&gt;2.2.3&lt;br&gt;2.2.4&lt;/p&gt;
+&lt;p&gt;新建标签&lt;/p&gt;
+&lt;p&gt;分两种：轻量级的（lightweight）和 含附注的（annotated）&lt;br&gt;轻量级，仅仅是一个提交对象引用；含附注的可以带有信息， 有自己的说明，邮箱，标签名字&lt;/p&gt;
+&lt;p&gt;一般都是含附注的&lt;/p&gt;
+&lt;p&gt;创建一个tag :&lt;br&gt;git tag -a v1.4 -m “my version 1.4”&lt;/p&gt;
+&lt;p&gt;git show [tagname]&lt;br&gt;查看标签信息，&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tag v0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Tagger: JerryZhang &amp;lt;jerry0908mo@163.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date:   Tue Jun 21 00:05:23 2016 +0800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;my version 0.1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;commit f52eb62eefd38f423864fa2ff6c1cb52dadb91ed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Author: JerryZhang &amp;lt;jerry0908mo@163.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Date:   Mon Jun 20 16:48:14 2016 +0800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;……提交记录信息……&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;签署标签&lt;/p&gt;
+&lt;p&gt;如果你有自己的私钥，还可以用 GPG 来签署标签. -s  signed的首字母&lt;br&gt;$ git tag -s v1.5 -m ‘my signed 1.5 tag’&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;todo 执行失败 不明白做什么用的&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;➜  ProGitBlog git:(master) git tag -s v0.2 -m &amp;quot;my version signed 0.2&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;error: cannot run gpg: No such file or directory&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;error: could not run gpg.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;error: unable to sign the tag&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;轻量级标签&lt;/p&gt;
+&lt;p&gt;git tag v1.4-lw&lt;br&gt;直接创建 不加参数。 &lt;/p&gt;
+&lt;p&gt;验证标签&lt;br&gt;可以使用 git tag -v [tag-name] （译注：取 verify 的首字母）的方式验证已经签署的标签。此命令会调用 GPG 来验证签名，所以你需要有签署者的公钥，存放在 keyring 中，才能验证：&lt;/p&gt;
+&lt;p&gt;$ git tag -v v1.4.2.1&lt;/p&gt;
+&lt;p&gt;从某次提交创建标签&lt;/p&gt;
+&lt;p&gt;$ git tag -a v1.2 9fceb02&lt;/p&gt;
+&lt;p&gt;后面跟上这次提交对象的校验和（或前几位字符就可以）&lt;/p&gt;
+&lt;p&gt;分享标签。&lt;br&gt;标签推到远端仓库&lt;/p&gt;
+&lt;p&gt;git push origin [tagname] &lt;/p&gt;
+&lt;p&gt;一次性推送所有tag到远端&lt;/p&gt;
+&lt;p&gt;$ git push origin –tags&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  ProGitBlog git:(master) git push origin --tags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Warning: Permanently added the RSA host key for IP address &amp;apos;59.56.27.71&amp;apos; to the list of known hosts.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Counting objects: 15, done.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Delta compression using up to 4 threads.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Compressing objects: 100% (14/14), done.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Writing objects: 100% (15/15), 1.95 KiB | 0 bytes/s, done.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Total 15 (delta 3), reused 0 (delta 0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;To git@git.coding.net:jerrysher/Blog.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * [new tag]         v0.1 -&amp;gt; v0.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其他人克隆后也可以看到这些标签&lt;/p&gt;
+&lt;h4 id=&quot;技巧和窍门&quot;&gt;&lt;a href=&quot;#技巧和窍门&quot; class=&quot;headerlink&quot; title=&quot;技巧和窍门&quot;&gt;&lt;/a&gt;技巧和窍门&lt;/h4&gt;&lt;p&gt;自动补全：&lt;br&gt;git源代码中的contrib/completion/git-completion.bash文件&lt;br&gt;改名字（加上点后）。&lt;br&gt;cp git-completion.bash ~/.git-completion.bash&lt;/p&gt;
+&lt;p&gt;配置到自己的环境变量文件中：&lt;br&gt;source ~/.git-completion.bash&lt;/p&gt;
+&lt;p&gt;两次tab可以不全命令或者参数 &lt;/p&gt;
+&lt;p&gt;别名：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global alias.co checkout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global alias.br branch&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global alias.ci commit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global alias.st status&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global alias.unstage &amp;apos;reset HEAD --&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global alias.last &amp;apos;log -1 HEAD&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;别名启用外部命令：&lt;br&gt;自己写了写脚本，加上！ 就可以执行&lt;br&gt;设置用 git visual 启动 gitk：&lt;br&gt;$ git config –global alias.visual ‘!gitk’&lt;/p&gt;
+&lt;h1 id=&quot;第三章：Git-分支模型&quot;&gt;&lt;a href=&quot;#第三章：Git-分支模型&quot; class=&quot;headerlink&quot; title=&quot;第三章：Git 分支模型&quot;&gt;&lt;/a&gt;第三章：Git 分支模型&lt;/h1&gt;&lt;p&gt;几乎都支持分支，分支可以让你离开主线工作，做其他事情，然后再回来，这个过程大多很昂贵。&lt;br&gt;Git 切换分支快速，方便。有人把 Git 的分支模型称为“必杀技特性”&lt;/p&gt;
+&lt;h2 id=&quot;何谓分支&quot;&gt;&lt;a href=&quot;#何谓分支&quot; class=&quot;headerlink&quot; title=&quot;何谓分支&quot;&gt;&lt;/a&gt;何谓分支&lt;/h2&gt;&lt;h2 id=&quot;分支的新建与合并&quot;&gt;&lt;a href=&quot;#分支的新建与合并&quot; class=&quot;headerlink&quot; title=&quot;分支的新建与合并&quot;&gt;&lt;/a&gt;分支的新建与合并&lt;/h2&gt;&lt;h2 id=&quot;分支的管理&quot;&gt;&lt;a href=&quot;#分支的管理&quot; class=&quot;headerlink&quot; title=&quot;分支的管理&quot;&gt;&lt;/a&gt;分支的管理&lt;/h2&gt;&lt;h2 id=&quot;利用分支进行开发的工作流程&quot;&gt;&lt;a href=&quot;#利用分支进行开发的工作流程&quot; class=&quot;headerlink&quot; title=&quot;利用分支进行开发的工作流程&quot;&gt;&lt;/a&gt;利用分支进行开发的工作流程&lt;/h2&gt;&lt;h2 id=&quot;远程分支&quot;&gt;&lt;a href=&quot;#远程分支&quot; class=&quot;headerlink&quot; title=&quot;远程分支&quot;&gt;&lt;/a&gt;远程分支&lt;/h2&gt;&lt;h2 id=&quot;分支的衍合&quot;&gt;&lt;a href=&quot;#分支的衍合&quot; class=&quot;headerlink&quot; title=&quot;分支的衍合&quot;&gt;&lt;/a&gt;分支的衍合&lt;/h2&gt;&lt;h2 id=&quot;小结&quot;&gt;&lt;a href=&quot;#小结&quot; class=&quot;headerlink&quot; title=&quot;小结&quot;&gt;&lt;/a&gt;小结&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: Pro Git 学习笔记&lt;br&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;版本控制&lt;br&gt;categories: 工具学习&lt;br&gt;comments: true&lt;br&gt;—`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>一个老鸟发的公司内部整理的 Android 学习路线图 Markdown 版本</title>
@@ -203,6 +429,277 @@
       <category term="Java" scheme="http://blog.jerryzhang.net/tags/Java/"/>
     
       <category term="设计模式" scheme="http://blog.jerryzhang.net/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《黑客与画家》读后感悟</title>
+    <link href="http://blog.jerryzhang.net/2016/05/12/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F%E6%82%9F/"/>
+    <id>http://blog.jerryzhang.net/2016/05/12/《黑客与画家》读后感悟/</id>
+    <published>2016-05-12T05:21:00.000Z</published>
+    <updated>2016-12-26T06:24:21.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;《黑客与画家》读完有一段时间了，由于之前是在上下班路上听的，也没做做笔记。后面无论读书还是听书还是要养成做笔记的习惯，毕竟脑子慢慢的不够用了。之前也好几次谈到了这本书，今天整体的说说看完这本书后学到和感悟到的东西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;《黑客与画家》这本书是硅谷创业之父Paul Graham的文集，主要介绍了黑客也就是优秀程序员的成长、思想以及工作方法和思路。试图让普通人理解我们所处的计算机时代。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;一开始就讨论了书呆子不受欢迎，及聪明的孩子和及笨的孩子为什么老是被大家孤立。第一章就扔出一个『惊天』的观点：”学校和监狱差不多，同学之间的关系是扭曲，野蛮的”。很早之前学生年龄孩子们都是各行各业的所以孩子们能够学到东西，同事更重要的是他们能够感到收自己的价值，能够感受到身边大大人们是权威的。这样孩子们是和社会紧密接触的。但是现在的孩子如同宠物一般被『寄养』在专门打造的封闭的美好小社会中。他们不能了解到真实的社会，活在了一个大人们为他们创建的另外一个『美好』社会。又因为孩子之间的所谓等级是凭空虚构出来的，没有对手孩子相互当做对手。无用的只是，扭曲的社交，对于家庭的叛逆感，渐渐让很多孩子都想到过自杀。小时候我自己还算一个聪明的孩子，但是我不得不承认，我自己多次想到过自杀。甚至有所行动，虽然有活下来，但是我身边的同学中，就有几位就真的离我们而去了，转眼已经几十年过去了。这本书开篇就让我感受到了不一样的态度。&lt;/p&gt;
+&lt;p&gt;后续的章节更是带着我思考了很多。每个人都有好奇心，关于秘密，关于不能说的话，我们都曾经『初生牛犊不怕虎』发现了不能说的话，偏偏要说一下。『不能说的话』这个章节，告诉我们怎么发现不能说的话，怎么发现不可告人的密码。发现了这些不能说的话之后，又应该怎么妥善处理。作者把发现不能说的话当做一种脑力的训练，发现了之后也只是跟三五知己聊聊，不足为外人道。但是我就想也要交好朋友，人不要太多，现在社会各种设备后能录音、录像，要防止所谓『朋友』录像，别又整一个老毕第二。&lt;/p&gt;
+&lt;p&gt;让我觉得最后收货的就是通过读这本书，我又一次的重新学习了什么是财富，如何理解财富分配不均的问题。财富不等同于金钱，财富的分配是更加人们创造的价值分配的。&lt;/p&gt;
+&lt;p&gt;当然本书还有更多值得学习和阅读的地方，我以上所说的并不全面，我推荐大家都来读读这本书，一方面可以了解黑客们也即是程序员们，另外一方面可以从中学到不少思想。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;《黑客与画家》读完有一段时间了，由于之前是在上下班路上听的，也没做做笔记。后面无论读书还是听书还是要养成做笔记的习惯，毕竟脑子慢慢的不够用了。之前也好几次谈到了这本书，今天整体的说说看完这本书后学到和感悟到的东西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;《黑客与画家》这本书是硅谷创业之父Paul Graham的文集，主要介绍了黑客也就是优秀程序员的成长、思想以及工作方法和思路。试图让普通人理解我们所处的计算机时代。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书" scheme="http://blog.jerryzhang.net/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>原来人生的捷径是这个！</title>
+    <link href="http://blog.jerryzhang.net/2016/04/27/%E5%8E%9F%E6%9D%A5%E4%BA%BA%E7%94%9F%E7%9A%84%E6%8D%B7%E5%BE%84%E6%98%AF%E8%BF%99%E4%B8%AA%EF%BC%81/"/>
+    <id>http://blog.jerryzhang.net/2016/04/27/原来人生的捷径是这个！/</id>
+    <published>2016-04-27T15:34:00.000Z</published>
+    <updated>2016-06-10T16:49:23.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-7cfe498121296387?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;翻阅公众号『土匪投资日记』的时候发现了一篇王强老师的演讲人生最大的捷径是用时间和生命阅读一流的书&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在现在这个网络自由的时代，任何一个人都可以花个把小时写一篇文章，来消费你的时间（比如我）。出版书籍虽说有了一些门槛，但是还是充斥着各种专门迎合市场、为了商业目的而写的文字。各种畅销书籍，各种国内外经典，还有各种网络文学，微博、朋友圈以及各种新闻需要消费我们宝贵的阅读时间。我们是不是应该专门筛选一下，哪些值得读，哪些不值当？&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;怎么筛选出值得读的东西，这么多书籍我们不可能一一去查看简介或者评论。王强老师在演讲中给我们给出了答案，看一流的书，而且是用时间和生命去阅读和拥抱一流的书。原话是：『我认为我人生最大的捷径就是，用时间和生命阅读和拥抱了世上一流的书』。同时他表示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;畅销书坚决不读，不是我看不起畅销书，而是我知道生命有限，只能读人类历史上大浪淘沙的作品。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然王强老师说的是『读书人』的态度，对于我们程序员这样的专业人士，我觉得至少专业的书籍是要读的，当然也要读经典书籍。虽然计算机科学发展一共也就是短短几十年，不过经典之作也被时间沉淀出来了。计算机技术瞬息万变，基本的原理变化很少，阅读经典的基础书籍可以帮助我们更好的理解基础技术。免得浪费时间，误入歧途。&lt;/p&gt;
+&lt;p&gt;计算机技术，我一直理解为一门辅助学科，需要在具体的业务之上发挥作用，是一门工具类的学科。所以程序员们也该读一读心理学、哲学相关的书籍，以便更好的理解人性和社会。其实说白了就是那些让你讨厌的产品经理读的书籍你也应该读一读，当然也该读那些有价值的。 &lt;/p&gt;
+&lt;p&gt;我认为我人生最大的捷径就是，用时间和生命阅读和拥抱了世上一流的书&lt;/p&gt;
+&lt;p&gt;很多人都在寻找的人生捷径，就这样被王强老师给说出来了。那么接下来该做什么？别再浪费时间看我的这篇文章了，赶紧去看看王强老师的演讲吧。&lt;/p&gt;
+&lt;p&gt;稿件审核：&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzAwOTIwMDQ3MQ==&amp;amp;mid=2451013531&amp;amp;idx=1&amp;amp;sn=d10ac8a1f7f7978b274ca160a763c166#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『程序员在读书』&lt;/a&gt;首席体验官 Bella&lt;br&gt;题图：&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzAwOTIwMDQ3MQ==&amp;amp;mid=2451013531&amp;amp;idx=1&amp;amp;sn=d10ac8a1f7f7978b274ca160a763c166#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『程序员在读书』&lt;/a&gt;首席摄影师 Lofei&lt;br&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzAwOTIwMDQ3MQ==&amp;amp;mid=2451013531&amp;amp;idx=1&amp;amp;sn=d10ac8a1f7f7978b274ca160a763c166#rd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阅读原文&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MjM5MjM5MjM3Mg==&amp;amp;mid=404827914&amp;amp;idx=1&amp;amp;sn=adbc828d28be01eeb4842bc8aac3c047&amp;amp;scene=25&amp;amp;key=b28b03434249256b8f63f706405dd843aa3f65ea9396c816b17829ea59e96b3a21ef7b18dbe654e4b5e21681e6def139&amp;amp;ascene=0&amp;amp;uin=MjMzNjA1&amp;amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.4+build(15E65&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;公众号『土匪投资日记』&lt;/a&gt;&amp;amp;version=11020201&amp;amp;pass_ticket=zeJySvYnxvQMJFBgxiUukn%2BdqBcmOnT%2FfUJ99918zFE%3D#wechat_redirect)分享王强老师的演讲人生最大的捷径是用时间和生命阅读一流的书丨土匪天天分享&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-7cfe498121296387?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;翻阅公众号『土匪投资日记』的时候发现了一篇王强老师的演讲人生最大的捷径是用时间和生命阅读一流的书&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在现在这个网络自由的时代，任何一个人都可以花个把小时写一篇文章，来消费你的时间（比如我）。出版书籍虽说有了一些门槛，但是还是充斥着各种专门迎合市场、为了商业目的而写的文字。各种畅销书籍，各种国内外经典，还有各种网络文学，微博、朋友圈以及各种新闻需要消费我们宝贵的阅读时间。我们是不是应该专门筛选一下，哪些值得读，哪些不值当？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="思考" scheme="http://blog.jerryzhang.net/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>既然是互联网公司为什么不搬到山里去，环境多好</title>
+    <link href="http://blog.jerryzhang.net/2016/04/26/%E6%97%A2%E7%84%B6%E6%98%AF%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%90%AC%E5%88%B0%E5%B1%B1%E9%87%8C%E5%8E%BB%EF%BC%8C%E7%8E%AF%E5%A2%83%E5%A4%9A%E5%A5%BD/"/>
+    <id>http://blog.jerryzhang.net/2016/04/26/既然是互联网公司为什么不搬到山里去，环境多好/</id>
+    <published>2016-04-26T13:55:00.000Z</published>
+    <updated>2016-06-10T16:49:53.000Z</updated>
+    
+    <content type="html">&lt;p&gt;继续听《黑客与画家》，有如下一段，大意是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;15世纪的佛罗伦萨成批的出现了很多艺术家，其中包括达芬奇，米开朗基罗。这些人才的成批涌现，最大的因素就是，让有天赋的人聚在了一起，共同解决某个难题。相互激励比天赋更加重要，达芬奇之所以成为达芬奇不仅仅是因为天赋，更多重要的是因为他生活在佛罗伦萨。如今，人们生活流动性大，但是主要的项目还是集中在那么几个城市，如果远离中心很难靠单打独斗取得伟大成果。个人最多可能稍微影响趋势，但是不能决定趋势，大部分情况下个人只能被趋势所影响。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-e06713b6413c23f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;br&gt;曾经在创业公司工作，同事们一起去山里游玩，当地环境优美。我们不禁感慨：反正我们是互联网公司，扯一根网线就可以了，何必回到大城市去，就在这里办公不是挺好的吗？&lt;/p&gt;
+&lt;p&gt;当然这个提议只是一个玩笑。不过现实中确实存在这个问题，很多人都开始逃离北上广，回到家乡去发展。是的，我们拥有了互联网，很多信息都可以通过信息高速公路瞬间传递到全球各地（我们暂不考虑有的公司或组织屏蔽网络的问题）。而且现在技术发展，全息投影以及VR技术可以让你感觉你的家人就像在你身边一样，但是有一个现实的问题就是信息仍然是极度不对称的。你的一举一动不可能专门的告诉你的家人，特别是如果你有一些小的不开心或者不舒服，你会选择报喜不报忧，何况只是一点点小问题。&lt;/p&gt;
+&lt;p&gt;在公司的协同工作中也是一样的，现在各类协同办公的软件很多，也都能够很好的解决异地办公的问题，不过仍然不能做到完全的信息统一。人们面对面的交流会比在线的交流更加充分，而且人们的交流不仅仅只是文字和语言，有更多的信息是通过肢体语言和神态传递的。相互直接的鼓励和刺激都需要面对面的感染。为什么北上广深杭的互联网公司如此之多？人才在这些城市更加聚集，这些城市面临的需要解决的问题更多，政府也帮助搭建更好的创业平台，人们都聚集在这些地方解决难题，创造财富。&lt;/p&gt;
+&lt;p&gt;周围的人文环境对于人们的影响是很大的，无论公司的发展，孩子的教育，自己的成长，都在被周边的环境所影响着。初中的英语老师特别逗，讲过一个例子，如果你把一只鸡带到打扫的很干净的屋子，鸡都会不知道怎么走路，也不知道在哪里排便。我没做过这样的实验，只是试图借这个例子说明环境对个体的影响。&lt;/p&gt;
+&lt;p&gt;如果你把一个科技公司办在风景优美的山里，会有多少人跟你一起去创业？你们又准备解决什么样的问题？&lt;/p&gt;
+&lt;p&gt;题图：来自『程序员在读书』首席摄影师Lofei&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;继续听《黑客与画家》，有如下一段，大意是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;15世纪的佛罗伦萨成批的出现了很多艺术家，其中包括达芬奇，米开朗基罗。这些人才的成批涌现，最大的因素就是，让有天赋的人聚在了一起，共同解决某个难题。相互激励比天赋更加重要，达芬奇之所以成为达芬奇不仅仅是因为天赋，更多重要的是因为他生活在佛罗伦萨。如今，人们生活流动性大，但是主要的项目还是集中在那么几个城市，如果远离中心很难靠单打独斗取得伟大成果。个人最多可能稍微影响趋势，但是不能决定趋势，大部分情况下个人只能被趋势所影响。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="思考" scheme="http://blog.jerryzhang.net/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>为什么娱乐明星的收入比伟大的科学家高那么多？</title>
+    <link href="http://blog.jerryzhang.net/2016/04/25/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A8%B1%E4%B9%90%E6%98%8E%E6%98%9F%E7%9A%84%E6%94%B6%E5%85%A5%E6%AF%94%E4%BC%9F%E5%A4%A7%E7%9A%84%E7%A7%91%E5%AD%A6%E5%AE%B6%E9%AB%98%E9%82%A3%E4%B9%88%E5%A4%9A%EF%BC%9F/"/>
+    <id>http://blog.jerryzhang.net/2016/04/25/为什么娱乐明星的收入比伟大的科学家高那么多？/</id>
+    <published>2016-04-25T15:13:00.000Z</published>
+    <updated>2016-06-10T16:52:33.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天在微博里看到阑夕在自己的微博里面发布一条言论： &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“为什么娱乐明星的收入比伟大的科学家高那么多？为什么有钱人一掷千金的办宴席却不把钱捐给饿肚子的穷人？为什么西欧偶出一次爆炸案件的关注人数要远高于中东每天都在发生死伤规模也更多的同类惨剧？”因为你们蠢啊。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-98a0911defd3c7e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;『程序员在读书』首席摄影师Lofei新作 神仙居&quot;&gt;&lt;/p&gt;
+&lt;p&gt;其实这条微博只有6个字和一个句号是阑夕的观点。虽然看起来有点粗暴直接，但是不一定没有道理。 &lt;/p&gt;
+&lt;p&gt;赚钱的多少，吸引眼球的多少其实很多时候是看给社会创造的价值多少，另外可能要给这个创造价值加上一个时间那就是当前。还有一个社会的概念，社会就是这个世界，这个世界上的人们。所以说到底还是大家的喜好决定而分配方式。&lt;/p&gt;
+&lt;p&gt;有上面微博中类似疑问的朋友们，或许是想说，为什么这个社会这么不公平？其实这问题如果你有真的思考过，你或许不能得到答案但是你肯定可以找到让自己不再问类似问题的借口或者说理由。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;为什么你可以来到这个世界，多少年前和你一样的竞争对手却没有来到这个世界上？为什么你可以身体健康，大脑智力还算正常，而有的人们却生活不能自理？身边太多的这些例子我们甚至都不用关心新闻，不用关心世界大事，国家大事。从小就应该产生过这样的疑问，并尝试找到答案。只要你曾经试图这么做过，你或许就会知道，只有相对公平，没有绝对的公平。你可能一时不能接受这些，没关系，深呼吸，不能接受就别想了。因为凭啥你有时间思考这些问题，而还有人饿着肚子、没有水喝或者忍受着病痛。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mmbiz.qlogo.cn/mmbiz/3Zj6CrZrwiaN8g8gdyFkUH2xc0jJwpeBvV0Vl6my2d5BhI0OFAz4MEyBnNxQZvwgvoMQyLZrwGicD1razMgBD0bQ/0?wx_fmt=png&quot; alt=&quot;阑夕微博截图&quot;&gt;&lt;br&gt;最近在用喜马拉雅听阮一峰翻译的《黑客与画家》，原作者是硅谷创业之父Paul Graham（原谅我还不知道播音是谁）。其中谈到了财富、创造财富以及财富分配的观点。&lt;br&gt;​&lt;br&gt;财富不等于金钱，财富是社会中的价值，比如食物，你的快乐。金钱只是交换价值所需要的中介物品，最开始的时候人们是自给自足不需要金钱，再后来人们是用东西换东西的，也不需要金钱。金钱只是因为人多了需要的东西各种各样，一时半会换不到合适的东西，所以才把东西集中在一起，用比较稀少的金钱作为中介物品来替换其他物品。人们劳动是为了创造价值，创造财富。&lt;/p&gt;
+&lt;p&gt;理解了财富是人们创造出来的，那么贫富差异也就不难理解。创造的财富多的人就自然就可以分配到更多的财富。为什么一个娱乐可以比伟大科学家收入高那么多。从某种意义上可以说，娱乐明星比科学家创造了更多的社会价值，但是要加上我开头说的两个限定，一是现在，二是社会是目前生活在这个地球上的人们。也许未来有一天大家发现这个科学家创造的社会价值其实更多。&lt;/p&gt;
+&lt;p&gt;或许我的拙略转达不能让你理解，那么我建议你去看看这本书，豆瓣最近做活动这本书只要6元钱，不到一包烟钱，或者正好一顿早餐。如果你还是觉得贵，那么跟我一样去喜马拉雅听。说明一下我是买了豆瓣电子书的，因为我发现越到后面这本书越不能靠听来准确的获取其中的知识，据说后面有LISP语言的『硬广』还有很多技术问题的讨论，所以需要动手实践一下。&lt;/p&gt;
+&lt;p&gt;如果你有一个疑问很是困扰你，我觉得有几种方式可以解开这个疑问。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1. 问身边的人&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 通过自己身边的事情自己参悟，如同王明阳参竹子一般&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 被人告诉你（包括读书看电影，看电视剧）&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果你真的觉得这个是一个疑问，那么应该通过上面的办法尝试自己解决一下。一般都可以得到答案，也不至于与被人说蠢，在评论中愤愤不平，还被那拉黑。想想好可怜。同时通过这样的脑力训练你的大脑也会更加聪明，绝对胜过喝饮料『X个核桃』。&lt;/p&gt;
+&lt;p&gt;每个人都会这样，有时候遇到一个问题，突然忘记了通过自己的方式来尝试解决问题，没关系吃一堑长一智，多被骂几次就学会了。骂多了也就看淡了。突然想到那年去禅寺一个师傅讲的：『你骂我，只是你在动嘴巴、浪费唾液，与我何干？』&lt;/p&gt;
+&lt;p&gt;题图：『程序员在读书』首席摄影师Lofei新作 神仙居&lt;br&gt;原文链接：喜马拉雅有声书『黑客与画家』&lt;a href=&quot;http://m.ximalaya.com/24467655/album/3188042&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;收听地址&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天在微博里看到阑夕在自己的微博里面发布一条言论： &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“为什么娱乐明星的收入比伟大的科学家高那么多？为什么有钱人一掷千金的办宴席却不把钱捐给饿肚子的穷人？为什么西欧偶出一次爆炸案件的关注人数要远高于中东每天都在发生死伤规模也更多的同类惨剧？”因为你们蠢啊。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-98a0911defd3c7e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;『程序员在读书』首席摄影师Lofei新作 神仙居&quot;&gt;&lt;/p&gt;
+&lt;p&gt;其实这条微博只有6个字和一个句号是阑夕的观点。虽然看起来有点粗暴直接，但是不一定没有道理。 &lt;/p&gt;
+&lt;p&gt;赚钱的多少，吸引眼球的多少其实很多时候是看给社会创造的价值多少，另外可能要给这个创造价值加上一个时间那就是当前。还有一个社会的概念，社会就是这个世界，这个世界上的人们。所以说到底还是大家的喜好决定而分配方式。&lt;/p&gt;
+&lt;p&gt;有上面微博中类似疑问的朋友们，或许是想说，为什么这个社会这么不公平？其实这问题如果你有真的思考过，你或许不能得到答案但是你肯定可以找到让自己不再问类似问题的借口或者说理由。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="思考" scheme="http://blog.jerryzhang.net/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>发善意，倾善行，不拖延，不疏忽——『人性的弱点』读后感及笔记</title>
+    <link href="http://blog.jerryzhang.net/2016/04/24/%E5%8F%91%E5%96%84%E6%84%8F%EF%BC%8C%E5%80%BE%E5%96%84%E8%A1%8C%EF%BC%8C%E4%B8%8D%E6%8B%96%E5%BB%B6%EF%BC%8C%E4%B8%8D%E7%96%8F%E5%BF%BD%E2%80%94%E2%80%94%E3%80%8E%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9%E3%80%8F%E8%AF%BB%E5%90%8E%E6%84%9F%E5%8F%8A%E7%AC%94%E8%AE%B0/"/>
+    <id>http://blog.jerryzhang.net/2016/04/24/发善意，倾善行，不拖延，不疏忽——『人性的弱点』读后感及笔记/</id>
+    <published>2016-04-24T15:19:00.000Z</published>
+    <updated>2016-06-10T16:49:31.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是发布在我维护的微信公众号『程序员在读书』上的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;欢迎在微信关注『程序员在读书』，拙笔献丑，欢迎指正。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;正如昨天所说的：很多道理我们都知道，但是执行太难。就比如我们都知道读书最好是读完了写写读后感或者至少整理一下读书笔记，会对自己有帮助。至于原因，具体说的话应该足够另写一篇文字了。 大致上是：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;一、是可以让自己有一个回忆巩固知识和知识重新发酵的过程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;二、分享出去可以和其他人一起进步交流&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;三、可以积累起来让自己知道自己在进步&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;四、或许还有四我还没想到吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-03e6d5535510ed99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;卡耐基先生在写作&quot;&gt;&lt;/p&gt;
+&lt;p&gt;前段时间读了卡耐基的『人性的弱点』。这本书的书名翻译很有意思，英文原文是 『How to Win Friends &amp;amp; Influence People』翻译中文的时候被转移到了副标题上，所以这本书的全名应该是『人性的弱点—— 如何赢取友谊与影响他人』。得到友谊和影响他人怎么为什么说成是人性的说点呢？在阅读这本书的过程中我不断的想要去验证作者说的秘诀，我也确实这么做了。真的会有不一样的效果。作者总结了和人打交道的经验，指出了我们平常做法的错误还给出了正确的做法，应该说是一本人际关系处理上的干货合集。无论是夫妻之间，和父母交流，商业谈判，职场中，甚至是作为企业领导，公司负责人，你都在这本书里面可以找到不少为人处世的答案。按照作者的技巧真的就想你抓住了和你打交道的人的弱点，他们都乖乖的和你好好交流，也如你所愿的做你想让他们做的事情。所以我暗自为『人性的弱点』这个中文翻译叫绝。&lt;/p&gt;
+&lt;p&gt;还有一个有意思的感受，我在读这本书的过程中有那么几次我感觉自己的读一本宗教的书籍。因为作者说道和人相处要真诚的找到对方的优点夸，而不是随便敷衍；要真诚的为对方的利益考虑，从对方的角度考虑问题。所以作者说『心诚则灵』。怎么样？你是不是也觉得和拜佛时说的话高度类似。其实想想也是，不论是人还是所谓的佛都是需要诚心对待的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此生之路，我将走过；&lt;br&gt;走过这一次，便再也无法重来，&lt;br&gt;所有力所能及的善行，&lt;br&gt;所有充盈于心的善意，&lt;br&gt;我将毫不吝惜，即可倾予。&lt;br&gt;我将再不拖延，再不疏忽，&lt;br&gt;只因此生之路，再也无法重来。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如上一段话是，卡耐基先生在本书最后嘱咐一定要抄写下来，贴在卫生间的洗漱镜上，每天看看的话。我抄写了也贴上去了，也真的每天看看，下面图片是我帖子洗漱镜上的话。劝人向善，劝人抓紧当前时间。又一次的感觉如同宗教，如同一种信仰。随手释放你的善意和善行。夸你身边的人一句也好。我如同信徒，在尽量这么做。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-b4c3568f17ddb6c3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;我帖子洗漱镜上的话&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这本书我也看完有一段时间了，一直想整理读书笔记，以下是我读后整理的部分笔记。共享之，共勉。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;坦承自己的错误&lt;br&gt;做事情前先了为别人考虑，对方可以从中得到什么&lt;br&gt;记住对方的名字 和一些关于他的事情，尊重和理解对方&lt;/p&gt;
+&lt;p&gt;避免争吵，避免树敌&lt;/p&gt;
+&lt;p&gt;做好一个聆听者&lt;/p&gt;
+&lt;p&gt;指出错误的时候给出一个足够大的鼓励&lt;br&gt;指出错误的时候用『而且』句式 而不是『但是』句式&lt;br&gt;学会发现别人的优点，并且真诚的夸奖&lt;/p&gt;
+&lt;p&gt;一起分析问题，提醒对方有可能错了。而不是一开始就下结论说对方错了。大家都会像维护自己的孩子一样维护自己的观点。同样如果你维护对方的观点也会得到对方的认可。&lt;/p&gt;
+&lt;p&gt;认可对方和你达成共识的观点。&lt;br&gt;从和对方达成共识的观点出发，步步推敲，引导达成新的共识&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;题图：卡耐基先生在写作 图片来源（&lt;a href=&quot;http://www.thelawofattraction.org/dale-carnegie/）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.thelawofattraction.org/dale-carnegie/）&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是发布在我维护的微信公众号『程序员在读书』上的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;欢迎在微信关注『程序员在读书』，拙笔献丑，欢迎指正。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;正如昨天所说的：很多道理我们都知道，但是执行太难。就比如我们都知道读书最好是读完了写写读后感或者至少整理一下读书笔记，会对自己有帮助。至于原因，具体说的话应该足够另写一篇文字了。 大致上是：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;一、是可以让自己有一个回忆巩固知识和知识重新发酵的过程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;二、分享出去可以和其他人一起进步交流&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;三、可以积累起来让自己知道自己在进步&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;四、或许还有四我还没想到吧&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="读书" scheme="http://blog.jerryzhang.net/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>世界读书日说读书</title>
+    <link href="http://blog.jerryzhang.net/2016/04/24/%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E6%97%A5%E8%AF%B4%E8%AF%BB%E4%B9%A6/"/>
+    <id>http://blog.jerryzhang.net/2016/04/24/世界读书日说读书/</id>
+    <published>2016-04-24T04:09:00.000Z</published>
+    <updated>2016-06-10T16:52:31.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是世界读书日发布在我刚刚开始维护的微信公众号『程序员在读书』上的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;欢迎在微信关注『程序员在读书』，拙笔献丑，欢迎指正。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-f72ed21675303b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;去年10月份去仙居公盂游玩的时候拍的一条晒太阳的狗&quot;&gt;&lt;br&gt;今天是第21个世界读书日，我也是通过各种软件上还有朋友圈知道的，想不知道有点难度。微信读书昨天就放出了活动，设计了10道题目测试用户阅读量，答完题目分享可以得到一本电子书。当然其他公司也有很多活动，比如简书在北京和上海有组织线下的换书活动。豆瓣也有活动推出征集大家最喜欢的读的图书。&lt;/p&gt;
+&lt;p&gt;4月23日，世界图书与版权日，俗称世界读书日，是1995年开始设立的。同时这一天也是和很多大文人有关的纪念日。当然有的忌日，有的是诞辰。每个节日都有自己的起源，我就看了一篇百度百科，大概知道了一些。就不复制粘贴了。 总之这个节日设立的目的大概有三点：一、让大家都享受读书的快乐，无论穷富，无论年龄，二、感谢和纪念『文人们』注意版权问题，三、让大家哟个日子可以在一起庆祝（一起促销）。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-a751a7b7901306fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;微信读书日活动截图&quot;&gt;&lt;br&gt;节日总是很多的，我们不能总是在节日的时候才想起来做些什么事情。关于读书其实我们从小的教育就是读教科书，学校发的书本。而课外读物其实是比较少的。小说就跟别想了，我们都是偷偷地读的。&lt;/p&gt;
+&lt;p&gt; 我记得我第一次读小说是一本武侠小说。那年我不知道为什么病了挂水，在家里翻了一本没有封面也没有封背，甚至最开始的前几十页和最后的几十页也不知道去哪里了，整个书发黄。挂针的时候就被吸引了，针挂完的那个晚上我一直看到了深夜，看完了那本书。一开始讲述主人公被困在一个地下洞穴，后来发现武功秘籍……。后来大概知道那本是古龙先生的作品。至于什么名字到现在不知道。这个就是最初的阅读小说的体验。一种想要知道接下来的故事情节，虽然已经深夜但是根本不瞌睡，虽然眼睛已经模糊不清，但是任何要揉着眼睛，洗把脸继续看。&lt;/p&gt;
+&lt;p&gt;我很少看小说，但是每次看都是这样的体验，很是舒服。当然如果你看电视连续剧的话其实也是差不太多的体验。不一样的是电视剧给了你想象力上的限制。想象力是人类宝贵的财富，想要什么，只需要想象（现在叫做脑补）一下，你就立刻拥有（呵呵）。无论工作中，恋爱中，生活中都少不了要脑补。读书可以提高想象力，特别是读小说类的书籍。 &lt;/p&gt;
+&lt;p&gt;其实很多事情就是这样，道理都懂，就是不好做到。所以纯粹讲道理的文字就被叫做鸡汤文。大家都在声讨鸡汤文，说是没有勺子，没有给出具体的操作办法和步骤。我就告诉很多事情往往就是告诉你大道理，然后清清楚楚的告诉你要怎么做一二三四五，让你照着做你也做不到。不要不服，比如健身，不然减肥，比如读书，比如戒烟。我就不一一列举了。免得有人觉得我是故意凑字数。所以有时我还是喜欢看鸡汤文的。鸡汤文编辑成书就是励志书籍。我专门在家里备着些励志书籍，不仅仅是因为受到老罗（这次是罗永浩）年轻时在房间门口堆放一大推励志书籍的影响。也是确实有作用，我是在看到老罗这个故事之前就发现励志书的作用的。当你萎靡不正，大姨夫来的那么几天，你感觉整个人生就是灰色的，你活着就是一个笑话。不是身边的两三好友陪着你喝啤酒灌马尿你就可以完全缓得过来的。专业的事情还是要交给专业的人去做，励志书籍才是真正的鸡血存储总库。多少个灰色的日子我都是默默的拔下自己的电插头充在这些书籍上重获新生的。 真的有作用，不信你试试，一开始就停不下来了，比抖腿还管用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-9ee2bae36b03048a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;我拍的西湖景色&quot;&gt;&lt;br&gt;喝饱了鸡血，充慢了电。你需要释放，怎么释放呢？专业技术书。这一部分的书籍阅读起来我们往往又另外一个名词叫做学习。要花费的精力和时间更多，需要更多的专注力投入。很多时候你需要动手和笔或者电脑做点事情才能彻底明白书里面讲的东西。 但是学到的知识往往能够直接的用到生活或工作中，不敢说立竿见影，至少也见效比较快。所以想要这类书坚持阅读我想比较不错的办法就是逼自己。也许你也可以发挥自己的想象力，开打自己的脑洞，想象一下自己这个技术掌握的时候的情景。&lt;/p&gt;
+&lt;p&gt;哦对了，最近这几年读书还有一个比较不错的作用，就是可以在朋友圈或者微博里面晒一下，装一装文艺青年。无论怎么说，读书还是好处挺多的，那又怎么样呢，说的再多如果你不读还是不读的，能不能看到这里都不好说呢。&lt;/p&gt;
+&lt;p&gt;题图：去年10月份去仙居公盂游玩的时候拍的一条晒太阳的狗&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是世界读书日发布在我刚刚开始维护的微信公众号『程序员在读书』上的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;欢迎在微信关注『程序员在读书』，拙笔献丑，欢迎指正。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-f72ed21675303b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;去年10月份去仙居公盂游玩的时候拍的一条晒太阳的狗&quot;&gt;&lt;br&gt;今天是第21个世界读书日，我也是通过各种软件上还有朋友圈知道的，想不知道有点难度。微信读书昨天就放出了活动，设计了10道题目测试用户阅读量，答完题目分享可以得到一本电子书。当然其他公司也有很多活动，比如简书在北京和上海有组织线下的换书活动。豆瓣也有活动推出征集大家最喜欢的读的图书。&lt;/p&gt;
+&lt;p&gt;4月23日，世界图书与版权日，俗称世界读书日，是1995年开始设立的。同时这一天也是和很多大文人有关的纪念日。当然有的忌日，有的是诞辰。每个节日都有自己的起源，我就看了一篇百度百科，大概知道了一些。就不复制粘贴了。 总之这个节日设立的目的大概有三点：一、让大家都享受读书的快乐，无论穷富，无论年龄，二、感谢和纪念『文人们』注意版权问题，三、让大家哟个日子可以在一起庆祝（一起促销）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="读书" scheme="http://blog.jerryzhang.net/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我没感受到你的心，只因少了电池</title>
+    <link href="http://blog.jerryzhang.net/2016/01/15/%E6%88%91%E6%B2%A1%E6%84%9F%E5%8F%97%E5%88%B0%E4%BD%A0%E7%9A%84%E5%BF%83%EF%BC%8C%E5%8F%AA%E5%9B%A0%E5%B0%91%E4%BA%86%E7%94%B5%E6%B1%A0/"/>
+    <id>http://blog.jerryzhang.net/2016/01/15/我没感受到你的心，只因少了电池/</id>
+    <published>2016-01-14T16:47:00.000Z</published>
+    <updated>2016-06-10T16:49:42.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是一款智能体重秤产品的拆箱记。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;谁还有多余的Android数据线？办公室的老腊肉工程师在呼救。平时做Android开发，数据线是一个耗费品，用一端时间就坏了，不坏才不正常，说明你没与认真开发、调试。&lt;/p&gt;
+&lt;p&gt;办公室的老腊肉工程师的数据线坏了，找优秀员工J询问是否有多余的Android数据线。&lt;br&gt;J同学说：有。转身拿来自己新收到的快递。老腊肉惊讶的以为买了很多数据线，因为看包装还是不小的。&lt;/p&gt;
+&lt;p&gt;我「恰巧」经过，看到J同学在拆快递，立刻围观（不错过任何长见识的机会）。快递从一个购物塑料袋中取出，我一看形状脱口道：「体重秤？」。J同学悠悠的说：「这都被你猜到了。」&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;体重秤居然带了Android数据线，看来一定又是一个高端的智能体重秤。腊肉同学拿走Android数据线试了一下可以用，立刻回来一起继续围观「高端」数码产品。&lt;/p&gt;
+&lt;p&gt;取出「体重秤」，J同时解释「是一款体脂秤，可以测脂肪」。外包装上写着「智能电子体重秤」，和大部分体重秤一样，面上有一块显示屏。不同的是还有三个圆形的按钮，称面上还对称的分布着4个直径约三、四厘米的金属接触点，应该是用来测量脂肪的传感器。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-a2b198875807fc0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;腊肉同学拿着体重秤寻找数据线插口，没找到。问：「这个东西从哪里传输数据？」。「啊？」，J茫然。我说「数据线和这个秤没有半毛钱关系，数据线只是单纯的赠品，就想这个布娃娃。」说着我拿起快递一起送来的暖手宝布娃娃说。&lt;/p&gt;
+&lt;p&gt;此时办公室里面不少同事聚过来围观，都觉得还是挺高端的一个东西，好奇，都想看看怎么测脂肪的。「说明书上说是赤脚测量脂肪的」，我说，「我来试试」。大家都惊呼「别了吧，小心大家氨气中毒」。我说「我来个倒立，用手测试，应该也可以。」&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-5bb068b5c784556a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;可爱地暖手宝布娃娃&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我把口袋的东西都放回办公桌上，检查衣服在倒立时大面积曝光。然后找了个靠墙的空地，拿过体重秤放在墙根，手放在4个金属接触点上准备倒立。旁边同事说：『没电池吧』。倒立表演没有开始就结束了。 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-47e0b7cd7a66d400.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;秤正面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我想商家应该是把电池装好的，只是放了绝缘片，抽掉就可以了。因为之前我买过另外一款智能电子秤确实是这么做的。边想我就已经把电子秤反过来，打开了电池后盖。 可惜空空如也，没有电池。大家也都很奇怪，居然没有电池。或许在快递包装里面吧？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-60bc76d274a1e116.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;秤背面&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我们都开始翻找快递送过来的所有东西，一卷软米尺，一个热水袋布娃娃，体重表，说明书，Android数据线，礼品袋，背面印有体重记录表的致谢函。哦，对了还有很细心的准备地防止磕碰的安全气囊。就是没有电池！3节7号电池。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-01b3e8f2cb19e243.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-a81a3c36177618d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Paste_Image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;于是乎大家试图在办公室借，毕竟大家还是想看看这个「高端」的「智能电子体重秤」是如何智能的。找电池的结果自然是没找到，因为办公室的鼠标，键盘大多是5号电池。&lt;/p&gt;
+&lt;p&gt;我看着秤面上的「美时美刻 乐享生活」，礼品袋上的「您好！感谢让我遇到您」，大段的致谢函，还有哪个温馨的娃娃，感到十分遗憾。不是遗憾我没有感受到高端和智能，更不是遗憾我没有秀成我的倒立，而是觉得「明明感觉似乎挺用心的产品，为什么就缺了电池呢？」&lt;br&gt;&lt;img src=&quot;https://dl2.pushbulletusercontent.com/SfeLa6LGSjT0DVcWFmjF7wrEeUb7b7tg/IMG_20160113_180201R.jpg&quot; alt=&quot;礼品袋&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dl2.pushbulletusercontent.com/yUmTsvfCv3oGo2m0SqGXhuBSX6xSoCG7/IMG_20160113_180212R.jpg&quot; alt=&quot;气囊&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是一款智能体重秤产品的拆箱记。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;谁还有多余的Android数据线？办公室的老腊肉工程师在呼救。平时做Android开发，数据线是一个耗费品，用一端时间就坏了，不坏才不正常，说明你没与认真开发、调试。&lt;/p&gt;
+&lt;p&gt;办公室的老腊肉工程师的数据线坏了，找优秀员工J询问是否有多余的Android数据线。&lt;br&gt;J同学说：有。转身拿来自己新收到的快递。老腊肉惊讶的以为买了很多数据线，因为看包装还是不小的。&lt;/p&gt;
+&lt;p&gt;我「恰巧」经过，看到J同学在拆快递，立刻围观（不错过任何长见识的机会）。快递从一个购物塑料袋中取出，我一看形状脱口道：「体重秤？」。J同学悠悠的说：「这都被你猜到了。」&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="观察" scheme="http://blog.jerryzhang.net/categories/%E8%A7%82%E5%AF%9F/"/>
+    
     
   </entry>
   
