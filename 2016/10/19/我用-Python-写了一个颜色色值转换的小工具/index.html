@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android, 工程师, 程序员" />
+  <meta name="keywords" content="工具,Python," />
 
 
 
@@ -86,16 +86,19 @@
 
 
 
-<meta name="description">
+<meta name="description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。
+Zeplin 的颜色色值显示示例原有处理方式因为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我用 Python 写了一个颜色色值转换的小工具">
 <meta property="og:url" content="http://blog.jerryzhang.net/2016/10/19/我用-Python-写了一个颜色色值转换的小工具/index.html">
 <meta property="og:site_name" content="JerrySher's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-10-18T16:56:51.000Z">
+<meta property="og:description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。
+Zeplin 的颜色色值显示示例原有处理方式因为">
+<meta property="og:updated_time" content="2016-12-26T06:40:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我用 Python 写了一个颜色色值转换的小工具">
-<meta name="twitter:description">
+<meta name="twitter:description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。
+Zeplin 的颜色色值显示示例原有处理方式因为">
 
 
 
@@ -310,7 +313,61 @@
       
 
       
-        
+        <p>需求说明<br>公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。</p>
+<p>Zeplin 的颜色色值显示示例<br>原有处理方式<br>因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。</p>
+<p>采用 hex 函数手动转换色值<br>动机<br>人总是懒得，想要写这个小工具已经很久了，我也打过有过构思就是：</p>
+<p>输入: 类似 RGB 的十进制值(110, 122 138)，用空格或者逗号分割一下。<br>输出: 一个十六进制的 RGB 颜色色值(#6e7a8a)。<br>但就一直没动手，一直讲究着。真懒！</p>
+<p>开干<br>1.首先我需要输入函数<br>我打开我之前学习 Python 的文件夹，里面正好有一个 raw_input 的示例：</p>
+<p>#!/usr/bin/python</p>
+<p>#coding=utf-8</p>
+<p>raw_input(“\n\n等输入”)<br>在终端执行 python input.py 后， 可以输入文字。<br>我需要接受到用户输入的信息。怎么接收忘记了， Google 之，得到结果，顺便改改输入提示语，打印出输入的内容：</p>
+<p>input = raw_input(“\n输入颜色 比如50 144 60:\n”)<br>print(input)</p>
+<ol>
+<li>需要分割字符<br>查询到python 字符分割函数 split()，默认不传入参数就可以用空白符分割。原本还说用英文逗号(,)作为分隔符，现在看来可以省了，直接用空格分割，无论多少空格都可以自动分割。于是加上代码：</li>
+</ol>
+<p>rgbColorArray = input.split()<br>print(rgbColorArray)</p>
+<ol>
+<li>需要遍历数组<br>简单的遍历数组的是怎么弄的也忘记了，同样搜索：</li>
+</ol>
+<p>for x in rgbColorArray:  print(x)</p>
+<ol>
+<li>字符转成十六进制<br>这个时候拿到了字符串，要变成十六进制的字符串。这个时候需要两个函数， int() 和 hex()，int 函数可以将字符串转成 int 类型，而 hex 则接受数字参数，返回字符串。 0x开始的字符串。<br>于是就有了第一个版本。</li>
+</ol>
+<p>第一个版本</p>
+<p>第一个版本</p>
+<p>第一个版本执行结果<br>写出这样的基础版本已经基本可以得到我想要的结果了，缺点是还需要我手动收入，动用大脑记忆十六进制色值然后输入。希望可以直接复制最后结果。</p>
+<p>再进一步<br>虽然结果已经出来了，但是还是希望可以在进步一些，有几个问题：</p>
+<p>当要转换的数字小于16的时候 只有一位不显示，比如11 显示的结果是0xB<br>现实的结果多了0x<br>显示的结果最好连在一起方便复制，而不是每个颜色一行。<br>那么就需要遍历颜色值数组，去掉0x 字符串， 判断小于16的前面补上0。连续在一起输出结果。</p>
+<p>for 循环遍历数组<br>前面用到了 for 循环，是从查到的范例，不过多行就不知道怎么弄了。java 写多了一般都是 { } 大括号括起来。<br>继续查资料，于是知道是大概下面这样的用法。</p>
+<p>#!/usr/bin/python</p>
+<h1 id="coding-UTF-8"><a href="#coding-UTF-8" class="headerlink" title="-- coding: UTF-8 --"></a>-<em>- coding: UTF-8 -</em>-</h1><p>for num in range(10,20):  # 迭代 10 到 20 之间的数字<br>   for i in range(2,num): # 根据因子迭代<br>      if num%i == 0:      # 确定第一个因子<br>         j=num/i          # 计算第二个因子<br>         print ‘%d 等于 %d * %d’ % (num,i,j)<br>         break            # 跳出当前循环<br>   else:                  # 循环的 else 部分<br>      print num, ‘是一个质数’<br>变量声明<br>由于需要不换行，所以就需要字符连接，而不是直接 print。<br>声明变量又遇到问题了。根据前面的变量使用情况，找了些 python 代码看了看，大概知道不用声明什么类型，直接用就好了。于是有了代码：</p>
+<p>output = “#”<br>for x in rgbColorArray:<br>    intx = int(x)<br>    output = output +  hex(intx)<br>print(output)<br>字符串裁剪 和拼接。<br>需要把多余的0x 两位去掉。<br>用到字符串裁剪，依然寻找范例。</p>
+<p>#!/usr/bin/python</p>
+<p>var1 = ‘Hello World!’<br>var2 = “Python Runoob”</p>
+<p>print “var1[0]: “, var1[0]<br>print “var2[1:5]: “, var2[1:5]<br>这个范例的执行结果：</p>
+<p>var1[0]: H<br>var2[1:5]: ytho<br>顺便问了旁边也在学习 python 的同事，他告诉我后面的索引可以省略，代表直接裁剪到结尾。<br>比如上面的例子如果 print “var2[1:]”, var2[1:] 得到的结果应该是 ython Runoob</p>
+<p>所以有代码：</p>
+<p>output = “#”<br>for x in rgbColorArray:<br>    intx = int(x)<br>    output = output +  hex(intx)[2:]<br>print(output)<br>也可以从后往前数，比如还是上面的范例可以写成。比如上面的例子如果 print “var2[-1:]”, var2[-1:] 得到的结果应该是 ob 也就是字符串的后两位。<br>于是我们这里可以写成hex(intx)[-2:] (因为输出字符串类似是0x23， 这样的)就是这个导致我后面写了个 bug，我也文章最后说明这个 bug 是什么。</p>
+<p>if else 判断<br>接着要做一个判断，给一位的补上0</p>
+<pre><code>if intx &lt; 16:
+    output = output + &apos;0&apos; + hex(intx)[-2:]
+else:
+    output = output +  hex(intx)[-2:]
+</code></pre><p>这样就有了python 文件：</p>
+<p>#!/usr/bin/python</p>
+<p>#coding=utf-8</p>
+<p>input = raw_input(“\n输入颜色 比如50 144 60:\n”)</p>
+<p>#print(input)</p>
+<p>rgbColorArray = input.split()<br>print(rgbColorArray)</p>
+<p>output = “#”<br>for x in rgbColorArray:<br>    intx = int(x)<br>    if intx &lt; 16:<br>        output = output + ‘0’ + hex(intx)[-2:]<br>    else:<br>        output = output +  hex(intx)[-2:]    </p>
+<p>#print(hex(int(x)))<br>print(output)<br>还有最后一步：把 ColorU 加入到环境变量中<br>这个时候我可以得到我要的记过了，但是有点不太方便，我需要到这个 python 文件所在的目录下写</p>
+<p>python colorU.py<br>或者写全 colorU.py 这个路径。都是很麻的事情，所以我需要把 colorU 加入环境变量中。我用的是 zsh，所以找到环境变量的配置文件：~/.zshrc,末尾加上配置：</p>
+<p>alias colorU=”python ~/Documents/Development/PythonStudy/colorU.py”<br>这个是经过另外以为同事指导后的最后可行版本，我最初的思路是把 colorU.py 文件设置成可执行文件，然后加入到 Path 当中。结果我把 colorU.py 这个文件的地址加入到了 Path 中，世界上PATH 应该是一个目录。这样添加别名的方式更方便。</p>
+<p>后续<br>后来据说 Zeplin 的客户端可以默认显示十六进制的色值，而我用的是网页版的，所以没有。也就是说如果我装客户端就可以不用我写的这个脚本了。但没关系我学习了 python，写了我自己的第一个真正有用的 python 代码。</p>
+<p>一个bug：我是在写这篇文章的时候才发现这个 bug 的，类似0x33这样的字符串从后往前裁剪的时候写[-2:]，当然没有问题，但是写0xf 这样的字符串就会有问题了。程序输入 5 5 5得到的结果是 #0x50x50x5。修改成[2:] 的裁剪就可以了。</p>
+<p>倒向裁剪字符串引起的bug<br>还可以继续升级体验：</p>
+<p>a. 直接在终端中输入 colorU 231 234 123 就可以得到结果 #e7ea7b;<br>b. 配合Alfred， 呼出 Alfred 窗口后，输入色值，得到结果，回车直接复制十六进制到粘贴板。<br>c. 保存之前已经转换过的色值，方便重复使用的颜色，直接复制十六进制颜色。<br>参考：<br>菜鸟教程</p>
+
       
     </div>
 
@@ -355,13 +412,21 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/工具/" rel="tag">#工具</a>
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/14/让Sublime 支持GB2312格式/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2016/06/14/让Sublime 支持GB2312格式/" rel="next" title="既然是互联网公司为什么不搬到山里去，环境多好">
+                <i class="fa fa-chevron-left"></i> 既然是互联网公司为什么不搬到山里去，环境多好
               </a>
             
           </div>
@@ -465,7 +530,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -474,7 +539,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -546,7 +611,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-UTF-8"><span class="nav-number">1.</span> <span class="nav-text">-- coding: UTF-8 --</span></a></li></ol></div>
             
           </div>
         </section>

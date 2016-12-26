@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jerryzhang.net/"/>
-  <updated>2016-10-18T16:56:51.000Z</updated>
+  <updated>2016-12-26T06:40:52.000Z</updated>
   <id>http://blog.jerryzhang.net/</id>
   
   <author>
@@ -20,23 +20,83 @@
     <link href="http://blog.jerryzhang.net/2016/10/19/%E6%88%91%E7%94%A8-Python-%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E9%A2%9C%E8%89%B2%E8%89%B2%E5%80%BC%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     <id>http://blog.jerryzhang.net/2016/10/19/我用-Python-写了一个颜色色值转换的小工具/</id>
     <published>2016-10-18T16:56:51.000Z</published>
-    <updated>2016-10-18T16:56:51.000Z</updated>
+    <updated>2016-12-26T06:40:52.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;需求说明&lt;br&gt;公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。&lt;/p&gt;
+&lt;p&gt;Zeplin 的颜色色值显示示例&lt;br&gt;原有处理方式&lt;br&gt;因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。&lt;/p&gt;
+&lt;p&gt;采用 hex 函数手动转换色值&lt;br&gt;动机&lt;br&gt;人总是懒得，想要写这个小工具已经很久了，我也打过有过构思就是：&lt;/p&gt;
+&lt;p&gt;输入: 类似 RGB 的十进制值(110, 122 138)，用空格或者逗号分割一下。&lt;br&gt;输出: 一个十六进制的 RGB 颜色色值(#6e7a8a)。&lt;br&gt;但就一直没动手，一直讲究着。真懒！&lt;/p&gt;
+&lt;p&gt;开干&lt;br&gt;1.首先我需要输入函数&lt;br&gt;我打开我之前学习 Python 的文件夹，里面正好有一个 raw_input 的示例：&lt;/p&gt;
+&lt;p&gt;#!/usr/bin/python&lt;/p&gt;
+&lt;p&gt;#coding=utf-8&lt;/p&gt;
+&lt;p&gt;raw_input(“\n\n等输入”)&lt;br&gt;在终端执行 python input.py 后， 可以输入文字。&lt;br&gt;我需要接受到用户输入的信息。怎么接收忘记了， Google 之，得到结果，顺便改改输入提示语，打印出输入的内容：&lt;/p&gt;
+&lt;p&gt;input = raw_input(“\n输入颜色 比如50 144 60:\n”)&lt;br&gt;print(input)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;需要分割字符&lt;br&gt;查询到python 字符分割函数 split()，默认不传入参数就可以用空白符分割。原本还说用英文逗号(,)作为分隔符，现在看来可以省了，直接用空格分割，无论多少空格都可以自动分割。于是加上代码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;rgbColorArray = input.split()&lt;br&gt;print(rgbColorArray)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;需要遍历数组&lt;br&gt;简单的遍历数组的是怎么弄的也忘记了，同样搜索：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;for x in rgbColorArray:  print(x)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;字符转成十六进制&lt;br&gt;这个时候拿到了字符串，要变成十六进制的字符串。这个时候需要两个函数， int() 和 hex()，int 函数可以将字符串转成 int 类型，而 hex 则接受数字参数，返回字符串。 0x开始的字符串。&lt;br&gt;于是就有了第一个版本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第一个版本&lt;/p&gt;
+&lt;p&gt;第一个版本&lt;/p&gt;
+&lt;p&gt;第一个版本执行结果&lt;br&gt;写出这样的基础版本已经基本可以得到我想要的结果了，缺点是还需要我手动收入，动用大脑记忆十六进制色值然后输入。希望可以直接复制最后结果。&lt;/p&gt;
+&lt;p&gt;再进一步&lt;br&gt;虽然结果已经出来了，但是还是希望可以在进步一些，有几个问题：&lt;/p&gt;
+&lt;p&gt;当要转换的数字小于16的时候 只有一位不显示，比如11 显示的结果是0xB&lt;br&gt;现实的结果多了0x&lt;br&gt;显示的结果最好连在一起方便复制，而不是每个颜色一行。&lt;br&gt;那么就需要遍历颜色值数组，去掉0x 字符串， 判断小于16的前面补上0。连续在一起输出结果。&lt;/p&gt;
+&lt;p&gt;for 循环遍历数组&lt;br&gt;前面用到了 for 循环，是从查到的范例，不过多行就不知道怎么弄了。java 写多了一般都是 { } 大括号括起来。&lt;br&gt;继续查资料，于是知道是大概下面这样的用法。&lt;/p&gt;
+&lt;p&gt;#!/usr/bin/python&lt;/p&gt;
+&lt;h1 id=&quot;coding-UTF-8&quot;&gt;&lt;a href=&quot;#coding-UTF-8&quot; class=&quot;headerlink&quot; title=&quot;-- coding: UTF-8 --&quot;&gt;&lt;/a&gt;-&lt;em&gt;- coding: UTF-8 -&lt;/em&gt;-&lt;/h1&gt;&lt;p&gt;for num in range(10,20):  # 迭代 10 到 20 之间的数字&lt;br&gt;   for i in range(2,num): # 根据因子迭代&lt;br&gt;      if num%i == 0:      # 确定第一个因子&lt;br&gt;         j=num/i          # 计算第二个因子&lt;br&gt;         print ‘%d 等于 %d * %d’ % (num,i,j)&lt;br&gt;         break            # 跳出当前循环&lt;br&gt;   else:                  # 循环的 else 部分&lt;br&gt;      print num, ‘是一个质数’&lt;br&gt;变量声明&lt;br&gt;由于需要不换行，所以就需要字符连接，而不是直接 print。&lt;br&gt;声明变量又遇到问题了。根据前面的变量使用情况，找了些 python 代码看了看，大概知道不用声明什么类型，直接用就好了。于是有了代码：&lt;/p&gt;
+&lt;p&gt;output = “#”&lt;br&gt;for x in rgbColorArray:&lt;br&gt;    intx = int(x)&lt;br&gt;    output = output +  hex(intx)&lt;br&gt;print(output)&lt;br&gt;字符串裁剪 和拼接。&lt;br&gt;需要把多余的0x 两位去掉。&lt;br&gt;用到字符串裁剪，依然寻找范例。&lt;/p&gt;
+&lt;p&gt;#!/usr/bin/python&lt;/p&gt;
+&lt;p&gt;var1 = ‘Hello World!’&lt;br&gt;var2 = “Python Runoob”&lt;/p&gt;
+&lt;p&gt;print “var1[0]: “, var1[0]&lt;br&gt;print “var2[1:5]: “, var2[1:5]&lt;br&gt;这个范例的执行结果：&lt;/p&gt;
+&lt;p&gt;var1[0]: H&lt;br&gt;var2[1:5]: ytho&lt;br&gt;顺便问了旁边也在学习 python 的同事，他告诉我后面的索引可以省略，代表直接裁剪到结尾。&lt;br&gt;比如上面的例子如果 print “var2[1:]”, var2[1:] 得到的结果应该是 ython Runoob&lt;/p&gt;
+&lt;p&gt;所以有代码：&lt;/p&gt;
+&lt;p&gt;output = “#”&lt;br&gt;for x in rgbColorArray:&lt;br&gt;    intx = int(x)&lt;br&gt;    output = output +  hex(intx)[2:]&lt;br&gt;print(output)&lt;br&gt;也可以从后往前数，比如还是上面的范例可以写成。比如上面的例子如果 print “var2[-1:]”, var2[-1:] 得到的结果应该是 ob 也就是字符串的后两位。&lt;br&gt;于是我们这里可以写成hex(intx)[-2:] (因为输出字符串类似是0x23， 这样的)就是这个导致我后面写了个 bug，我也文章最后说明这个 bug 是什么。&lt;/p&gt;
+&lt;p&gt;if else 判断&lt;br&gt;接着要做一个判断，给一位的补上0&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if intx &amp;lt; 16:
+    output = output + &amp;apos;0&amp;apos; + hex(intx)[-2:]
+else:
+    output = output +  hex(intx)[-2:]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这样就有了python 文件：&lt;/p&gt;
+&lt;p&gt;#!/usr/bin/python&lt;/p&gt;
+&lt;p&gt;#coding=utf-8&lt;/p&gt;
+&lt;p&gt;input = raw_input(“\n输入颜色 比如50 144 60:\n”)&lt;/p&gt;
+&lt;p&gt;#print(input)&lt;/p&gt;
+&lt;p&gt;rgbColorArray = input.split()&lt;br&gt;print(rgbColorArray)&lt;/p&gt;
+&lt;p&gt;output = “#”&lt;br&gt;for x in rgbColorArray:&lt;br&gt;    intx = int(x)&lt;br&gt;    if intx &amp;lt; 16:&lt;br&gt;        output = output + ‘0’ + hex(intx)[-2:]&lt;br&gt;    else:&lt;br&gt;        output = output +  hex(intx)[-2:]    &lt;/p&gt;
+&lt;p&gt;#print(hex(int(x)))&lt;br&gt;print(output)&lt;br&gt;还有最后一步：把 ColorU 加入到环境变量中&lt;br&gt;这个时候我可以得到我要的记过了，但是有点不太方便，我需要到这个 python 文件所在的目录下写&lt;/p&gt;
+&lt;p&gt;python colorU.py&lt;br&gt;或者写全 colorU.py 这个路径。都是很麻的事情，所以我需要把 colorU 加入环境变量中。我用的是 zsh，所以找到环境变量的配置文件：~/.zshrc,末尾加上配置：&lt;/p&gt;
+&lt;p&gt;alias colorU=”python ~/Documents/Development/PythonStudy/colorU.py”&lt;br&gt;这个是经过另外以为同事指导后的最后可行版本，我最初的思路是把 colorU.py 文件设置成可执行文件，然后加入到 Path 当中。结果我把 colorU.py 这个文件的地址加入到了 Path 中，世界上PATH 应该是一个目录。这样添加别名的方式更方便。&lt;/p&gt;
+&lt;p&gt;后续&lt;br&gt;后来据说 Zeplin 的客户端可以默认显示十六进制的色值，而我用的是网页版的，所以没有。也就是说如果我装客户端就可以不用我写的这个脚本了。但没关系我学习了 python，写了我自己的第一个真正有用的 python 代码。&lt;/p&gt;
+&lt;p&gt;一个bug：我是在写这篇文章的时候才发现这个 bug 的，类似0x33这样的字符串从后往前裁剪的时候写[-2:]，当然没有问题，但是写0xf 这样的字符串就会有问题了。程序输入 5 5 5得到的结果是 #0x50x50x5。修改成[2:] 的裁剪就可以了。&lt;/p&gt;
+&lt;p&gt;倒向裁剪字符串引起的bug&lt;br&gt;还可以继续升级体验：&lt;/p&gt;
+&lt;p&gt;a. 直接在终端中输入 colorU 231 234 123 就可以得到结果 #e7ea7b;&lt;br&gt;b. 配合Alfred， 呼出 Alfred 窗口后，输入色值，得到结果，回车直接复制十六进制到粘贴板。&lt;br&gt;c. 保存之前已经转换过的色值，方便重复使用的颜色，直接复制十六进制颜色。&lt;br&gt;参考：&lt;br&gt;菜鸟教程&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;p&gt;需求说明&lt;br&gt;公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果
     
     </summary>
     
     
+      <category term="工具" scheme="http://blog.jerryzhang.net/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Python" scheme="http://blog.jerryzhang.net/tags/Python/"/>
+    
   </entry>
   
   <entry>
-    <title></title>
+    <title>既然是互联网公司为什么不搬到山里去，环境多好</title>
     <link href="http://blog.jerryzhang.net/2016/06/14/%E8%AE%A9Sublime%20%E6%94%AF%E6%8C%81GB2312%E6%A0%BC%E5%BC%8F/"/>
     <id>http://blog.jerryzhang.net/2016/06/14/让Sublime 支持GB2312格式/</id>
-    <published>2016-06-14T04:02:41.000Z</published>
-    <updated>2016-06-14T04:02:41.000Z</updated>
+    <published>2016-06-14T04:05:00.000Z</published>
+    <updated>2016-12-26T06:39:15.000Z</updated>
     
     <content type="html">&lt;p&gt;让Sublime 支持GB2312格式，&lt;br&gt;Sublime默认只支持UTF-8编码格式&lt;/p&gt;
 &lt;p&gt;需要安装插件 CovertToUTF8&lt;/p&gt;
@@ -51,6 +111,8 @@
 &lt;p&gt;File: /Users/jerrysher/Downloads/Fiy5SDEjl8xM9NHWXNnEAw3e
     
     </summary>
+    
+      <category term="笔记" scheme="http://blog.jerryzhang.net/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
