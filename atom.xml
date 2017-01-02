@@ -119,19 +119,13 @@ else:
   </entry>
   
   <entry>
-    <title></title>
+    <title>Pro Git 学习笔记</title>
     <link href="http://blog.jerryzhang.net/2016/06/12/Pro-Git-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://blog.jerryzhang.net/2016/06/12/Pro-Git-学习笔记/</id>
-    <published>2016-06-12T09:21:54.000Z</published>
-    <updated>2016-08-03T13:44:36.000Z</updated>
+    <published>2016-06-12T09:21:00.000Z</published>
+    <updated>2017-01-02T15:32:07.000Z</updated>
     
-    <content type="html">&lt;hr&gt;
-&lt;p&gt;title: Pro Git 学习笔记&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;li&gt;版本控制&lt;br&gt;categories: 工具学习&lt;br&gt;comments: true&lt;br&gt;—`&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;学习 Pro Git 一书的学习笔记。&lt;br&gt;采用教材：Pro Git 中文版&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;一、起步&quot;&gt;&lt;a href=&quot;#一、起步&quot; class=&quot;headerlink&quot; title=&quot;一、起步&quot;&gt;&lt;/a&gt;一、起步&lt;/h1&gt;&lt;h2 id=&quot;关于版本控制&quot;&gt;&lt;a href=&quot;#关于版本控制&quot; class=&quot;headerlink&quot; title=&quot;关于版本控制&quot;&gt;&lt;/a&gt;关于版本控制&lt;/h2&gt;&lt;ul&gt;
@@ -149,10 +143,10 @@ else:
 &lt;ul&gt;
 &lt;li&gt;已提交&lt;/li&gt;
 &lt;li&gt;已修改&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;已暂存&lt;br&gt;33&lt;/p&gt;
-&lt;h2 id=&quot;git-安装和配置&quot;&gt;&lt;a href=&quot;#git-安装和配置&quot; class=&quot;headerlink&quot; title=&quot;git 安装和配置&quot;&gt;&lt;/a&gt;git 安装和配置&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;已暂存&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;源码安装，或者编译包安装。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;git-安装和配置&quot;&gt;&lt;a href=&quot;#git-安装和配置&quot; class=&quot;headerlink&quot; title=&quot;git 安装和配置&quot;&gt;&lt;/a&gt;git 安装和配置&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;源码安装，或者编译包安装。&lt;/p&gt;
 &lt;h3 id=&quot;配置：&quot;&gt;&lt;a href=&quot;#配置：&quot; class=&quot;headerlink&quot; title=&quot;配置：&quot;&gt;&lt;/a&gt;配置：&lt;/h3&gt;&lt;p&gt;配置和查看 git 环境：&lt;/p&gt;
 &lt;p&gt;git config   实际上调用的是 git-config 命令，但是至今输入git-config 找不到这个命令&lt;/p&gt;
 &lt;p&gt;git config —sytem 配置系统环境 系统所有用户通用的配置&lt;br&gt;git config —global 配置当前用户环境  在 ~/.gitconfig 目录下配置。&lt;br&gt;git config  设置当前项目的配置     在.git/config目录下记录&lt;/p&gt;
@@ -290,17 +284,35 @@ modified:   benchmarks.rb
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title: Pro Git 学习笔记&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;li&gt;版本控制&lt;br&gt;categories: 工具学习&lt;br&gt;comments: true&lt;br&gt;—`&lt;/li&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;学习 Pro Git 一书的学习笔记。&lt;br&gt;采用教材：Pro Git 中文版&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;一、起步&quot;&gt;&lt;a href=&quot;#一、起步&quot; class=&quot;headerlink&quot; title=&quot;一、起步&quot;&gt;&lt;/a&gt;一、起步&lt;/h1&gt;&lt;h2 id=&quot;关于版本控制&quot;&gt;&lt;a href=&quot;#关于版本控制&quot; class=&quot;headerlink&quot; title=&quot;关于版本控制&quot;&gt;&lt;/a&gt;关于版本控制&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;本地版本的控制 rcs 保存并管理文件补丁（patch）&lt;/li&gt;
+&lt;li&gt;集中化的版本控制系统 CVS SubVersion Perfoce， 有集中的服务器管理版本，本地每次获得最新版本代码。 &lt;/li&gt;
+&lt;li&gt;分布式版本控制系统 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;学
+&lt;h2 id=&quot;Git-历史&quot;&gt;&lt;a href=&quot;#Git-历史&quot; class=&quot;headerlink&quot; title=&quot;Git 历史&quot;&gt;&lt;/a&gt;Git 历史&lt;/h2&gt;&lt;p&gt; 2005年一直免费试用的 分布式版本控制系统 BitKeeper 的商业公司停止了对 Linux 的免费授权,  Linus 就带领社区撸了一个分布式版本管理系统。 &lt;/p&gt;
+&lt;h2 id=&quot;git-基础概念&quot;&gt;&lt;a href=&quot;#git-基础概念&quot; class=&quot;headerlink&quot; title=&quot;git 基础概念&quot;&gt;&lt;/a&gt;git 基础概念&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;文件快照，直接保存文件，而不是差异比较&lt;/li&gt;
+&lt;li&gt;本地操作 可以不用连接网络仓库  疯狂提交代码&lt;/li&gt;
+&lt;li&gt;时刻保证数据完整性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文件的三个状态&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已提交&lt;/li&gt;
+&lt;li&gt;已修改&lt;/li&gt;
+&lt;li&gt;已暂存&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
+      <category term="工具学习" scheme="http://blog.jerryzhang.net/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Git" scheme="http://blog.jerryzhang.net/tags/Git/"/>
+    
+      <category term="版本控制" scheme="http://blog.jerryzhang.net/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
@@ -500,7 +512,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/05/12/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F%E6%82%9F/"/>
     <id>http://blog.jerryzhang.net/2016/05/12/《黑客与画家》读后感悟/</id>
     <published>2016-05-12T05:21:00.000Z</published>
-    <updated>2016-12-26T06:24:21.000Z</updated>
+    <updated>2017-01-02T15:19:55.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;《黑客与画家》读完有一段时间了，由于之前是在上下班路上听的，也没做做笔记。后面无论读书还是听书还是要养成做笔记的习惯，毕竟脑子慢慢的不够用了。之前也好几次谈到了这本书，今天整体的说说看完这本书后学到和感悟到的东西。&lt;/p&gt;
