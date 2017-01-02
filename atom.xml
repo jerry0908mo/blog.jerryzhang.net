@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jerryzhang.net/"/>
-  <updated>2016-12-26T06:40:52.000Z</updated>
+  <updated>2017-01-02T15:19:37.000Z</updated>
   <id>http://blog.jerryzhang.net/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://blog.jerryzhang.net/2016/10/19/%E6%88%91%E7%94%A8-Python-%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E9%A2%9C%E8%89%B2%E8%89%B2%E5%80%BC%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     <id>http://blog.jerryzhang.net/2016/10/19/我用-Python-写了一个颜色色值转换的小工具/</id>
     <published>2016-10-18T16:56:51.000Z</published>
-    <updated>2016-12-26T06:40:52.000Z</updated>
+    <updated>2017-01-02T15:19:37.000Z</updated>
     
     <content type="html">&lt;p&gt;需求说明&lt;br&gt;公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。&lt;/p&gt;
-&lt;p&gt;Zeplin 的颜色色值显示示例&lt;br&gt;原有处理方式&lt;br&gt;因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。&lt;/p&gt;
+&lt;p&gt;Zeplin 的颜色色值显示示例&lt;br&gt;原有处理方式&lt;br&gt;因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;采用 hex 函数手动转换色值&lt;br&gt;动机&lt;br&gt;人总是懒得，想要写这个小工具已经很久了，我也打过有过构思就是：&lt;/p&gt;
 &lt;p&gt;输入: 类似 RGB 的十进制值(110, 122 138)，用空格或者逗号分割一下。&lt;br&gt;输出: 一个十六进制的 RGB 颜色色值(#6e7a8a)。&lt;br&gt;但就一直没动手，一直讲究着。真懒！&lt;/p&gt;
 &lt;p&gt;开干&lt;br&gt;1.首先我需要输入函数&lt;br&gt;我打开我之前学习 Python 的文件夹，里面正好有一个 raw_input 的示例：&lt;/p&gt;
@@ -80,7 +80,8 @@ else:
     
     <summary type="html">
     
-      &lt;p&gt;需求说明&lt;br&gt;公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果
+      &lt;p&gt;需求说明&lt;br&gt;公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。&lt;/p&gt;
+&lt;p&gt;Zeplin 的颜色色值显示示例&lt;br&gt;原有处理方式&lt;br&gt;因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。&lt;br&gt;
     
     </summary>
     
