@@ -94,7 +94,7 @@ Zeplin 的颜色色值显示示例原有处理方式因为">
 <meta property="og:site_name" content="JerrySher's Blog">
 <meta property="og:description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。
 Zeplin 的颜色色值显示示例原有处理方式因为">
-<meta property="og:updated_time" content="2017-01-02T15:19:37.000Z">
+<meta property="og:updated_time" content="2017-01-03T15:11:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我用 Python 写了一个颜色色值转换的小工具">
 <meta name="twitter:description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。
@@ -318,51 +318,43 @@ Zeplin 的颜色色值显示示例原有处理方式因为">
 <p>采用 hex 函数手动转换色值<br>动机<br>人总是懒得，想要写这个小工具已经很久了，我也打过有过构思就是：</p>
 <p>输入: 类似 RGB 的十进制值(110, 122 138)，用空格或者逗号分割一下。<br>输出: 一个十六进制的 RGB 颜色色值(#6e7a8a)。<br>但就一直没动手，一直讲究着。真懒！</p>
 <p>开干<br>1.首先我需要输入函数<br>我打开我之前学习 Python 的文件夹，里面正好有一个 raw_input 的示例：</p>
-<p>#!/usr/bin/python</p>
-<p>#coding=utf-8</p>
-<p>raw_input(“\n\n等输入”)<br>在终端执行 python input.py 后， 可以输入文字。<br>我需要接受到用户输入的信息。怎么接收忘记了， Google 之，得到结果，顺便改改输入提示语，打印出输入的内容：</p>
-<p>input = raw_input(“\n输入颜色 比如50 144 60:\n”)<br>print(input)</p>
-<ol>
-<li>需要分割字符<br>查询到python 字符分割函数 split()，默认不传入参数就可以用空白符分割。原本还说用英文逗号(,)作为分隔符，现在看来可以省了，直接用空格分割，无论多少空格都可以自动分割。于是加上代码：</li>
-</ol>
-<p>rgbColorArray = input.split()<br>print(rgbColorArray)</p>
-<ol>
-<li>需要遍历数组<br>简单的遍历数组的是怎么弄的也忘记了，同样搜索：</li>
-</ol>
-<p>for x in rgbColorArray:  print(x)</p>
-<ol>
-<li>字符转成十六进制<br>这个时候拿到了字符串，要变成十六进制的字符串。这个时候需要两个函数， int() 和 hex()，int 函数可以将字符串转成 int 类型，而 hex 则接受数字参数，返回字符串。 0x开始的字符串。<br>于是就有了第一个版本。</li>
-</ol>
-<p>第一个版本</p>
-<p>第一个版本</p>
-<p>第一个版本执行结果<br>写出这样的基础版本已经基本可以得到我想要的结果了，缺点是还需要我手动收入，动用大脑记忆十六进制色值然后输入。希望可以直接复制最后结果。</p>
-<p>再进一步<br>虽然结果已经出来了，但是还是希望可以在进步一些，有几个问题：</p>
-<p>当要转换的数字小于16的时候 只有一位不显示，比如11 显示的结果是0xB<br>现实的结果多了0x<br>显示的结果最好连在一起方便复制，而不是每个颜色一行。<br>那么就需要遍历颜色值数组，去掉0x 字符串， 判断小于16的前面补上0。连续在一起输出结果。</p>
-<p>for 循环遍历数组<br>前面用到了 for 循环，是从查到的范例，不过多行就不知道怎么弄了。java 写多了一般都是 { } 大括号括起来。<br>继续查资料，于是知道是大概下面这样的用法。</p>
-<p>#!/usr/bin/python</p>
-<h1 id="coding-UTF-8"><a href="#coding-UTF-8" class="headerlink" title="-- coding: UTF-8 --"></a>-<em>- coding: UTF-8 -</em>-</h1><p>for num in range(10,20):  # 迭代 10 到 20 之间的数字<br>   for i in range(2,num): # 根据因子迭代<br>      if num%i == 0:      # 确定第一个因子<br>         j=num/i          # 计算第二个因子<br>         print ‘%d 等于 %d * %d’ % (num,i,j)<br>         break            # 跳出当前循环<br>   else:                  # 循环的 else 部分<br>      print num, ‘是一个质数’<br>变量声明<br>由于需要不换行，所以就需要字符连接，而不是直接 print。<br>声明变量又遇到问题了。根据前面的变量使用情况，找了些 python 代码看了看，大概知道不用声明什么类型，直接用就好了。于是有了代码：</p>
-<p>output = “#”<br>for x in rgbColorArray:<br>    intx = int(x)<br>    output = output +  hex(intx)<br>print(output)<br>字符串裁剪 和拼接。<br>需要把多余的0x 两位去掉。<br>用到字符串裁剪，依然寻找范例。</p>
-<p>#!/usr/bin/python</p>
-<p>var1 = ‘Hello World!’<br>var2 = “Python Runoob”</p>
-<p>print “var1[0]: “, var1[0]<br>print “var2[1:5]: “, var2[1:5]<br>这个范例的执行结果：</p>
-<p>var1[0]: H<br>var2[1:5]: ytho<br>顺便问了旁边也在学习 python 的同事，他告诉我后面的索引可以省略，代表直接裁剪到结尾。<br>比如上面的例子如果 print “var2[1:]”, var2[1:] 得到的结果应该是 ython Runoob</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#coding=utf-8</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">raw_input(&quot;\n\n等输入&quot;)</span><br><span class="line">在终端执行 python input.py 后， 可以输入文字。</span><br><span class="line">我需要接受到用户输入的信息。怎么接收忘记了， Google 之，得到结果，顺便改改输入提示语，打印出输入的内容：</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">input = raw_input(&quot;\n输入颜色 比如50 144 60:\n&quot;)</span><br><span class="line">print(input)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">2. 需要分割字符</span><br><span class="line">查询到python 字符分割函数 split()，默认不传入参数就可以用空白符分割。原本还说用英文逗号(,)作为分隔符，现在看来可以省了，直接用空格分割，无论多少空格都可以自动分割。于是加上代码：</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">rgbColorArray = input.split()</span><br><span class="line">print(rgbColorArray)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">3. 需要遍历数组</span><br><span class="line">简单的遍历数组的是怎么弄的也忘记了，同样搜索：</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">for x in rgbColorArray:  print(x)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">3. 字符转成十六进制</span><br><span class="line">这个时候拿到了字符串，要变成十六进制的字符串。这个时候需要两个函数， int() 和 hex()，int 函数可以将字符串转成 int 类型，而 hex 则接受数字参数，返回字符串。 0x开始的字符串。</span><br><span class="line">于是就有了第一个版本。</span><br><span class="line"></span><br><span class="line">第一个版本</span><br><span class="line"></span><br><span class="line">第一个版本</span><br><span class="line"></span><br><span class="line">第一个版本执行结果</span><br><span class="line">写出这样的基础版本已经基本可以得到我想要的结果了，缺点是还需要我手动收入，动用大脑记忆十六进制色值然后输入。希望可以直接复制最后结果。</span><br><span class="line"></span><br><span class="line">再进一步</span><br><span class="line">虽然结果已经出来了，但是还是希望可以在进步一些，有几个问题：</span><br><span class="line"></span><br><span class="line">当要转换的数字小于16的时候 只有一位不显示，比如11 显示的结果是0xB</span><br><span class="line">现实的结果多了0x</span><br><span class="line">显示的结果最好连在一起方便复制，而不是每个颜色一行。</span><br><span class="line">那么就需要遍历颜色值数组，去掉0x 字符串， 判断小于16的前面补上0。连续在一起输出结果。</span><br><span class="line"></span><br><span class="line">for 循环遍历数组</span><br><span class="line">前面用到了 for 循环，是从查到的范例，不过多行就不知道怎么弄了。java 写多了一般都是 &#123; &#125; 大括号括起来。</span><br><span class="line">继续查资料，于是知道是大概下面这样的用法。</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">for num in range(10,20):  # 迭代 10 到 20 之间的数字</span><br><span class="line">   for i in range(2,num): # 根据因子迭代</span><br><span class="line">      if num%i == 0:      # 确定第一个因子</span><br><span class="line">         j=num/i          # 计算第二个因子</span><br><span class="line">         print &apos;%d 等于 %d * %d&apos; % (num,i,j)</span><br><span class="line">         break            # 跳出当前循环</span><br><span class="line">   else:                  # 循环的 else 部分</span><br><span class="line">      print num, &apos;是一个质数&apos;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">变量声明</span><br><span class="line">由于需要不换行，所以就需要字符连接，而不是直接 print。</span><br><span class="line">声明变量又遇到问题了。根据前面的变量使用情况，找了些 python 代码看了看，大概知道不用声明什么类型，直接用就好了。于是有了代码：</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">output = &quot;#&quot;</span><br><span class="line">for x in rgbColorArray: </span><br><span class="line">    intx = int(x)</span><br><span class="line">    output = output +  hex(intx)</span><br><span class="line">print(output)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">字符串裁剪 和拼接。</span><br><span class="line">需要把多余的0x 两位去掉。</span><br><span class="line">用到字符串裁剪，依然寻找范例。</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">#!/usr/bin/python</span><br><span class="line"></span><br><span class="line">var1 = &apos;Hello World!&apos;</span><br><span class="line">var2 = &quot;Python Runoob&quot;</span><br><span class="line"></span><br><span class="line">print &quot;var1[0]: &quot;, var1[0]</span><br><span class="line">print &quot;var2[1:5]: &quot;, var2[1:5]</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">这个范例的执行结果：</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">var1[0]: H</span><br><span class="line">var2[1:5]: ytho</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">顺便问了旁边也在学习 python 的同事，他告诉我后面的索引可以省略，代表直接裁剪到结尾。</span><br><span class="line">比如上面的例子如果 ```print &quot;var2[1:]&quot;, var2[1:] ```得到的结果应该是 ```ython Runoob</span><br></pre></td></tr></table></figure>
 <p>所以有代码：</p>
-<p>output = “#”<br>for x in rgbColorArray:<br>    intx = int(x)<br>    output = output +  hex(intx)[2:]<br>print(output)<br>也可以从后往前数，比如还是上面的范例可以写成。比如上面的例子如果 print “var2[-1:]”, var2[-1:] 得到的结果应该是 ob 也就是字符串的后两位。<br>于是我们这里可以写成hex(intx)[-2:] (因为输出字符串类似是0x23， 这样的)就是这个导致我后面写了个 bug，我也文章最后说明这个 bug 是什么。</p>
+<pre><code>output = &quot;#&quot;
+for x in rgbColorArray: 
+    intx = int(x)
+    output = output +  hex(intx)[2:]
+print(output)
+</code></pre><p>也可以从后往前数，比如还是上面的范例可以写成。比如上面的例子如果 print “var2[-1:]”, var2[-1:] 得到的结果应该是 ob 也就是字符串的后两位。<br>于是我们这里可以写成hex(intx)[-2:] (因为输出字符串类似是0x23， 这样的)就是这个导致我后面写了个 bug，我也文章最后说明这个 bug 是什么。</p>
 <p>if else 判断<br>接着要做一个判断，给一位的补上0</p>
 <pre><code>if intx &lt; 16:
     output = output + &apos;0&apos; + hex(intx)[-2:]
 else:
     output = output +  hex(intx)[-2:]
 </code></pre><p>这样就有了python 文件：</p>
-<p>#!/usr/bin/python</p>
-<p>#coding=utf-8</p>
-<p>input = raw_input(“\n输入颜色 比如50 144 60:\n”)</p>
-<p>#print(input)</p>
-<p>rgbColorArray = input.split()<br>print(rgbColorArray)</p>
-<p>output = “#”<br>for x in rgbColorArray:<br>    intx = int(x)<br>    if intx &lt; 16:<br>        output = output + ‘0’ + hex(intx)[-2:]<br>    else:<br>        output = output +  hex(intx)[-2:]    </p>
-<p>#print(hex(int(x)))<br>print(output)<br>还有最后一步：把 ColorU 加入到环境变量中<br>这个时候我可以得到我要的记过了，但是有点不太方便，我需要到这个 python 文件所在的目录下写</p>
-<p>python colorU.py<br>或者写全 colorU.py 这个路径。都是很麻的事情，所以我需要把 colorU 加入环境变量中。我用的是 zsh，所以找到环境变量的配置文件：~/.zshrc,末尾加上配置：</p>
-<p>alias colorU=”python ~/Documents/Development/PythonStudy/colorU.py”<br>这个是经过另外以为同事指导后的最后可行版本，我最初的思路是把 colorU.py 文件设置成可执行文件，然后加入到 Path 当中。结果我把 colorU.py 这个文件的地址加入到了 Path 中，世界上PATH 应该是一个目录。这样添加别名的方式更方便。</p>
+<pre><code>#!/usr/bin/python
+#coding=utf-8
+
+input = raw_input(&quot;\n输入颜色 比如50 144 60:\n&quot;)
+#print(input)
+
+rgbColorArray = input.split()
+print(rgbColorArray)
+
+output = &quot;#&quot;
+for x in rgbColorArray: 
+    intx = int(x)
+    if intx &lt; 16:
+        output = output + &apos;0&apos; + hex(intx)[-2:]
+    else:
+        output = output +  hex(intx)[-2:]    
+#print(hex(int(x)))
+print(output)
+</code></pre><p>还有最后一步：把 ColorU 加入到环境变量中<br>这个时候我可以得到我要的记过了，但是有点不太方便，我需要到这个 python 文件所在的目录下写</p>
+<pre><code>python colorU.py
+</code></pre><p>或者写全 colorU.py 这个路径。都是很麻的事情，所以我需要把 colorU 加入环境变量中。我用的是 zsh，所以找到环境变量的配置文件：~/.zshrc,末尾加上配置：</p>
+<pre><code>alias colorU=&quot;python ~/Documents/Development/PythonStudy/colorU.py&quot;
+</code></pre><p>这个是经过另外以为同事指导后的最后可行版本，我最初的思路是把 colorU.py 文件设置成可执行文件，然后加入到 Path 当中。结果我把 colorU.py 这个文件的地址加入到了 Path 中，世界上PATH 应该是一个目录。这样添加别名的方式更方便。</p>
 <p>后续<br>后来据说 Zeplin 的客户端可以默认显示十六进制的色值，而我用的是网页版的，所以没有。也就是说如果我装客户端就可以不用我写的这个脚本了。但没关系我学习了 python，写了我自己的第一个真正有用的 python 代码。</p>
 <p>一个bug：我是在写这篇文章的时候才发现这个 bug 的，类似0x33这样的字符串从后往前裁剪的时候写[-2:]，当然没有问题，但是写0xf 这样的字符串就会有问题了。程序输入 5 5 5得到的结果是 #0x50x50x5。修改成[2:] 的裁剪就可以了。</p>
 <p>倒向裁剪字符串引起的bug<br>还可以继续升级体验：</p>
@@ -611,7 +603,7 @@ else:
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-UTF-8"><span class="nav-number">1.</span> <span class="nav-text">-- coding: UTF-8 --</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
