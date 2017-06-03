@@ -10,7 +10,7 @@
                 http://www.landi.com/
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
-            <enclosure url="http://you.com/app/Your%20Great%20App%202.0.zip" sparkle:version="2.0" length="1623481" type="application/octet-stream" sparkle:dsaSignature="BAFJW4B6B1K1JyW30nbkBwainOzrN6EQuAh" />
+            <enclosure url="https://blog.jerryzhang.net/WuWuWuGroup/images/LandiMacForTeacher.app.zip" sparkle:version="2.0" length="18416337" type="application/octet-stream" sparkle:dsaSignature="MCwCFH5an/5xd0GZ90UVtLd6f3WgSLpSAhQaQ2Wa99yts6jGDz+jFPwzXuEnSQ==" />
             <sparkle:minimumSystemVersion>10.7</sparkle:minimumSystemVersion>
         </item>
         <!-- <item>
