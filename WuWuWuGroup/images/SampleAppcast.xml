@@ -10,7 +10,7 @@
                 http://www.landi.com/
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
-            <enclosure url="https://blog.jerryzhang.net/WuWuWuGroup/images/LandiMacForTeacher.app.zip" sparkle:version="2.0" length="18416337" type="application/octet-stream" sparkle:dsaSignature="MCwCFH5an/5xd0GZ90UVtLd6f3WgSLpSAhQaQ2Wa99yts6jGDz+jFPwzXuEnSQ==" />
+            <enclosure url="https://github.com/jerry0908mo/blog.jerryzhang.net/blob/gh-pages/WuWuWuGroup/images/LandiMacForTeacher.app.zip?raw=true" sparkle:version="2.0" length="18416523" type="application/octet-stream" sparkle:dsaSignature="MCwCFDpMmir1Ye8EaOYgm3dF2WHIm93wAhRudBS6acfia5M0U91IgGOoZ1qNFA" />
             <sparkle:minimumSystemVersion>10.7</sparkle:minimumSystemVersion>
         </item>
         <!-- <item>
