@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jerryzhang.net/"/>
-  <updated>2017-02-22T05:41:46.000Z</updated>
+  <updated>2017-07-27T12:23:54.000Z</updated>
   <id>http://blog.jerryzhang.net/</id>
   
   <author>
@@ -16,27 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Xcode 快捷方式</title>
-    <link href="http://blog.jerryzhang.net/2017/02/22/Xcode-%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/"/>
-    <id>http://blog.jerryzhang.net/2017/02/22/Xcode-快捷方式/</id>
-    <published>2017-02-22T05:41:46.000Z</published>
-    <updated>2017-02-22T05:41:46.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>我用 Python 写了一个颜色色值转换的小工具</title>
     <link href="http://blog.jerryzhang.net/2016/10/19/%E6%88%91%E7%94%A8-Python-%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E9%A2%9C%E8%89%B2%E8%89%B2%E5%80%BC%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     <id>http://blog.jerryzhang.net/2016/10/19/我用-Python-写了一个颜色色值转换的小工具/</id>
     <published>2016-10-18T16:56:51.000Z</published>
-    <updated>2017-01-03T15:11:17.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;p&gt;需求说明&lt;br&gt;公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。&lt;/p&gt;
 &lt;p&gt;Zeplin 的颜色色值显示示例&lt;br&gt;原有处理方式&lt;br&gt;因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -105,7 +89,7 @@ print(output)
     <link href="http://blog.jerryzhang.net/2016/06/14/%E8%AE%A9Sublime%20%E6%94%AF%E6%8C%81GB2312%E6%A0%BC%E5%BC%8F/"/>
     <id>http://blog.jerryzhang.net/2016/06/14/让Sublime 支持GB2312格式/</id>
     <published>2016-06-14T04:05:00.000Z</published>
-    <updated>2016-12-26T06:42:00.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;p&gt;让Sublime 支持GB2312格式，&lt;br&gt;Sublime默认只支持UTF-8编码格式&lt;/p&gt;
 &lt;p&gt;需要安装插件 CovertToUTF8&lt;/p&gt;
@@ -131,7 +115,7 @@ print(output)
     <link href="http://blog.jerryzhang.net/2016/06/12/Pro-Git-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://blog.jerryzhang.net/2016/06/12/Pro-Git-学习笔记/</id>
     <published>2016-06-12T09:21:00.000Z</published>
-    <updated>2017-01-02T15:32:07.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;学习 Pro Git 一书的学习笔记。&lt;br&gt;采用教材：Pro Git 中文版&lt;/p&gt;
@@ -329,7 +313,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/06/10/%E4%B8%80%E4%B8%AA%E8%80%81%E9%B8%9F%E5%8F%91%E7%9A%84%E5%85%AC%E5%8F%B8%E5%86%85%E9%83%A8%E6%95%B4%E7%90%86%E7%9A%84-Android-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE-Markdown-%E7%89%88%E6%9C%AC/"/>
     <id>http://blog.jerryzhang.net/2016/06/10/一个老鸟发的公司内部整理的-Android-学习路线图-Markdown-版本/</id>
     <published>2016-06-10T15:34:54.000Z</published>
-    <updated>2016-06-10T16:03:53.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;这篇文章不是原创，是根据 &lt;a href=&quot;http://www.diycode.cc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DiyCode&lt;/a&gt; 社区看到&lt;a href=&quot;http://www.diycode.cc/topics/117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一篇学习Android路线&lt;/a&gt;，整理成 Markdown 格式。我直接转帖到我的博客，方便自己学习。&lt;/p&gt;
@@ -520,7 +504,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/05/12/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F%E6%82%9F/"/>
     <id>http://blog.jerryzhang.net/2016/05/12/《黑客与画家》读后感悟/</id>
     <published>2016-05-12T05:21:00.000Z</published>
-    <updated>2017-01-02T15:19:55.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;《黑客与画家》读完有一段时间了，由于之前是在上下班路上听的，也没做做笔记。后面无论读书还是听书还是要养成做笔记的习惯，毕竟脑子慢慢的不够用了。之前也好几次谈到了这本书，今天整体的说说看完这本书后学到和感悟到的东西。&lt;/p&gt;
@@ -552,7 +536,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/04/27/%E5%8E%9F%E6%9D%A5%E4%BA%BA%E7%94%9F%E7%9A%84%E6%8D%B7%E5%BE%84%E6%98%AF%E8%BF%99%E4%B8%AA%EF%BC%81/"/>
     <id>http://blog.jerryzhang.net/2016/04/27/原来人生的捷径是这个！/</id>
     <published>2016-04-27T15:34:00.000Z</published>
-    <updated>2016-06-10T16:49:23.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-7cfe498121296387?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -591,7 +575,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/04/26/%E6%97%A2%E7%84%B6%E6%98%AF%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%90%AC%E5%88%B0%E5%B1%B1%E9%87%8C%E5%8E%BB%EF%BC%8C%E7%8E%AF%E5%A2%83%E5%A4%9A%E5%A5%BD/"/>
     <id>http://blog.jerryzhang.net/2016/04/26/既然是互联网公司为什么不搬到山里去，环境多好/</id>
     <published>2016-04-26T13:55:00.000Z</published>
-    <updated>2016-06-10T16:49:53.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;p&gt;继续听《黑客与画家》，有如下一段，大意是：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -625,7 +609,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/04/25/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A8%B1%E4%B9%90%E6%98%8E%E6%98%9F%E7%9A%84%E6%94%B6%E5%85%A5%E6%AF%94%E4%BC%9F%E5%A4%A7%E7%9A%84%E7%A7%91%E5%AD%A6%E5%AE%B6%E9%AB%98%E9%82%A3%E4%B9%88%E5%A4%9A%EF%BC%9F/"/>
     <id>http://blog.jerryzhang.net/2016/04/25/为什么娱乐明星的收入比伟大的科学家高那么多？/</id>
     <published>2016-04-25T15:13:00.000Z</published>
-    <updated>2016-06-10T16:52:33.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;p&gt;今天在微博里看到阑夕在自己的微博里面发布一条言论： &lt;/p&gt;
 &lt;blockquote&gt;
@@ -670,7 +654,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/04/24/%E5%8F%91%E5%96%84%E6%84%8F%EF%BC%8C%E5%80%BE%E5%96%84%E8%A1%8C%EF%BC%8C%E4%B8%8D%E6%8B%96%E5%BB%B6%EF%BC%8C%E4%B8%8D%E7%96%8F%E5%BF%BD%E2%80%94%E2%80%94%E3%80%8E%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9%E3%80%8F%E8%AF%BB%E5%90%8E%E6%84%9F%E5%8F%8A%E7%AC%94%E8%AE%B0/"/>
     <id>http://blog.jerryzhang.net/2016/04/24/发善意，倾善行，不拖延，不疏忽——『人性的弱点』读后感及笔记/</id>
     <published>2016-04-24T15:19:00.000Z</published>
-    <updated>2016-06-10T16:49:31.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是发布在我维护的微信公众号『程序员在读书』上的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;欢迎在微信关注『程序员在读书』，拙笔献丑，欢迎指正。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;正如昨天所说的：很多道理我们都知道，但是执行太难。就比如我们都知道读书最好是读完了写写读后感或者至少整理一下读书笔记，会对自己有帮助。至于原因，具体说的话应该足够另写一篇文字了。 大致上是：&lt;/p&gt;
@@ -714,7 +698,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/04/24/%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E6%97%A5%E8%AF%B4%E8%AF%BB%E4%B9%A6/"/>
     <id>http://blog.jerryzhang.net/2016/04/24/世界读书日说读书/</id>
     <published>2016-04-24T04:09:00.000Z</published>
-    <updated>2016-06-10T16:52:31.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是世界读书日发布在我刚刚开始维护的微信公众号『程序员在读书』上的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;欢迎在微信关注『程序员在读书』，拙笔献丑，欢迎指正。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/20523-f72ed21675303b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;去年10月份去仙居公盂游玩的时候拍的一条晒太阳的狗&quot;&gt;&lt;br&gt;今天是第21个世界读书日，我也是通过各种软件上还有朋友圈知道的，想不知道有点难度。微信读书昨天就放出了活动，设计了10道题目测试用户阅读量，答完题目分享可以得到一本电子书。当然其他公司也有很多活动，比如简书在北京和上海有组织线下的换书活动。豆瓣也有活动推出征集大家最喜欢的读的图书。&lt;/p&gt;
@@ -747,7 +731,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2016/01/15/%E6%88%91%E6%B2%A1%E6%84%9F%E5%8F%97%E5%88%B0%E4%BD%A0%E7%9A%84%E5%BF%83%EF%BC%8C%E5%8F%AA%E5%9B%A0%E5%B0%91%E4%BA%86%E7%94%B5%E6%B1%A0/"/>
     <id>http://blog.jerryzhang.net/2016/01/15/我没感受到你的心，只因少了电池/</id>
     <published>2016-01-14T16:47:00.000Z</published>
-    <updated>2016-06-10T16:49:42.000Z</updated>
+    <updated>2017-07-27T12:23:54.000Z</updated>
     
     <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;本文是一款智能体重秤产品的拆箱记。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;谁还有多余的Android数据线？办公室的老腊肉工程师在呼救。平时做Android开发，数据线是一个耗费品，用一端时间就坏了，不坏才不正常，说明你没与认真开发、调试。&lt;/p&gt;
@@ -791,7 +775,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2014/07/01/Android%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB%EF%BC%885%EF%BC%89/"/>
     <id>http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/</id>
     <published>2014-06-30T16:00:00.000Z</published>
-    <updated>2016-06-01T16:12:19.000Z</updated>
+    <updated>2017-07-27T12:22:24.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文是我翻译自&lt;a href=&quot;1&quot;&gt;国外开发者Danlew博客&lt;/a&gt;上的系列文章，原文链接：&lt;a href=&quot;2&quot;&gt;Android Tips Round-Up, Part 5&lt;/a&gt;。感谢&lt;a href=&quot;3&quot;&gt;伯乐在线&lt;/a&gt;的选文、校译。本文在&lt;a href=&quot;4&quot;&gt;伯乐在线首发&lt;/a&gt;。&lt;/p&gt;
@@ -856,7 +840,7 @@ modified:   benchmarks.rb
     <link href="http://blog.jerryzhang.net/2014/06/18/%E6%8F%90%E5%8D%87Android%E5%B9%B3%E6%9D%BF%E6%80%A7%E8%83%BD%E7%9A%84%E5%8D%81%E5%A4%A7%E6%8A%80%E5%B7%A7/"/>
     <id>http://blog.jerryzhang.net/2014/06/18/提升Android平板性能的十大技巧/</id>
     <published>2014-06-17T16:00:00.000Z</published>
-    <updated>2016-06-01T16:55:30.000Z</updated>
+    <updated>2017-07-27T12:22:24.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文是我翻译自&lt;a href=&quot;http://www.fromdev.com/&quot; title=&quot;fromdev&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fromdev&lt;/a&gt; 的文章，原文链接：&lt;a href=&quot;http://www.fromdev.com/2014/04/android-tablet-performance-tips.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;10 Performance Tips to Speed Up Your Android Tablet&lt;/a&gt; 。感谢&lt;a href=&quot;http://blog.jobbole.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线&lt;/a&gt;的选文、校译。本文在&lt;a href=&quot;http://blog.jobbole.com/69974/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线首发&lt;/a&gt; 。&lt;/p&gt;
