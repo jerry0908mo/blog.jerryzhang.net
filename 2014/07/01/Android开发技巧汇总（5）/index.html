@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -63,54 +63,41 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="视频,SparseArray,缩略图,android开发,控件拖动,数据库事务,Activity,TouchEvent," />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-
-
-
-  <link rel="alternate" href="/atom.xml" title="JerrySher's Blog" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <meta name="keywords" content="视频,SparseArray,缩略图,android开发,控件拖动,数据库事务,Activity,TouchEvent,">
 
 
 
 
 
+  <link rel="alternate" href="/atom.xml" title="JerrySher's Blog" type="application/atom+xml">
 
-<meta name="description" content="本文是我翻译自国外开发者Danlew博客上的系列文章，原文链接：Android Tips Round-Up, Part 5。感谢伯乐在线的选文、校译。本文在伯乐在线首发。
 
 
-这是我发表的Android开发技巧的最后一篇。
-这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。
-ViewDragHelperViewDragHelper  视图拖动是一">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="本文是我翻译自国外开发者Danlew博客上的系列文章，原文链接：Android Tips Round-Up, Part 5。感谢伯乐在线的选文、校译。本文在伯乐在线首发。   这是我发表的Android开发技巧的最后一篇。 这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。 ViewDragHelperViewDragHelper  视图拖动是一">
+<meta name="keywords" content="视频,SparseArray,缩略图,android开发,控件拖动,数据库事务,Activity,TouchEvent">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android开发技巧汇总（5）">
 <meta property="og:url" content="http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/index.html">
-<meta property="og:site_name" content="JerrySher's Blog">
-<meta property="og:description" content="本文是我翻译自国外开发者Danlew博客上的系列文章，原文链接：Android Tips Round-Up, Part 5。感谢伯乐在线的选文、校译。本文在伯乐在线首发。
-
-
-这是我发表的Android开发技巧的最后一篇。
-这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。
-ViewDragHelperViewDragHelper  视图拖动是一">
+<meta property="og:site_name" content="JerrySher&#39;s Blog">
+<meta property="og:description" content="本文是我翻译自国外开发者Danlew博客上的系列文章，原文链接：Android Tips Round-Up, Part 5。感谢伯乐在线的选文、校译。本文在伯乐在线首发。   这是我发表的Android开发技巧的最后一篇。 这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。 ViewDragHelperViewDragHelper  视图拖动是一">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-27T12:22:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android开发技巧汇总（5）">
-<meta name="twitter:description" content="本文是我翻译自国外开发者Danlew博客上的系列文章，原文链接：Android Tips Round-Up, Part 5。感谢伯乐在线的选文、校译。本文在伯乐在线首发。
-
-
-这是我发表的Android开发技巧的最后一篇。
-这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。
-ViewDragHelperViewDragHelper  视图拖动是一">
+<meta name="twitter:description" content="本文是我翻译自国外开发者Danlew博客上的系列文章，原文链接：Android Tips Round-Up, Part 5。感谢伯乐在线的选文、校译。本文在伯乐在线首发。   这是我发表的Android开发技巧的最后一篇。 这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。 ViewDragHelperViewDragHelper  视图拖动是一">
 
 
 
@@ -128,7 +115,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
   };
 </script>
 
-  <title> Android开发技巧汇总（5） | JerrySher's Blog </title>
+  <title> Android开发技巧汇总（5） | JerrySher's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +136,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -157,7 +144,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">JerrySher's Blog</span>
       <span class="logo-line-after"><i></i></span>
@@ -184,7 +171,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -194,7 +181,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -204,9 +191,19 @@ ViewDragHelperViewDragHelper  视图拖动是一">
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-now">
+          <a href="/now.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            近况
           </a>
         </li>
       
@@ -214,7 +211,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -224,7 +221,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -234,9 +231,9 @@ ViewDragHelperViewDragHelper  视图拖动是一">
         <li class="menu-item menu-item-friends">
           <a href="/friends" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-plane"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-plane"></i> <br>
             
-            Friends
+            友链
           </a>
         </li>
       
@@ -296,7 +293,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -350,22 +347,22 @@ ViewDragHelperViewDragHelper  视图拖动是一">
 <hr>
 <p>这是我发表的Android开发技巧的最后一篇。</p>
 <p>这些技巧都是我亲自测试过的。如果后面遇到新的技巧，我会和大家分享，不过不会是每天都有了。祝大家愉快。</p>
-<h2 id="ViewDragHelper"><a href="#ViewDragHelper" class="headerlink" title="ViewDragHelper"></a>ViewDragHelper</h2><p><a href="5">ViewDragHelper</a>  视图拖动是一个比较复杂的问题，这个类可以帮助解决不少问题。如果你需要一个例子，<a href="6">DrawerLayout</a>就是利用它实现的扫滑。 Flavient Laurent 还写了一些关于这方面的<a href="http://flavienlaurent.com/blog/2013/08/28/each-navigation-drawer-hides-a-viewdraghelper/" target="_blank" rel="external">优秀文章</a>。</p>
-<h2 id="PopupWindow"><a href="#PopupWindow" class="headerlink" title="PopupWindow"></a>PopupWindow</h2><p><a href="https://developer.android.com/reference/android/widget/PopupWindow.html" target="_blank" rel="external">PopupWindow</a>: Android到处都在使用PopupWindow ，甚至你都没有意识到（标题导航条ActionBar，自动补全AutoComplete，编辑框错误提醒Edittext Errors），这个类是创建浮层内容的主要方法。</p>
+<h2 id="ViewDragHelper"><a href="#ViewDragHelper" class="headerlink" title="ViewDragHelper"></a>ViewDragHelper</h2><p><a href="5">ViewDragHelper</a>  视图拖动是一个比较复杂的问题，这个类可以帮助解决不少问题。如果你需要一个例子，<a href="6">DrawerLayout</a>就是利用它实现的扫滑。 Flavient Laurent 还写了一些关于这方面的<a href="http://flavienlaurent.com/blog/2013/08/28/each-navigation-drawer-hides-a-viewdraghelper/" target="_blank" rel="noopener">优秀文章</a>。</p>
+<h2 id="PopupWindow"><a href="#PopupWindow" class="headerlink" title="PopupWindow"></a>PopupWindow</h2><p><a href="https://developer.android.com/reference/android/widget/PopupWindow.html" target="_blank" rel="noopener">PopupWindow</a>: Android到处都在使用PopupWindow ，甚至你都没有意识到（标题导航条ActionBar，自动补全AutoComplete，编辑框错误提醒Edittext Errors），这个类是创建浮层内容的主要方法。</p>
 <a id="more"></a>
-<h2 id="ActionBar-getThemedContext"><a href="#ActionBar-getThemedContext" class="headerlink" title="ActionBar.getThemedContext()"></a>ActionBar.getThemedContext()</h2><p><a href="https://developer.android.com/reference/android/app/ActionBar.html#getThemedContext(" target="_blank" rel="external">Actionbar.getThemrContext()</a>) 标题导航栏的主题化是很复杂的（不同于Activity其他部分的主题化）。你可以得到一个上下文(Context)，用这个上下文(Context)创建的自定义组件可以有正确的主题。</p>
-<h2 id="ThumbnailUtils"><a href="#ThumbnailUtils" class="headerlink" title="ThumbnailUtils"></a>ThumbnailUtils</h2><p><a href="https://developer.android.com/reference/android/media/ThumbnailUtils.html" target="_blank" rel="external">ThumbnailUtils</a>【译者注：该API从V8才开始支持】帮助创建缩略图；通常我都是用现有的图片加载库（比如，Picasso 或者 Volley），不过这个ThumbnaiUtils可以创建视频缩略图。</p>
-<h2 id="Context-getExternalFilesDir"><a href="#Context-getExternalFilesDir" class="headerlink" title="Context.getExternalFilesDir()"></a>Context.getExternalFilesDir()</h2><p><a href="https://developer.android.com/reference/android/content/Context.html#getExternalFilesDir(java.lang.String" target="_blank" rel="external">Context.getExternalFilesDir()</a>)【译者注：该API从V8才开始支持】 申请了SD卡写权限后，你可以在SD的任何地方写数据，把你的数据写在设计好的合适位置会更加有礼貌。这样数据可以及时被清理，也会有更好的用户体验。此外在，Android 4.0 Kitkat 上在这个文件夹下写数据是不需要权限的，每个用户有自己的独立的数据存储路径。</p>
-<h2 id="SparseArray"><a href="#SparseArray" class="headerlink" title="SparseArray"></a>SparseArray</h2><p><a href="https://developer.android.com/reference/android/util/SparseArray.html" target="_blank" rel="external">SparseArray</a>：Map<integer,object>的高效优化版本。推荐了解姐妹类SparseBooleanArray，SparseIntArray和SparseLongArray。</integer,object></p>
-<h2 id="PackageManager-setComponentEnabledSetting"><a href="#PackageManager-setComponentEnabledSetting" class="headerlink" title="PackageManager.setComponentEnabledSetting()"></a>PackageManager.setComponentEnabledSetting()</h2><p><a href="https://developer.android.com/reference/android/content/pm/PackageManager.html#setComponentEnabledSetting(android.content.ComponentName,%20int,%20int" target="_blank" rel="external">PackageManager.setComponentEnabledSetting()</a>)可以用来启动或者禁用程序清单中的组件。 这个对于关闭不需要的功能组件是非常赞的。比如,关掉一个当前不用的广播接收器。</p>
-<h2 id="SQLiteDatabase-yieldIfContendedSafely"><a href="#SQLiteDatabase-yieldIfContendedSafely" class="headerlink" title="SQLiteDatabase.yieldIfContendedSafely()"></a>SQLiteDatabase.yieldIfContendedSafely()</h2><p><a href="https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html#yieldIfContendedSafely(" target="_blank" rel="external">SQLiteDatabase.yieldIfContendedSafely()</a>)让你暂时停止一个数据库事务， 这样你可以就不会占用太多的系统资源。</p>
-<h2 id="Environment-getExternalStoragePublicDirectory"><a href="#Environment-getExternalStoragePublicDirectory" class="headerlink" title="Environment.getExternalStoragePublicDirectory()"></a>Environment.getExternalStoragePublicDirectory()</h2><p><a href="https://developer.android.com/reference/android/os/Environment.html#getExternalStoragePublicDirectory(java.lang.String" target="_blank" rel="external">Environment.getExternalStoragePublicDirectory()</a>：还是那句话，用户期望在SD卡上得到统一的用户体验，用这个方法可以获得在用户设备上放置指定类型文件（音乐，图片等）的正确目录。</p>
-<h2 id="View-generateViewId"><a href="#View-generateViewId" class="headerlink" title="View.generateViewId()"></a>View.generateViewId()</h2><p><a href="https://developer.android.com/reference/android/view/View.html#generateViewId(" target="_blank" rel="external">View.generateViewId()</a>)每次我都想要推荐动态生成控件的ID.需要注意的是，不要和已经存在的控件ID或者其他已经生成的控件ID重复。</p>
-<h2 id="ActivityManager-clearApplicationUserData"><a href="#ActivityManager-clearApplicationUserData" class="headerlink" title="ActivityManager.clearApplicationUserData()"></a>ActivityManager.clearApplicationUserData()</h2><p><a href="https://developer.android.com/reference/android/app/ActivityManager.html#clearApplicationUserData(" target="_blank" rel="external">ActivityManager.clearApplicationUserData()</a>) 一键清理你的app产生的用户数据，可能是做用户退出登录功能，有史以来最简单的方式了。</p>
-<h2 id="Context-createConfigurationContext"><a href="#Context-createConfigurationContext" class="headerlink" title="Context.createConfigurationContext()"></a>Context.createConfigurationContext()</h2><p><a href="http://developer.android.com/reference/android/content/Context.html#createConfigurationContext(android.content.res.Configuration" target="_blank" rel="external">Context.createConfigurationContext()</a>) - 自定义你的配置环境信息，我通常会遇到这样的问题：强制让一部分显示在某个特定的环境下（倒不是我一直这样瞎整，说来话长，你很难理解）。用这个可以实现起来稍微简单一点。</p>
-<h2 id="ActivityOptions"><a href="#ActivityOptions" class="headerlink" title="ActivityOptions"></a>ActivityOptions</h2><p><a href="http://developer.android.com/reference/android/app/ActivityOptions.html" target="_blank" rel="external">ActivityOptions</a> - 方便的定义两个Activity切换的动画。 使用<a href="http://developer.android.com/reference/android/support/v4/app/ActivityOptionsCompat.html" target="_blank" rel="external">ActivityOptionsCompat</a> 可以很好解决旧版本的兼容问题。</p>
-<h2 id="AdapterViewFlipper-fyiWillBeAdvancedByHostKThx"><a href="#AdapterViewFlipper-fyiWillBeAdvancedByHostKThx" class="headerlink" title="AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()"></a>AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()</h2><p><a href="http://developer.android.com/reference/android/widget/AdapterViewFlipper.html#fyiWillBeAdvancedByHostKThx%28%29" target="_blank" rel="external">AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()</a>【译者注：该API从V11才开始支持】- 仅仅因为很好玩，没有其他原因。在整个安卓开源项目中(AOSP the Android Open Source Project Android开放源代码项目)中还有其他很有意思的东西（比如 <a href="http://developer.android.com/reference/android/hardware/SensorManager.html#GRAVITY_DEATH_STAR_I" target="_blank" rel="external">GRAVITY_DEATH_STAR_I</a>），不过，都不像这个这样，这个确实有用。</p>
-<h2 id="ViewParent-requestDisallowInterceptTouchEvent"><a href="#ViewParent-requestDisallowInterceptTouchEvent" class="headerlink" title="ViewParent.requestDisallowInterceptTouchEvent()"></a>ViewParent.requestDisallowInterceptTouchEvent()</h2><p><a href="http://developer.android.com/reference/android/view/ViewParent.html#requestDisallowInterceptTouchEvent%28boolean%29" target="_blank" rel="external">ViewParent.requestDisallowInterceptTouchEvent()</a> - Android系统触摸事件机制大多时候能够默认处理，不过有时候你需要使用这个方法来剥夺父一级控件的控制权（顺便，如果你想对Android触摸机制了解更多，<a href="https://www.youtube.com/watch?v=EZAoJU-nUyI" target="_blank" rel="external">这个演讲</a>会令你惊叹不已。) </p>
+<h2 id="ActionBar-getThemedContext"><a href="#ActionBar-getThemedContext" class="headerlink" title="ActionBar.getThemedContext()"></a>ActionBar.getThemedContext()</h2><p><a href="https://developer.android.com/reference/android/app/ActionBar.html#getThemedContext(" target="_blank" rel="noopener">Actionbar.getThemrContext()</a>) 标题导航栏的主题化是很复杂的（不同于Activity其他部分的主题化）。你可以得到一个上下文(Context)，用这个上下文(Context)创建的自定义组件可以有正确的主题。</p>
+<h2 id="ThumbnailUtils"><a href="#ThumbnailUtils" class="headerlink" title="ThumbnailUtils"></a>ThumbnailUtils</h2><p><a href="https://developer.android.com/reference/android/media/ThumbnailUtils.html" target="_blank" rel="noopener">ThumbnailUtils</a>【译者注：该API从V8才开始支持】帮助创建缩略图；通常我都是用现有的图片加载库（比如，Picasso 或者 Volley），不过这个ThumbnaiUtils可以创建视频缩略图。</p>
+<h2 id="Context-getExternalFilesDir"><a href="#Context-getExternalFilesDir" class="headerlink" title="Context.getExternalFilesDir()"></a>Context.getExternalFilesDir()</h2><p><a href="https://developer.android.com/reference/android/content/Context.html#getExternalFilesDir(java.lang.String" target="_blank" rel="noopener">Context.getExternalFilesDir()</a>)【译者注：该API从V8才开始支持】 申请了SD卡写权限后，你可以在SD的任何地方写数据，把你的数据写在设计好的合适位置会更加有礼貌。这样数据可以及时被清理，也会有更好的用户体验。此外在，Android 4.0 Kitkat 上在这个文件夹下写数据是不需要权限的，每个用户有自己的独立的数据存储路径。</p>
+<h2 id="SparseArray"><a href="#SparseArray" class="headerlink" title="SparseArray"></a>SparseArray</h2><p><a href="https://developer.android.com/reference/android/util/SparseArray.html" target="_blank" rel="noopener">SparseArray</a>：Map<integer,object>的高效优化版本。推荐了解姐妹类SparseBooleanArray，SparseIntArray和SparseLongArray。</integer,object></p>
+<h2 id="PackageManager-setComponentEnabledSetting"><a href="#PackageManager-setComponentEnabledSetting" class="headerlink" title="PackageManager.setComponentEnabledSetting()"></a>PackageManager.setComponentEnabledSetting()</h2><p><a href="https://developer.android.com/reference/android/content/pm/PackageManager.html#setComponentEnabledSetting(android.content.ComponentName,%20int,%20int" target="_blank" rel="noopener">PackageManager.setComponentEnabledSetting()</a>)可以用来启动或者禁用程序清单中的组件。 这个对于关闭不需要的功能组件是非常赞的。比如,关掉一个当前不用的广播接收器。</p>
+<h2 id="SQLiteDatabase-yieldIfContendedSafely"><a href="#SQLiteDatabase-yieldIfContendedSafely" class="headerlink" title="SQLiteDatabase.yieldIfContendedSafely()"></a>SQLiteDatabase.yieldIfContendedSafely()</h2><p><a href="https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html#yieldIfContendedSafely(" target="_blank" rel="noopener">SQLiteDatabase.yieldIfContendedSafely()</a>)让你暂时停止一个数据库事务， 这样你可以就不会占用太多的系统资源。</p>
+<h2 id="Environment-getExternalStoragePublicDirectory"><a href="#Environment-getExternalStoragePublicDirectory" class="headerlink" title="Environment.getExternalStoragePublicDirectory()"></a>Environment.getExternalStoragePublicDirectory()</h2><p><a href="https://developer.android.com/reference/android/os/Environment.html#getExternalStoragePublicDirectory(java.lang.String" target="_blank" rel="noopener">Environment.getExternalStoragePublicDirectory()</a>：还是那句话，用户期望在SD卡上得到统一的用户体验，用这个方法可以获得在用户设备上放置指定类型文件（音乐，图片等）的正确目录。</p>
+<h2 id="View-generateViewId"><a href="#View-generateViewId" class="headerlink" title="View.generateViewId()"></a>View.generateViewId()</h2><p><a href="https://developer.android.com/reference/android/view/View.html#generateViewId(" target="_blank" rel="noopener">View.generateViewId()</a>)每次我都想要推荐动态生成控件的ID.需要注意的是，不要和已经存在的控件ID或者其他已经生成的控件ID重复。</p>
+<h2 id="ActivityManager-clearApplicationUserData"><a href="#ActivityManager-clearApplicationUserData" class="headerlink" title="ActivityManager.clearApplicationUserData()"></a>ActivityManager.clearApplicationUserData()</h2><p><a href="https://developer.android.com/reference/android/app/ActivityManager.html#clearApplicationUserData(" target="_blank" rel="noopener">ActivityManager.clearApplicationUserData()</a>) 一键清理你的app产生的用户数据，可能是做用户退出登录功能，有史以来最简单的方式了。</p>
+<h2 id="Context-createConfigurationContext"><a href="#Context-createConfigurationContext" class="headerlink" title="Context.createConfigurationContext()"></a>Context.createConfigurationContext()</h2><p><a href="http://developer.android.com/reference/android/content/Context.html#createConfigurationContext(android.content.res.Configuration" target="_blank" rel="noopener">Context.createConfigurationContext()</a>) - 自定义你的配置环境信息，我通常会遇到这样的问题：强制让一部分显示在某个特定的环境下（倒不是我一直这样瞎整，说来话长，你很难理解）。用这个可以实现起来稍微简单一点。</p>
+<h2 id="ActivityOptions"><a href="#ActivityOptions" class="headerlink" title="ActivityOptions"></a>ActivityOptions</h2><p><a href="http://developer.android.com/reference/android/app/ActivityOptions.html" target="_blank" rel="noopener">ActivityOptions</a> - 方便的定义两个Activity切换的动画。 使用<a href="http://developer.android.com/reference/android/support/v4/app/ActivityOptionsCompat.html" target="_blank" rel="noopener">ActivityOptionsCompat</a> 可以很好解决旧版本的兼容问题。</p>
+<h2 id="AdapterViewFlipper-fyiWillBeAdvancedByHostKThx"><a href="#AdapterViewFlipper-fyiWillBeAdvancedByHostKThx" class="headerlink" title="AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()"></a>AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()</h2><p><a href="http://developer.android.com/reference/android/widget/AdapterViewFlipper.html#fyiWillBeAdvancedByHostKThx%28%29" target="_blank" rel="noopener">AdapterViewFlipper.fyiWillBeAdvancedByHostKThx()</a>【译者注：该API从V11才开始支持】- 仅仅因为很好玩，没有其他原因。在整个安卓开源项目中(AOSP the Android Open Source Project Android开放源代码项目)中还有其他很有意思的东西（比如 <a href="http://developer.android.com/reference/android/hardware/SensorManager.html#GRAVITY_DEATH_STAR_I" target="_blank" rel="noopener">GRAVITY_DEATH_STAR_I</a>），不过，都不像这个这样，这个确实有用。</p>
+<h2 id="ViewParent-requestDisallowInterceptTouchEvent"><a href="#ViewParent-requestDisallowInterceptTouchEvent" class="headerlink" title="ViewParent.requestDisallowInterceptTouchEvent()"></a>ViewParent.requestDisallowInterceptTouchEvent()</h2><p><a href="http://developer.android.com/reference/android/view/ViewParent.html#requestDisallowInterceptTouchEvent%28boolean%29" target="_blank" rel="noopener">ViewParent.requestDisallowInterceptTouchEvent()</a> - Android系统触摸事件机制大多时候能够默认处理，不过有时候你需要使用这个方法来剥夺父一级控件的控制权（顺便，如果你想对Android触摸机制了解更多，<a href="https://www.youtube.com/watch?v=EZAoJU-nUyI" target="_blank" rel="noopener">这个演讲</a>会令你惊叹不已。) </p>
 
       
     </div>
@@ -374,7 +371,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
       
         
 <div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt="JerrySher wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt="JerrySher wechat" style="width: 200px; max-width: 100%;">
     <div>欢迎关注『程序员在读书』</div>
 </div>
 
@@ -392,13 +389,13 @@ ViewDragHelperViewDragHelper  视图拖动是一">
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/about/images/qrcode_wechat_pay.jpg" alt="JerrySher WeChat Pay"/>
+          <img id="wechat_qr" src="/about/images/qrcode_wechat_pay.jpg" alt="JerrySher WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/about/images/qrcode_alipay.jpg" alt="JerrySher Alipay"/>
+          <img id="alipay_qr" src="/about/images/qrcode_alipay.jpg" alt="JerrySher Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -461,12 +458,9 @@ ViewDragHelperViewDragHelper  视图拖动是一">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2014/07/01/Android开发技巧汇总（5）/"
-     data-title="Android开发技巧汇总（5）"
-     data-content=""
-     data-url="http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/">
+        <div class="ds-share flat" data-thread-key="2014/07/01/Android开发技巧汇总（5）/" data-title="Android开发技巧汇总（5）" data-content data-url="http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/">
   <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
+    <ul class="ds-share-icons-16">
 
       <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
       <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
@@ -491,8 +485,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/07/01/Android开发技巧汇总（5）/"
-           data-title="Android开发技巧汇总（5）" data-url="http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/">
+      <div class="ds-thread" data-thread-key="2014/07/01/Android开发技巧汇总（5）/" data-title="Android开发技巧汇总（5）" data-url="http://blog.jerryzhang.net/2014/07/01/Android开发技巧汇总（5）/">
       </div>
     
   </div>
@@ -517,7 +510,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -528,9 +521,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars1.githubusercontent.com/u/1029393?v=3&s=460"
-               alt="JerrySher" />
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/1029393?v=3&s=460" alt="JerrySher">
           <p class="site-author-name" itemprop="name">JerrySher</p>
           <p class="site-description motion-element" itemprop="description"></p>
         </div>
@@ -612,12 +603,12 @@ ViewDragHelperViewDragHelper  视图拖动是一">
 
         
           <div id="wechat_subscriber_qcode" class="feed-link motion-element">
-            <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt="JerrySher wechat" style="width: 150px; max-width: 80%;"/>
+            <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt="JerrySher wechat" style="width: 150px; max-width: 80%;">
             <div style="text-align: center">欢迎关注『程序员在读书』</div>
         
         
 
-      </section>
+      </div></section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
@@ -642,10 +633,10 @@ ViewDragHelperViewDragHelper  视图拖动是一">
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -761,7 +752,7 @@ ViewDragHelperViewDragHelper  视图拖动是一">
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
   
     
