@@ -1,0 +1,719 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,工具," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JerrySher's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。 Zeplin 的颜色色值显示示例原有处理方式因为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我用 Python 写了一个颜色色值转换的小工具">
+<meta property="og:url" content="http://blog.jerryzhang.net/2016/10/19/%E6%88%91%E7%94%A8-Python-%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E9%A2%9C%E8%89%B2%E8%89%B2%E5%80%BC%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="JerrySher&#39;s Blog">
+<meta property="og:description" content="需求说明公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。 Zeplin 的颜色色值显示示例原有处理方式因为">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-10-18T16:56:51.000Z">
+<meta property="article:modified_time" content="2018-06-06T09:43:23.896Z">
+<meta property="article:author" content="JerrySher">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title>  | JerrySher's Blog </title>
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">JerrySher's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">不断学习，不断归零 生活在这个时代，牛人都在不断的学习进步，我有什么理由停下来休息</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-friends">
+          <a href="/friends" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-plane"></i> <br />
+            
+            Friends
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                我用 Python 写了一个颜色色值转换的小工具
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-19T00:56:51+08:00" content="2016-10-19">
+              2016-10-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>需求说明<br>公司的 UI 设计小哥，已经转用 Zeplin 很久了。Zeplin 的设计稿展示页面的颜色色值使用十进制的 RGB 表示的，在 Android 中的颜色表示大多情况下都需要十六进制的 RGB 表示。我的数学没有好到直接看到十进制就可以心算得到十六进制的结果，所以我需要一个工具，输入十进制的 RGB ，得到十六进制的色值，最好可以方便复制。</p>
+<p>Zeplin 的颜色色值显示示例<br>原有处理方式<br>因为我会 Python （仅限于终端输入 python 然后当做计算器算，或者用 hex() 函数把十进制转换成十六进制），所以遇到这样的问题我当然是采用python 的 hex() 函数做转换，然后手动结果输入到 Android Studio 中。<br><span id="more"></span></p>
+<p>采用 hex 函数手动转换色值<br>动机<br>人总是懒得，想要写这个小工具已经很久了，我也打过有过构思就是：</p>
+<p>输入: 类似 RGB 的十进制值(110, 122 138)，用空格或者逗号分割一下。<br>输出: 一个十六进制的 RGB 颜色色值(#6e7a8a)。<br>但就一直没动手，一直讲究着。真懒！</p>
+<p>开干<br>1.首先我需要输入函数<br>我打开我之前学习 Python 的文件夹，里面正好有一个 raw_input 的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#coding=utf-8</span><br></pre></td></tr></table></figure>
+<p>raw_input(“\n\n等输入”)<br>在终端执行 python input.py 后， 可以输入文字。<br>我需要接受到用户输入的信息。怎么接收忘记了， Google 之，得到结果，顺便改改输入提示语，打印出输入的内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">input = raw_input(&quot;\n输入颜色 比如50 144 60:\n&quot;)</span><br><span class="line">print(input)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>需要分割字符<br>查询到python 字符分割函数 split()，默认不传入参数就可以用空白符分割。原本还说用英文逗号(,)作为分隔符，现在看来可以省了，直接用空格分割，无论多少空格都可以自动分割。于是加上代码：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rgbColorArray = input.split()</span><br><span class="line">print(rgbColorArray)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>需要遍历数组<br>简单的遍历数组的是怎么弄的也忘记了，同样搜索：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for x in rgbColorArray:  print(x)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>字符转成十六进制<br>这个时候拿到了字符串，要变成十六进制的字符串。这个时候需要两个函数， int() 和 hex()，int 函数可以将字符串转成 int 类型，而 hex 则接受数字参数，返回字符串。 0x开始的字符串。<br>于是就有了第一个版本。</li>
+</ol>
+<p>第一个版本</p>
+<p>第一个版本</p>
+<p>第一个版本执行结果<br>写出这样的基础版本已经基本可以得到我想要的结果了，缺点是还需要我手动收入，动用大脑记忆十六进制色值然后输入。希望可以直接复制最后结果。</p>
+<p>再进一步<br>虽然结果已经出来了，但是还是希望可以在进步一些，有几个问题：</p>
+<p>当要转换的数字小于16的时候 只有一位不显示，比如11 显示的结果是0xB<br>现实的结果多了0x<br>显示的结果最好连在一起方便复制，而不是每个颜色一行。<br>那么就需要遍历颜色值数组，去掉0x 字符串， 判断小于16的前面补上0。连续在一起输出结果。</p>
+<p>for 循环遍历数组<br>前面用到了 for 循环，是从查到的范例，不过多行就不知道怎么弄了。java 写多了一般都是 { } 大括号括起来。<br>继续查资料，于是知道是大概下面这样的用法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">for num in range(10,20):  # 迭代 10 到 20 之间的数字</span><br><span class="line">   for i in range(2,num): # 根据因子迭代</span><br><span class="line">      if num%i == 0:      # 确定第一个因子</span><br><span class="line">         j=num/i          # 计算第二个因子</span><br><span class="line">         print &#x27;%d 等于 %d * %d&#x27; % (num,i,j)</span><br><span class="line">         break            # 跳出当前循环</span><br><span class="line">   else:                  # 循环的 else 部分</span><br><span class="line">      print num, &#x27;是一个质数&#x27;</span><br></pre></td></tr></table></figure>
+<p>变量声明<br>由于需要不换行，所以就需要字符连接，而不是直接 print。<br>声明变量又遇到问题了。根据前面的变量使用情况，找了些 python 代码看了看，大概知道不用声明什么类型，直接用就好了。于是有了代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">output = &quot;#&quot;</span><br><span class="line">for x in rgbColorArray: </span><br><span class="line">    intx = int(x)</span><br><span class="line">    output = output +  hex(intx)</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
+<p>字符串裁剪 和拼接。<br>需要把多余的0x 两位去掉。<br>用到字符串裁剪，依然寻找范例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"></span><br><span class="line">var1 = &#x27;Hello World!&#x27;</span><br><span class="line">var2 = &quot;Python Runoob&quot;</span><br><span class="line"></span><br><span class="line">print &quot;var1[0]: &quot;, var1[0]</span><br><span class="line">print &quot;var2[1:5]: &quot;, var2[1:5]</span><br></pre></td></tr></table></figure>
+<p>这个范例的执行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1[0]: H</span><br><span class="line">var2[1:5]: ytho</span><br></pre></td></tr></table></figure>
+<p>顺便问了旁边也在学习 python 的同事，他告诉我后面的索引可以省略，代表直接裁剪到结尾。<br>比如上面的例子如果 <code>print &quot;var2[1:]&quot;, var2[1:]</code>得到的结果应该是 <code>ython Runoob</code></p>
+<p>所以有代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">output = &quot;#&quot;</span><br><span class="line">for x in rgbColorArray: </span><br><span class="line">    intx = int(x)</span><br><span class="line">    output = output +  hex(intx)[2:]</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
+<p>也可以从后往前数，比如还是上面的范例可以写成。比如上面的例子如果 print “var2[-1:]”, var2[-1:] 得到的结果应该是 ob 也就是字符串的后两位。<br>于是我们这里可以写成hex(intx)[-2:] (因为输出字符串类似是0x23， 这样的)就是这个导致我后面写了个 bug，我也文章最后说明这个 bug 是什么。</p>
+<p>if else 判断<br>接着要做一个判断，给一位的补上0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if intx &lt; 16:</span><br><span class="line">    output = output + &#x27;0&#x27; + hex(intx)[-2:]</span><br><span class="line">else:</span><br><span class="line">    output = output +  hex(intx)[-2:]</span><br></pre></td></tr></table></figure>
+<p>这样就有了python 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#coding=utf-8</span><br><span class="line"></span><br><span class="line">input = raw_input(&quot;\n输入颜色 比如50 144 60:\n&quot;)</span><br><span class="line">#print(input)</span><br><span class="line"></span><br><span class="line">rgbColorArray = input.split()</span><br><span class="line">print(rgbColorArray)</span><br><span class="line"></span><br><span class="line">output = &quot;#&quot;</span><br><span class="line">for x in rgbColorArray: </span><br><span class="line">    intx = int(x)</span><br><span class="line">    if intx &lt; 16:</span><br><span class="line">        output = output + &#x27;0&#x27; + hex(intx)[-2:]</span><br><span class="line">    else:</span><br><span class="line">        output = output +  hex(intx)[-2:]    </span><br><span class="line">#print(hex(int(x)))</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
+<p>还有最后一步：把 ColorU 加入到环境变量中<br>这个时候我可以得到我要的记过了，但是有点不太方便，我需要到这个 python 文件所在的目录下写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python colorU.py</span><br></pre></td></tr></table></figure>
+<p>或者写全 colorU.py 这个路径。都是很麻的事情，所以我需要把 colorU 加入环境变量中。我用的是 zsh，所以找到环境变量的配置文件：~/.zshrc,末尾加上配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias colorU=&quot;python ~/Documents/Development/PythonStudy/colorU.py&quot;</span><br></pre></td></tr></table></figure>
+<p>这个是经过另外以为同事指导后的最后可行版本，我最初的思路是把 colorU.py 文件设置成可执行文件，然后加入到 Path 当中。结果我把 colorU.py 这个文件的地址加入到了 Path 中，世界上PATH 应该是一个目录。这样添加别名的方式更方便。</p>
+<p>后续<br>后来据说 Zeplin 的客户端可以默认显示十六进制的色值，而我用的是网页版的，所以没有。也就是说如果我装客户端就可以不用我写的这个脚本了。但没关系我学习了 python，写了我自己的第一个真正有用的 python 代码。</p>
+<p>一个bug：我是在写这篇文章的时候才发现这个 bug 的，类似0x33这样的字符串从后往前裁剪的时候写[-2:]，当然没有问题，但是写0xf 这样的字符串就会有问题了。程序输入 5 5 5得到的结果是 #0x50x50x5。修改成[2:] 的裁剪就可以了。</p>
+<p>倒向裁剪字符串引起的bug<br>还可以继续升级体验：</p>
+<p>a. 直接在终端中输入 colorU 231 234 123 就可以得到结果 #e7ea7b;<br>b. 配合Alfred， 呼出 Alfred 窗口后，输入色值，得到结果，回车直接复制十六进制到粘贴板。<br>c. 保存之前已经转换过的色值，方便重复使用的颜色，直接复制十六进制颜色。<br>参考：<br>菜鸟教程</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt=" wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎关注『程序员在读书』</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/about/images/qrcode_wechat_pay.jpg" alt=" WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/about/images/qrcode_alipay.jpg" alt=" Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+            <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">#工具</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/14/%E8%AE%A9Sublime%20%E6%94%AF%E6%8C%81GB2312%E6%A0%BC%E5%BC%8F/" rel="next" title="让Sublime 支持GB2312格式">
+                <i class="fa fa-chevron-left"></i> 让Sublime 支持GB2312格式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/01/30/%E5%8D%9A%E5%AE%A2%E5%A4%8D%E6%B4%BB-%E6%88%91%E5%BC%80%E5%A7%8B%E7%94%A8Clawdbot%E5%92%8CAI%E6%9D%A5%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E4%BA%86/" rel="prev" title="博客复活！我开始用 Clawdbot + AI 来更新博客了">
+                博客复活！我开始用 Clawdbot + AI 来更新博客了 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jerry0908mo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/qxjerry" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/ZhangruiJerry" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+          <div id="wechat_subscriber_qcode" class="feed-link motion-element">
+            <img id="wechat_subscriber_qcode" src="/about/images/qrcode_for_wechat_mp.jpg" alt=" wechat" style="width: 150px; max-width: 80%;"/>
+            <div style="text-align: center">欢迎关注『程序员在读书』</div>
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JerrySher</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
