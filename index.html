@@ -357,7 +357,25 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WECHAT_APPID=你的appid</span><br><span class="line">WECHAT_SECRET=你的secret</span><br><span class="line">REPLICATE_API_KEY=你的replicate_key</span><br><span class="line">WECHAT_AUTHOR=Jerry</span><br></pre></td></tr></table></figure>
 <h2 id="三、加载配置并验证-token"><a href="#三、加载配置并验证-token" class="headerlink" title="三、加载配置并验证 token"></a>三、加载配置并验证 token</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> -a</span><br><span class="line"><span class="built_in">source</span> .<span class="built_in">env</span></span><br><span class="line"><span class="built_in">set</span> +a</span><br><span class="line"><span class="built_in">source</span> ./scripts.sh</span><br><span class="line">get_wechat_token</span><br></pre></td></tr></table></figure>
 <p>如果返回的是有效 <code>access_token</code>，说明公众号接口认证已通。</p>
-<h2 id="四、执行发布链路（建议先发草稿）"><a href="#四、执行发布链路（建议先发草稿）" class="headerlink" title="四、执行发布链路（建议先发草稿）"></a>四、执行发布链路（建议先发草稿）</h2><p>典型流程：</p>
+<h2 id="四、真实踩坑：errcode-40164（IP-不在白名单）"><a href="#四、真实踩坑：errcode-40164（IP-不在白名单）" class="headerlink" title="四、真实踩坑：errcode 40164（IP 不在白名单）"></a>四、真实踩坑：<code>errcode 40164</code>（IP 不在白名单）</h2><p>这次实测发布时，流程卡在获取 token：</p>
+<ul>
+<li>错误码：<code>40164</code></li>
+<li>典型报错：<code>invalid ip ... not in whitelist</code></li>
+<li>本质原因：公众号后台启用了 <strong>IP 白名单</strong>，而当前自动化执行出口 IP 没有加入白名单。</li>
+</ul>
+<p>下面这张图是公众号后台里白名单入口的位置（安全中心 → IP 白名单）：</p>
+<p><img src="/images/wechat/ip-whitelist-entry.jpg" alt="公众号安全中心-IP白名单入口"></p>
+<p>而在执行侧，你会看到类似这样的报错提示：</p>
+<p><img src="/images/wechat/errcode-40164-chat.jpg" alt="发布报错-errcode40164"></p>
+<h3 id="怎么修复"><a href="#怎么修复" class="headerlink" title="怎么修复"></a>怎么修复</h3><ol>
+<li>在公众号后台把当前执行环境的出口 IP 加入白名单；</li>
+<li>等待配置生效后，重新执行 <code>get_wechat_token</code>；</li>
+<li>token 获取成功后再执行 <code>publish_article</code>。</li>
+</ol>
+<blockquote>
+<p>建议把“白名单校验”加到你的发布前检查清单里，避免定时任务夜间静默失败。</p>
+</blockquote>
+<h2 id="五、执行发布链路（建议先发草稿）"><a href="#五、执行发布链路（建议先发草稿）" class="headerlink" title="五、执行发布链路（建议先发草稿）"></a>五、执行发布链路（建议先发草稿）</h2><p>典型流程：</p>
 <ol>
 <li>采集热点</li>
 <li>生成文章 HTML</li>
@@ -368,20 +386,20 @@
 </ol>
 <p>示例：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">content_html=$(<span class="built_in">cat</span> ./content.html)</span><br><span class="line">publish_article <span class="string">&quot;今天的 AI 热点解读&quot;</span> <span class="string">&quot;<span class="variable">$content_html</span>&quot;</span> <span class="string">&quot;未来科技风封面&quot;</span> <span class="string">&quot;AI 热点日报&quot;</span></span><br></pre></td></tr></table></figure>
-<h2 id="五、在-OpenClaw-里做定时自动发布"><a href="#五、在-OpenClaw-里做定时自动发布" class="headerlink" title="五、在 OpenClaw 里做定时自动发布"></a>五、在 OpenClaw 里做定时自动发布</h2><p>你可以用 cron 每天触发一次：</p>
+<h2 id="六、在-OpenClaw-里做定时自动发布"><a href="#六、在-OpenClaw-里做定时自动发布" class="headerlink" title="六、在 OpenClaw 里做定时自动发布"></a>六、在 OpenClaw 里做定时自动发布</h2><p>你可以用 cron 每天触发一次：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron add \</span><br><span class="line">  --name <span class="string">&quot;wechat-ai-daily&quot;</span> \</span><br><span class="line">  --cron <span class="string">&quot;0 9 * * *&quot;</span> \</span><br><span class="line">  --tz <span class="string">&quot;Asia/Shanghai&quot;</span> \</span><br><span class="line">  --session isolated \</span><br><span class="line">  --message <span class="string">&quot;发布AI热点；不要提问，直接执行&quot;</span></span><br></pre></td></tr></table></figure>
 <p>查看任务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron list</span><br></pre></td></tr></table></figure>
 <p>删除任务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron delete --name <span class="string">&quot;wechat-ai-daily&quot;</span></span><br></pre></td></tr></table></figure>
-<h2 id="六、上线前的-5-个检查点"><a href="#六、上线前的-5-个检查点" class="headerlink" title="六、上线前的 5 个检查点"></a>六、上线前的 5 个检查点</h2><ol>
+<h2 id="七、上线前的-5-个检查点"><a href="#七、上线前的-5-个检查点" class="headerlink" title="七、上线前的 5 个检查点"></a>七、上线前的 5 个检查点</h2><ol>
 <li><code>get_wechat_token</code> 返回正常 token（不是 <code>null</code>）</li>
 <li>公众号接口权限已开通（草稿/发布相关接口）</li>
 <li>服务器出口 IP（如有白名单要求）已配置</li>
 <li><code>.env</code> 已加入 <code>.gitignore</code>，避免密钥泄露</li>
 <li>发布失败时有兜底策略（比如默认封面）</li>
 </ol>
-<h2 id="七、我踩过的坑（你可以直接避开）"><a href="#七、我踩过的坑（你可以直接避开）" class="headerlink" title="七、我踩过的坑（你可以直接避开）"></a>七、我踩过的坑（你可以直接避开）</h2><ul>
+<h2 id="八、我踩过的坑（你可以直接避开）"><a href="#八、我踩过的坑（你可以直接避开）" class="headerlink" title="八、我踩过的坑（你可以直接避开）"></a>八、我踩过的坑（你可以直接避开）</h2><ul>
 <li>本地能生成文章，不代表微信接口权限就够</li>
 <li>commit 成功，不代表文章已经对外发布</li>
 <li>自动化流程最怕“半自动”：建议把验收写成固定清单</li>
