@@ -263,6 +263,180 @@
             
               
                 
+                <a class="post-title-link" href="/2026/02/28/%E5%9C%A8%E5%A4%A7%E9%BE%99%E8%99%BE%E4%B8%AD%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/" itemprop="url">
+                  在大龙虾（OpenClaw）中配置自动发布微信公众号文章：完整实战
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2026-02-28T18:55:00+08:00" content="2026-02-28">
+              2026-02-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这篇文章专门讲一件事：</p>
+<p><strong>如何在大龙虾（OpenClaw）里，把“写公众号文章 + 配图 + 推送草稿”做成自动流程。</strong></p>
+<blockquote>
+<p>目标不是“能跑一次”，而是“每天稳定跑”。</p>
+</blockquote>
+<h2 id="一、先准备-4-个关键参数"><a href="#一、先准备-4-个关键参数" class="headerlink" title="一、先准备 4 个关键参数"></a>一、先准备 4 个关键参数</h2><p>在开始前，你需要这几个变量：</p>
+<ul>
+<li><code>WECHAT_APPID</code>：公众号 AppID</li>
+<li><code>WECHAT_SECRET</code>：公众号 AppSecret</li>
+<li><code>REPLICATE_API_KEY</code>：用于 AI 生成配图</li>
+<li><code>WECHAT_AUTHOR</code>：文章作者（可选）</li>
+</ul>
+<p>建议全部放到 <code>.env</code> 文件，不要写死在代码里。</p>
+<h2 id="二、在项目里配置环境变量"><a href="#二、在项目里配置环境变量" class="headerlink" title="二、在项目里配置环境变量"></a>二、在项目里配置环境变量</h2><p>以 <code>wechat-ai-publisher</code> 为例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/wechat-ai-publisher</span><br><span class="line"><span class="built_in">cp</span> .env.example .<span class="built_in">env</span></span><br></pre></td></tr></table></figure>
+<p>然后编辑 <code>.env</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WECHAT_APPID=你的appid</span><br><span class="line">WECHAT_SECRET=你的secret</span><br><span class="line">REPLICATE_API_KEY=你的replicate_key</span><br><span class="line">WECHAT_AUTHOR=Jerry</span><br></pre></td></tr></table></figure>
+<h2 id="三、加载配置并验证-token"><a href="#三、加载配置并验证-token" class="headerlink" title="三、加载配置并验证 token"></a>三、加载配置并验证 token</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> -a</span><br><span class="line"><span class="built_in">source</span> .<span class="built_in">env</span></span><br><span class="line"><span class="built_in">set</span> +a</span><br><span class="line"><span class="built_in">source</span> ./scripts.sh</span><br><span class="line">get_wechat_token</span><br></pre></td></tr></table></figure>
+<p>如果返回的是有效 <code>access_token</code>，说明公众号接口认证已通。</p>
+<h2 id="四、执行发布链路（建议先发草稿）"><a href="#四、执行发布链路（建议先发草稿）" class="headerlink" title="四、执行发布链路（建议先发草稿）"></a>四、执行发布链路（建议先发草稿）</h2><p>典型流程：</p>
+<ol>
+<li>采集热点</li>
+<li>生成文章 HTML</li>
+<li>生成封面图</li>
+<li>上传素材</li>
+<li>创建草稿</li>
+<li>需要时再提交发布</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">content_html=$(<span class="built_in">cat</span> ./content.html)</span><br><span class="line">publish_article <span class="string">&quot;今天的 AI 热点解读&quot;</span> <span class="string">&quot;<span class="variable">$content_html</span>&quot;</span> <span class="string">&quot;未来科技风封面&quot;</span> <span class="string">&quot;AI 热点日报&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="五、在-OpenClaw-里做定时自动发布"><a href="#五、在-OpenClaw-里做定时自动发布" class="headerlink" title="五、在 OpenClaw 里做定时自动发布"></a>五、在 OpenClaw 里做定时自动发布</h2><p>你可以用 cron 每天触发一次：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron add \</span><br><span class="line">  --name <span class="string">&quot;wechat-ai-daily&quot;</span> \</span><br><span class="line">  --cron <span class="string">&quot;0 9 * * *&quot;</span> \</span><br><span class="line">  --tz <span class="string">&quot;Asia/Shanghai&quot;</span> \</span><br><span class="line">  --session isolated \</span><br><span class="line">  --message <span class="string">&quot;发布AI热点；不要提问，直接执行&quot;</span></span><br></pre></td></tr></table></figure>
+<p>查看任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron list</span><br></pre></td></tr></table></figure>
+<p>删除任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron delete --name <span class="string">&quot;wechat-ai-daily&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="六、上线前的-5-个检查点"><a href="#六、上线前的-5-个检查点" class="headerlink" title="六、上线前的 5 个检查点"></a>六、上线前的 5 个检查点</h2><ol>
+<li><code>get_wechat_token</code> 返回正常 token（不是 <code>null</code>）</li>
+<li>公众号接口权限已开通（草稿/发布相关接口）</li>
+<li>服务器出口 IP（如有白名单要求）已配置</li>
+<li><code>.env</code> 已加入 <code>.gitignore</code>，避免密钥泄露</li>
+<li>发布失败时有兜底策略（比如默认封面）</li>
+</ol>
+<h2 id="七、我踩过的坑（你可以直接避开）"><a href="#七、我踩过的坑（你可以直接避开）" class="headerlink" title="七、我踩过的坑（你可以直接避开）"></a>七、我踩过的坑（你可以直接避开）</h2><ul>
+<li>本地能生成文章，不代表微信接口权限就够</li>
+<li>commit 成功，不代表文章已经对外发布</li>
+<li>自动化流程最怕“半自动”：建议把验收写成固定清单</li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>大龙虾真正的价值，不是“帮你写一篇”，而是把“写作—配图—发布”做成可复用流水线。</p>
+<p>把配置和验收标准一次性做对，你会发现公众号更新这件事会轻很多。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2026/02/28/%E9%A3%9E%E4%B9%A6%E8%A7%A3%E9%94%81%E6%8C%81%E4%B9%85-Agent-%E4%BB%8E0%E5%88%B0%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8D%8F%E4%BD%9C/" itemprop="url">
                   Gateway Dashboard Agents 页面新增飞书持久 Agent：问题复盘与修复说明
                 </a>
@@ -1485,124 +1659,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/26/%E6%97%A2%E7%84%B6%E6%98%AF%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%90%AC%E5%88%B0%E5%B1%B1%E9%87%8C%E5%8E%BB%EF%BC%8C%E7%8E%AF%E5%A2%83%E5%A4%9A%E5%A5%BD/" itemprop="url">
-                  既然是互联网公司为什么不搬到山里去，环境多好
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-26T21:55:00+08:00" content="2016-04-26">
-              2016-04-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/%E6%80%9D%E8%80%83/" itemprop="url" rel="index">
-                    <span itemprop="name">思考</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>继续听《黑客与画家》，有如下一段，大意是：</p>
-<blockquote>
-<p>15世纪的佛罗伦萨成批的出现了很多艺术家，其中包括达芬奇，米开朗基罗。这些人才的成批涌现，最大的因素就是，让有天赋的人聚在了一起，共同解决某个难题。相互激励比天赋更加重要，达芬奇之所以成为达芬奇不仅仅是因为天赋，更多重要的是因为他生活在佛罗伦萨。如今，人们生活流动性大，但是主要的项目还是集中在那么几个城市，如果远离中心很难靠单打独斗取得伟大成果。个人最多可能稍微影响趋势，但是不能决定趋势，大部分情况下个人只能被趋势所影响。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/26/%E6%97%A2%E7%84%B6%E6%98%AF%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%90%AC%E5%88%B0%E5%B1%B1%E9%87%8C%E5%8E%BB%EF%BC%8C%E7%8E%AF%E5%A2%83%E5%A4%9A%E5%A5%BD/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1648,7 +1704,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1665,7 +1721,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
